@@ -9,4 +9,5 @@ Static landing page for Ferre Torres B.V., the Dutch B.V. for European AI-first 
 3. Set the source to **Deploy from a branch**.
 4. Select the default branch and `/ (root)`.
 
+Custom domain: `ferretorres.eu`.
 Public contact email: `jferre@ferretorres.eu`.
