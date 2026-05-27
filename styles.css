@@ -23,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
 }
 
 body {
@@ -50,7 +51,11 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 18px var(--page-margin);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(16, 22, 21, 0.92);
   color: var(--white);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18);
 }
 
 .brand {
@@ -69,7 +74,7 @@ a {
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.52);
   border-radius: 50%;
-  background: rgba(16, 22, 21, 0.52);
+  background: var(--green);
   font-size: 0.78rem;
 }
 
@@ -82,7 +87,7 @@ nav {
 }
 
 nav a {
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
 }
 
@@ -440,7 +445,6 @@ h3 {
 
 @media (max-width: 720px) {
   .site-header {
-    position: absolute;
     align-items: flex-start;
   }
 
