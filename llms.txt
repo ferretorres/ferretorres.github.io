@@ -1,0 +1,22 @@
+# Ferre Torres B.V.
+
+Ferre Torres B.V. is a Dutch B.V. providing AI consultancy and AI-first software development for companies in Europe.
+
+Primary positioning:
+- AI consultancy for companies
+- AI-first transformation and AI-first development
+- Company Brain systems
+- RAG and agentic AI systems
+- Finance intelligence, dashboards, and internal AI-native software
+
+Core service pages:
+- https://ferretorres.eu/ai-consultancy.html
+- https://ferretorres.eu/company-brain.html
+- https://ferretorres.eu/rag-agentic-systems.html
+- https://ferretorres.eu/ai-software-engineering.html
+
+Delivery model:
+Start with one high-value workflow, validate it through an MVP or PoC, then scale the systems that work into production infrastructure.
+
+Contact:
+jferre@ferretorres.eu
