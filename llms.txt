@@ -13,15 +13,27 @@ Core service pages:
 - https://ferretorres.eu/ai-consultancy.html
 - https://ferretorres.eu/ai-consultancy-netherlands.html
 - https://ferretorres.eu/ai-consultancy-europe.html
+- https://ferretorres.eu/ai-consulting-for-enterprises.html
 - https://ferretorres.eu/rag-implementation-europe.html
+- https://ferretorres.eu/rag-implementation-netherlands.html
 - https://ferretorres.eu/ai-consultancy-finance.html
+- https://ferretorres.eu/ai-finance-dashboard.html
 - https://ferretorres.eu/ai-consultancy-regulated-companies.html
 - https://ferretorres.eu/ai-consultancy-operations.html
 - https://ferretorres.eu/ai-solutions.html
 - https://ferretorres.eu/delivery-patterns.html
 - https://ferretorres.eu/company-brain.html
+- https://ferretorres.eu/company-brain-for-companies.html
 - https://ferretorres.eu/rag-agentic-systems.html
+- https://ferretorres.eu/agentic-ai-workflows.html
 - https://ferretorres.eu/ai-software-engineering.html
+
+Static demo preview pages:
+- https://ferretorres.eu/demo-company-brain.html
+- https://ferretorres.eu/demo-rag-evaluation.html
+- https://ferretorres.eu/demo-finance-intelligence.html
+- https://ferretorres.eu/demo-ai-pm-assistant.html
+- https://ferretorres.eu/demo-agentic-workflow.html
 
 Delivery model:
 Start with one high-value workflow, validate it through an MVP or PoC, then scale the systems that work into production infrastructure.
