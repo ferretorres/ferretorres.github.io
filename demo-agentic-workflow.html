@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://ferretorres.eu/demo-agentic-workflow.html">
     <meta property="og:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css?v=20260601-solutions2">
+    <link rel="stylesheet" href="styles.css?v=20260601-resolve">
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -47,11 +47,16 @@
           <div class="demo-panel">
             <p class="demo-label">Agent run</p>
             <h2>Controlled automation over a repeated business process.</h2>
+            <div class="demo-controls" aria-label="Synthetic agentic workflow scenarios">
+              <button type="button" data-agent-scenario="renewal" aria-pressed="true">Renewal risk</button>
+              <button type="button" data-agent-scenario="invoice" aria-pressed="false">Invoice exception</button>
+              <button type="button" data-agent-scenario="support" aria-pressed="false">Support escalation</button>
+            </div>
             <div class="demo-workflow">
-              <div class="demo-step"><strong>1. Classify request</strong><p>Customer renewal risk detected from email and CRM context.</p><small>Confidence: high</small></div>
-              <div class="demo-step"><strong>2. Retrieve context</strong><p>Agent finds contract terms, last support tickets, usage drop, and open invoice status.</p><small>Sources: CRM, support desk, finance system</small></div>
-              <div class="demo-step"><strong>3. Draft action</strong><p>Prepare account manager brief and suggested renewal path.</p><span class="demo-status">Needs approval</span></div>
-              <div class="demo-step"><strong>4. Escalate exception</strong><p>Finance hold blocks automated next step. Route to owner.</p><small>Audit trail recorded</small></div>
+              <div class="demo-step"><strong id="agent-title-1">1. Classify request</strong><p id="agent-step-1">Customer renewal risk detected from email and CRM context.</p><small id="agent-note-1">Confidence: high</small></div>
+              <div class="demo-step"><strong id="agent-title-2">2. Retrieve context</strong><p id="agent-step-2">Agent finds contract terms, last support tickets, usage drop, and open invoice status.</p><small id="agent-note-2">Sources: CRM, support desk, finance system</small></div>
+              <div class="demo-step"><strong id="agent-title-3">3. Draft action</strong><p id="agent-step-3">Prepare account manager brief and suggested renewal path.</p><span class="demo-status" id="agent-status">Needs approval</span></div>
+              <div class="demo-step"><strong id="agent-title-4">4. Escalate exception</strong><p id="agent-step-4">Finance hold blocks automated next step. Route to owner.</p><small id="agent-note-4">Audit trail recorded</small></div>
             </div>
           </div>
           <aside class="demo-side">
@@ -62,5 +67,43 @@
         </div>
       </section>
     </main>
+    <script>
+      (() => {
+        const scenarios = {
+          renewal: [
+            ["1. Classify request", "Customer renewal risk detected from email and CRM context.", "Confidence: high"],
+            ["2. Retrieve context", "Agent finds contract terms, last support tickets, usage drop, and open invoice status.", "Sources: CRM, support desk, finance system"],
+            ["3. Draft action", "Prepare account manager brief and suggested renewal path.", "Needs approval"],
+            ["4. Escalate exception", "Finance hold blocks automated next step. Route to owner.", "Audit trail recorded"]
+          ],
+          invoice: [
+            ["1. Classify exception", "Invoice mismatch detected between purchase order, delivery record, and finance system.", "Confidence: medium"],
+            ["2. Retrieve context", "Agent compares order line, delivery note, approval chain, and payment terms.", "Sources: ERP, approvals, vendor file"],
+            ["3. Draft action", "Prepare reconciliation note and suggested correction.", "Finance review"],
+            ["4. Escalate exception", "Amount exceeds automatic tolerance. Route to finance owner.", "Control threshold triggered"]
+          ],
+          support: [
+            ["1. Classify escalation", "Customer support thread shows repeated unresolved issue and enterprise sentiment risk.", "Confidence: high"],
+            ["2. Retrieve context", "Agent finds SLA, previous tickets, account status, and deployment notes.", "Sources: support desk, CRM, deployment log"],
+            ["3. Draft action", "Prepare escalation brief with technical context and proposed response.", "Manager approval"],
+            ["4. Escalate exception", "SLA breach risk detected. Notify account owner.", "Audit trail recorded"]
+          ]
+        };
+        const update = (key) => {
+          scenarios[key].forEach(([title, step, note], index) => {
+            document.querySelector(`#agent-title-${index + 1}`).textContent = title;
+            document.querySelector(`#agent-step-${index + 1}`).textContent = step;
+            const noteNode = document.querySelector(index === 2 ? "#agent-status" : `#agent-note-${index + 1}`);
+            noteNode.textContent = note;
+          });
+          document.querySelectorAll("[data-agent-scenario]").forEach((button) => {
+            button.setAttribute("aria-pressed", String(button.dataset.agentScenario === key));
+          });
+        };
+        document.querySelectorAll("[data-agent-scenario]").forEach((button) => {
+          button.addEventListener("click", () => update(button.dataset.agentScenario));
+        });
+      })();
+    </script>
   </body>
 </html>

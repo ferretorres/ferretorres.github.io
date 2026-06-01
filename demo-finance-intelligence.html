@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://ferretorres.eu/demo-finance-intelligence.html">
     <meta property="og:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css?v=20260601-solutions2">
+    <link rel="stylesheet" href="styles.css?v=20260601-resolve">
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -47,19 +47,24 @@
           <div class="demo-panel">
             <p class="demo-label">Finance intelligence</p>
             <h2>From static charts to explained operating signals.</h2>
+            <div class="demo-controls" aria-label="Synthetic finance scenarios">
+              <button type="button" data-finance-scenario="margin" aria-pressed="true">Margin pressure</button>
+              <button type="button" data-finance-scenario="cash" aria-pressed="false">Cash variance</button>
+              <button type="button" data-finance-scenario="pricing" aria-pressed="false">Pricing trend</button>
+            </div>
             <div class="demo-metrics">
-              <div class="demo-metric"><span>-4.8%</span><strong>Margin shift</strong><small>Enterprise segment</small></div>
-              <div class="demo-metric"><span>12</span><strong>Anomalies</strong><small>3 need review</small></div>
-              <div class="demo-metric"><span>+7%</span><strong>Price signal</strong><small>Renewal cohort</small></div>
+              <div class="demo-metric"><span id="finance-metric-1">-4.8%</span><strong id="finance-label-1">Margin shift</strong><small id="finance-note-1">Enterprise segment</small></div>
+              <div class="demo-metric"><span id="finance-metric-2">12</span><strong id="finance-label-2">Anomalies</strong><small id="finance-note-2">3 need review</small></div>
+              <div class="demo-metric"><span id="finance-metric-3">+7%</span><strong id="finance-label-3">Price signal</strong><small id="finance-note-3">Renewal cohort</small></div>
             </div>
             <div class="demo-result">
               <strong>AI explanation</strong>
-              <p>Margin decline is concentrated in implementation-heavy accounts with delayed renewal pricing. Forecast impact depends on two Q3 change orders.</p>
+              <p id="finance-explanation">Margin decline is concentrated in implementation-heavy accounts with delayed renewal pricing. Forecast impact depends on two Q3 change orders.</p>
             </div>
             <div class="demo-result">
               <strong>Suggested follow-up</strong>
-              <p>Review renewal pricing exceptions and compare delivery hours against original contract assumptions.</p>
-              <span class="demo-status">Board pack candidate</span>
+              <p id="finance-action">Review renewal pricing exceptions and compare delivery hours against original contract assumptions.</p>
+              <span class="demo-status" id="finance-status">Board pack candidate</span>
             </div>
           </div>
           <aside class="demo-side">
@@ -70,5 +75,46 @@
         </div>
       </section>
     </main>
+    <script>
+      (() => {
+        const scenarios = {
+          margin: {
+            metrics: [["-4.8%", "Margin shift", "Enterprise segment"], ["12", "Anomalies", "3 need review"], ["+7%", "Price signal", "Renewal cohort"]],
+            explanation: "Margin decline is concentrated in implementation-heavy accounts with delayed renewal pricing. Forecast impact depends on two Q3 change orders.",
+            action: "Review renewal pricing exceptions and compare delivery hours against original contract assumptions.",
+            status: "Board pack candidate"
+          },
+          cash: {
+            metrics: [["-18d", "Cash runway shift", "Receivables delay"], ["6", "Late invoices", "2 strategic accounts"], ["31%", "DSO increase", "Enterprise segment"]],
+            explanation: "Cash variance is driven by two delayed enterprise payments and a cluster of services invoices moving beyond normal collection windows.",
+            action: "Prioritize account owner follow-up, review payment terms, and update the weekly cash forecast.",
+            status: "CFO review"
+          },
+          pricing: {
+            metrics: [["+9%", "Expansion signal", "Usage tier change"], ["4", "Underpriced accounts", "High support load"], ["2.3x", "Margin upside", "Renewal window"]],
+            explanation: "Pricing opportunity appears in accounts with high usage, high support volume, and renewal dates inside the next 90 days.",
+            action: "Prepare renewal scenarios and compare current discounting against implementation and support cost.",
+            status: "Pricing review"
+          }
+        };
+        const update = (key) => {
+          const scenario = scenarios[key];
+          scenario.metrics.forEach(([value, label, note], index) => {
+            document.querySelector(`#finance-metric-${index + 1}`).textContent = value;
+            document.querySelector(`#finance-label-${index + 1}`).textContent = label;
+            document.querySelector(`#finance-note-${index + 1}`).textContent = note;
+          });
+          document.querySelector("#finance-explanation").textContent = scenario.explanation;
+          document.querySelector("#finance-action").textContent = scenario.action;
+          document.querySelector("#finance-status").textContent = scenario.status;
+          document.querySelectorAll("[data-finance-scenario]").forEach((button) => {
+            button.setAttribute("aria-pressed", String(button.dataset.financeScenario === key));
+          });
+        };
+        document.querySelectorAll("[data-finance-scenario]").forEach((button) => {
+          button.addEventListener("click", () => update(button.dataset.financeScenario));
+        });
+      })();
+    </script>
   </body>
 </html>

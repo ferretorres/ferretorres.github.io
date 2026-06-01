@@ -22,6 +22,7 @@ Core service pages:
 - https://ferretorres.eu/ai-consultancy-operations.html
 - https://ferretorres.eu/ai-solutions.html
 - https://ferretorres.eu/delivery-patterns.html
+- https://ferretorres.eu/proof.html
 - https://ferretorres.eu/company-brain.html
 - https://ferretorres.eu/company-brain-for-companies.html
 - https://ferretorres.eu/rag-agentic-systems.html
@@ -34,6 +35,10 @@ Static demo preview pages:
 - https://ferretorres.eu/demo-finance-intelligence.html
 - https://ferretorres.eu/demo-ai-pm-assistant.html
 - https://ferretorres.eu/demo-agentic-workflow.html
+
+Privacy and contact:
+- https://ferretorres.eu/privacy.html
+- https://ferretorres.eu/contact-success.html
 
 Delivery model:
 Start with one high-value workflow, validate it through an MVP or PoC, then scale the systems that work into production infrastructure.

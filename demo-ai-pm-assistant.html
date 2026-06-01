@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://ferretorres.eu/demo-ai-pm-assistant.html">
     <meta property="og:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css?v=20260601-solutions2">
+    <link rel="stylesheet" href="styles.css?v=20260601-resolve">
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -47,10 +47,15 @@
           <div class="demo-panel">
             <p class="demo-label">Delivery intelligence</p>
             <h2>Project status without manual reporting drag.</h2>
+            <div class="demo-controls" aria-label="Synthetic AI PM scenarios">
+              <button type="button" data-pm-scenario="vendor" aria-pressed="true">Vendor risk</button>
+              <button type="button" data-pm-scenario="scope" aria-pressed="false">Scope change</button>
+              <button type="button" data-pm-scenario="budget" aria-pressed="false">Budget drift</button>
+            </div>
             <div class="demo-workflow">
-              <div class="demo-step"><strong>Risk detected</strong><p>Integration dependency is slipping against the Q3 launch path.</p><small>Source: sprint notes, vendor email, dependency tracker</small></div>
-              <div class="demo-step"><strong>Decision needed</strong><p>Confirm whether to reduce launch scope or move the vendor milestone.</p><small>Owner: CTO and delivery lead</small></div>
-              <div class="demo-step"><strong>Draft update</strong><p>Executive summary prepared with blocker, options, risk level, and next action.</p><span class="demo-status">Ready for review</span></div>
+              <div class="demo-step"><strong id="pm-title-1">Risk detected</strong><p id="pm-step-1">Integration dependency is slipping against the Q3 launch path.</p><small id="pm-note-1">Source: sprint notes, vendor email, dependency tracker</small></div>
+              <div class="demo-step"><strong id="pm-title-2">Decision needed</strong><p id="pm-step-2">Confirm whether to reduce launch scope or move the vendor milestone.</p><small id="pm-note-2">Owner: CTO and delivery lead</small></div>
+              <div class="demo-step"><strong id="pm-title-3">Draft update</strong><p id="pm-step-3">Executive summary prepared with blocker, options, risk level, and next action.</p><span class="demo-status" id="pm-status">Ready for review</span></div>
             </div>
           </div>
           <aside class="demo-side">
@@ -61,5 +66,40 @@
         </div>
       </section>
     </main>
+    <script>
+      (() => {
+        const scenarios = {
+          vendor: [
+            ["Risk detected", "Integration dependency is slipping against the Q3 launch path.", "Source: sprint notes, vendor email, dependency tracker"],
+            ["Decision needed", "Confirm whether to reduce launch scope or move the vendor milestone.", "Owner: CTO and delivery lead"],
+            ["Draft update", "Executive summary prepared with blocker, options, risk level, and next action.", "Ready for review"]
+          ],
+          scope: [
+            ["Scope change detected", "Three new requested features are not mapped to launch success criteria.", "Source: roadmap notes, stakeholder call, backlog"],
+            ["Decision needed", "Choose whether to defer the requests or replace lower-value launch scope.", "Owner: product and sponsor"],
+            ["Draft update", "Scope trade-off summary prepared with timeline impact and dependency map.", "Sponsor review"]
+          ],
+          budget: [
+            ["Budget drift detected", "Delivery hours are trending above forecast because review cycles are taking longer than planned.", "Source: timesheets, sprint notes, approval log"],
+            ["Decision needed", "Confirm whether to simplify review workflow or add capacity for the next milestone.", "Owner: delivery lead and finance"],
+            ["Draft update", "Budget risk note prepared with cause, options, and expected effect on delivery date.", "Finance review"]
+          ]
+        };
+        const update = (key) => {
+          scenarios[key].forEach(([title, step, note], index) => {
+            document.querySelector(`#pm-title-${index + 1}`).textContent = title;
+            document.querySelector(`#pm-step-${index + 1}`).textContent = step;
+            const noteNode = document.querySelector(index === 2 ? "#pm-status" : `#pm-note-${index + 1}`);
+            noteNode.textContent = note;
+          });
+          document.querySelectorAll("[data-pm-scenario]").forEach((button) => {
+            button.setAttribute("aria-pressed", String(button.dataset.pmScenario === key));
+          });
+        };
+        document.querySelectorAll("[data-pm-scenario]").forEach((button) => {
+          button.addEventListener("click", () => update(button.dataset.pmScenario));
+        });
+      })();
+    </script>
   </body>
 </html>

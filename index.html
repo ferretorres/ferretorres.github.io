@@ -22,7 +22,14 @@
     <meta name="twitter:title" content="AI Consultancy for Companies | Ferre Torres B.V.">
     <meta name="twitter:description" content="AI consultancy and AI-first development for companies: strategy, MVPs, company brain systems, RAG, agents, dashboards, and production software.">
     <meta name="twitter:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260601-resolve">
+    <script>
+      window.FERRE_SITE_CONFIG = {
+        formEndpoint: "",
+        analyticsProvider: "",
+        analyticsDomain: "ferretorres.eu"
+      };
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -67,7 +74,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Company Brain systems",
-                "url": "https://ferretorres.eu/company-brain.html",
+                "url": "https://ferretorres.eu/company-brain-for-companies.html",
                 "description": "Private company memory and knowledge systems for RAG, dashboards, assistants, and decision support."
               }
             },
@@ -75,9 +82,18 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "RAG and agentic AI systems",
-                "url": "https://ferretorres.eu/rag-agentic-systems.html",
+                "name": "RAG implementation and agentic AI systems",
+                "url": "https://ferretorres.eu/rag-implementation-netherlands.html",
                 "description": "Retrieval, evaluations, tool use, agent workflows, and governed deployment for company data."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "AI finance dashboards",
+                "url": "https://ferretorres.eu/ai-finance-dashboard.html",
+                "description": "Finance intelligence dashboards, reporting automation, anomaly explanations, and pricing signals."
               }
             },
             {
@@ -103,7 +119,7 @@
       <nav>
         <a href="ai-consultancy.html">Consulting</a>
         <a href="#capabilities">Capabilities</a>
-        <a href="#method">Method</a>
+        <a href="proof.html">Proof</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -403,6 +419,7 @@
               GDPR-aware architecture, European delivery, and senior technical
               ownership from discovery through implementation.
             </p>
+            <a class="text-link light-link" href="proof.html">How AI delivery is measured</a>
           </div>
         </div>
       </section>
@@ -461,14 +478,14 @@
                 <div>
                   <h3>30-second project brief</h3>
                   <p class="brief-note">
-                    This site does not store or send form data automatically. Add the
-                    basics, then prepare an email draft or generate the brief manually.
+                    Add the basics, then prepare an email draft. If an automatic form
+                    endpoint is connected later, the same brief can be submitted directly.
                     Advanced context is optional.
                   </p>
                 </div>
                 <span>30s</span>
               </div>
-              <form class="brief-form" id="project-brief-form">
+              <form class="brief-form" id="project-brief-form" data-endpoint="">
                 <div class="brief-fields brief-core">
                   <label>
                     Company
@@ -586,7 +603,7 @@
             </div>
             <p class="legal">
               Legal entity: Ferre Torres B.V. Registered office: Rotterdam, the Netherlands.
-              KvK: 42067229.
+              KvK: 42067229. <a href="privacy.html">Privacy</a>.
             </p>
           </div>
         </div>
@@ -599,6 +616,7 @@
         const output = document.querySelector("#brief-output");
         const outputWrap = document.querySelector("#brief-output-wrap");
         const status = document.querySelector("#brief-status");
+        const config = window.FERRE_SITE_CONFIG || {};
         const fields = [
           ["Company", "company"],
           ["Contact person and role", "contact"],
@@ -632,7 +650,7 @@
             .join("\n");
         };
 
-        form.addEventListener("submit", (event) => {
+        form.addEventListener("submit", async (event) => {
           event.preventDefault();
           if (!form.reportValidity()) {
             setStatus("Add contact details and the workflow before preparing the brief.");
@@ -641,6 +659,30 @@
           const brief = buildBrief();
           output.value = brief;
           outputWrap.hidden = false;
+          const endpoint = form.dataset.endpoint || config.formEndpoint || "";
+          if (endpoint) {
+            const payload = new FormData(form);
+            payload.set("brief", brief);
+            payload.set("_subject", "AI integration project brief");
+            try {
+              setStatus("Sending brief...");
+              const response = await fetch(endpoint, {
+                method: "POST",
+                body: payload,
+                headers: { Accept: "application/json" }
+              });
+              if (!response.ok) {
+                throw new Error("Form endpoint rejected the brief.");
+              }
+              window.location.href = "contact-success.html";
+            } catch (error) {
+              setStatus("Automatic sending failed. Email draft opened as fallback.");
+              const subject = encodeURIComponent("AI integration project brief");
+              const body = encodeURIComponent(brief);
+              window.location.href = `mailto:jferre@ferretorres.eu?subject=${subject}&body=${body}`;
+            }
+            return;
+          }
           const subject = encodeURIComponent("AI integration project brief");
           const body = encodeURIComponent(brief);
           window.location.href = `mailto:jferre@ferretorres.eu?subject=${subject}&body=${body}`;

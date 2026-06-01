@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://ferretorres.eu/demo-company-brain.html">
     <meta property="og:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css?v=20260601-solutions2">
+    <link rel="stylesheet" href="styles.css?v=20260601-resolve">
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -48,18 +48,23 @@
           <div class="demo-panel">
             <p class="demo-label">Company Brain search</p>
             <h2>Ask across company knowledge with sources and permissions.</h2>
+            <div class="demo-controls" aria-label="Synthetic Company Brain queries">
+              <button type="button" data-brain-query="margin" aria-pressed="true">Finance review</button>
+              <button type="button" data-brain-query="contract" aria-pressed="false">Contract search</button>
+              <button type="button" data-brain-query="risk" aria-pressed="false">Project risk</button>
+            </div>
             <div class="demo-search">
-              <input value="Why did Q2 margin drop in the enterprise segment?" aria-label="Synthetic Company Brain search query" readonly>
+              <input id="brain-query" value="Why did Q2 margin drop in the enterprise segment?" aria-label="Synthetic Company Brain search query" readonly>
             </div>
             <div class="demo-result">
               <strong>Answer preview</strong>
-              <p>Margin pressure appears linked to implementation overruns in two large accounts and delayed price adjustments on renewal contracts.</p>
-              <small>Sources: Finance review, Delivery risk log, Pricing committee notes</small>
+              <p id="brain-answer">Margin pressure appears linked to implementation overruns in two large accounts and delayed price adjustments on renewal contracts.</p>
+              <small id="brain-sources">Sources: Finance review, Delivery risk log, Pricing committee notes</small>
             </div>
             <div class="demo-result">
               <strong>Suggested action</strong>
-              <p>Review the renewal pricing workflow and flag delivery overrun risk before monthly forecast updates.</p>
-              <span class="demo-status">Human review required</span>
+              <p id="brain-action">Review the renewal pricing workflow and flag delivery overrun risk before monthly forecast updates.</p>
+              <span class="demo-status" id="brain-status">Human review required</span>
             </div>
           </div>
           <aside class="demo-side" aria-label="Company Brain modules">
@@ -82,5 +87,46 @@
         </div>
       </section>
     </main>
+    <script>
+      (() => {
+        const queries = {
+          margin: {
+            query: "Why did Q2 margin drop in the enterprise segment?",
+            answer: "Margin pressure appears linked to implementation overruns in two large accounts and delayed price adjustments on renewal contracts.",
+            sources: "Sources: Finance review, Delivery risk log, Pricing committee notes",
+            action: "Review the renewal pricing workflow and flag delivery overrun risk before monthly forecast updates.",
+            status: "Human review required"
+          },
+          contract: {
+            query: "Which renewal contracts need compliance review this month?",
+            answer: "Three synthetic contracts match the review policy because renewal value, data-processing terms, or jurisdiction changed since the previous approval.",
+            sources: "Sources: Contract policy, Renewal register, Data-processing addendum",
+            action: "Route the contract set to legal review and attach the relevant policy excerpts.",
+            status: "Legal queue"
+          },
+          risk: {
+            query: "Which delivery risks changed since last leadership update?",
+            answer: "The highest-risk item moved from schedule uncertainty to vendor dependency after an integration milestone slipped by one week.",
+            sources: "Sources: Sprint notes, Vendor email, Risk register",
+            action: "Prepare an executive update with owner, mitigation path, and decision needed.",
+            status: "Leadership update"
+          }
+        };
+        const update = (key) => {
+          const item = queries[key];
+          document.querySelector("#brain-query").value = item.query;
+          document.querySelector("#brain-answer").textContent = item.answer;
+          document.querySelector("#brain-sources").textContent = item.sources;
+          document.querySelector("#brain-action").textContent = item.action;
+          document.querySelector("#brain-status").textContent = item.status;
+          document.querySelectorAll("[data-brain-query]").forEach((button) => {
+            button.setAttribute("aria-pressed", String(button.dataset.brainQuery === key));
+          });
+        };
+        document.querySelectorAll("[data-brain-query]").forEach((button) => {
+          button.addEventListener("click", () => update(button.dataset.brainQuery));
+        });
+      })();
+    </script>
   </body>
 </html>

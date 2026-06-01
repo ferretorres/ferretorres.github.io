@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://ferretorres.eu/demo-rag-evaluation.html">
     <meta property="og:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css?v=20260601-solutions2">
+    <link rel="stylesheet" href="styles.css?v=20260601-resolve">
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -47,19 +47,24 @@
           <div class="demo-panel">
             <p class="demo-label">RAG test run</p>
             <h2>Evaluate answer quality, source coverage, and retrieval behavior.</h2>
+            <div class="demo-controls" aria-label="Synthetic RAG test scenarios">
+              <button type="button" data-rag-scenario="contracts" aria-pressed="true">Contracts</button>
+              <button type="button" data-rag-scenario="policies" aria-pressed="false">Policies</button>
+              <button type="button" data-rag-scenario="support" aria-pressed="false">Support knowledge</button>
+            </div>
             <div class="demo-metrics">
-              <div class="demo-metric"><span>87%</span><strong>Source match</strong><small>Target: 90%+</small></div>
-              <div class="demo-metric"><span>42 ms</span><strong>Search latency</strong><small>Vector + keyword</small></div>
-              <div class="demo-metric"><span>3</span><strong>Missing sources</strong><small>Need metadata cleanup</small></div>
+              <div class="demo-metric"><span id="rag-metric-1">87%</span><strong id="rag-label-1">Source match</strong><small id="rag-note-1">Target: 90%+</small></div>
+              <div class="demo-metric"><span id="rag-metric-2">42 ms</span><strong id="rag-label-2">Search latency</strong><small id="rag-note-2">Vector + keyword</small></div>
+              <div class="demo-metric"><span id="rag-metric-3">3</span><strong id="rag-label-3">Missing sources</strong><small id="rag-note-3">Need metadata cleanup</small></div>
             </div>
             <div class="demo-result">
               <strong>Test question</strong>
-              <p>Which contracts require compliance review before renewal?</p>
-              <small>Expected answer must cite contract policy and renewal workflow.</small>
+              <p id="rag-question">Which contracts require compliance review before renewal?</p>
+              <small id="rag-expected">Expected answer must cite contract policy and renewal workflow.</small>
             </div>
             <div class="demo-result">
               <strong>Evaluation note</strong>
-              <p>Retrieval finds the renewal policy but misses one regional exception. Add region metadata before pilot launch.</p>
+              <p id="rag-evaluation">Retrieval finds the renewal policy but misses one regional exception. Add region metadata before pilot launch.</p>
             </div>
           </div>
           <aside class="demo-side">
@@ -70,5 +75,46 @@
         </div>
       </section>
     </main>
+    <script>
+      (() => {
+        const scenarios = {
+          contracts: {
+            metrics: [["87%", "Source match", "Target: 90%+"], ["42 ms", "Search latency", "Vector + keyword"], ["3", "Missing sources", "Need metadata cleanup"]],
+            question: "Which contracts require compliance review before renewal?",
+            expected: "Expected answer must cite contract policy and renewal workflow.",
+            evaluation: "Retrieval finds the renewal policy but misses one regional exception. Add region metadata before pilot launch."
+          },
+          policies: {
+            metrics: [["93%", "Policy recall", "Approved source set"], ["2", "Conflicts", "Old policy copies"], ["98%", "Permission pass", "Role filter active"]],
+            question: "What approval is required before sharing customer data with a subprocesser?",
+            expected: "Expected answer must cite the data-processing policy and approval matrix.",
+            evaluation: "Answer quality is strong, but duplicated policy versions should be archived before rollout."
+          },
+          support: {
+            metrics: [["78%", "Answer coverage", "Needs article cleanup"], ["15", "Weak articles", "Low confidence"], ["6", "Escalation gaps", "No owner assigned"]],
+            question: "How should support handle repeated deployment failures for an enterprise account?",
+            expected: "Expected answer must cite troubleshooting steps and escalation policy.",
+            evaluation: "Retrieval exposes gaps in the support knowledge base. Add owner metadata and consolidate duplicated troubleshooting pages."
+          }
+        };
+        const update = (key) => {
+          const scenario = scenarios[key];
+          scenario.metrics.forEach(([value, label, note], index) => {
+            document.querySelector(`#rag-metric-${index + 1}`).textContent = value;
+            document.querySelector(`#rag-label-${index + 1}`).textContent = label;
+            document.querySelector(`#rag-note-${index + 1}`).textContent = note;
+          });
+          document.querySelector("#rag-question").textContent = scenario.question;
+          document.querySelector("#rag-expected").textContent = scenario.expected;
+          document.querySelector("#rag-evaluation").textContent = scenario.evaluation;
+          document.querySelectorAll("[data-rag-scenario]").forEach((button) => {
+            button.setAttribute("aria-pressed", String(button.dataset.ragScenario === key));
+          });
+        };
+        document.querySelectorAll("[data-rag-scenario]").forEach((button) => {
+          button.addEventListener("click", () => update(button.dataset.ragScenario));
+        });
+      })();
+    </script>
   </body>
 </html>

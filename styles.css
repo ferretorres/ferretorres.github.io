@@ -379,6 +379,10 @@ h3 {
   text-decoration: underline;
 }
 
+.light-link {
+  color: #9ff0d9;
+}
+
 .outcomes-section {
   background: var(--soft);
 }
@@ -687,6 +691,30 @@ h3 {
   color: var(--ink);
   font: inherit;
   padding: 12px 13px;
+}
+
+.demo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.demo-controls button {
+  border: 1px solid rgba(159, 240, 217, 0.28);
+  border-radius: 999px;
+  background: rgba(159, 240, 217, 0.1);
+  color: #d7fff3;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 850;
+  padding: 8px 11px;
+}
+
+.demo-controls button[aria-pressed="true"] {
+  background: #9ff0d9;
+  color: var(--green-strong);
 }
 
 .demo-result,
