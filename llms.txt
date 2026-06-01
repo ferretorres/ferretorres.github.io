@@ -11,6 +11,14 @@ Primary positioning:
 
 Core service pages:
 - https://ferretorres.eu/ai-consultancy.html
+- https://ferretorres.eu/ai-consultancy-netherlands.html
+- https://ferretorres.eu/ai-consultancy-europe.html
+- https://ferretorres.eu/rag-implementation-europe.html
+- https://ferretorres.eu/ai-consultancy-finance.html
+- https://ferretorres.eu/ai-consultancy-regulated-companies.html
+- https://ferretorres.eu/ai-consultancy-operations.html
+- https://ferretorres.eu/ai-solutions.html
+- https://ferretorres.eu/delivery-patterns.html
 - https://ferretorres.eu/company-brain.html
 - https://ferretorres.eu/rag-agentic-systems.html
 - https://ferretorres.eu/ai-software-engineering.html
