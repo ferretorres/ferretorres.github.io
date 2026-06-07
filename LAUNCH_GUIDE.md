@@ -22,6 +22,7 @@ This file is for manual launch tasks that cannot be completed from the static Gi
    - `https://ferretorres.eu/`
    - `https://ferretorres.eu/ai-consultancy.html`
    - `https://ferretorres.eu/ai-consulting-process.html`
+   - `https://ferretorres.eu/capability-statement.html`
    - `https://ferretorres.eu/ai-opportunity-assessment.html`
    - `https://ferretorres.eu/ai-integration-roadmap.html`
    - `https://ferretorres.eu/ai-consultancy-netherlands.html`
