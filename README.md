@@ -16,6 +16,7 @@ Public contact email: `jferre@ferretorres.eu`.
 
 - Manual launch and indexing tasks: `LAUNCH_GUIDE.md`
 - Owner completion tracker: `specs/site-completion-tracker.md`
+- Outreach and first-call sales guide: `SALES_PLAYBOOK.md`
 
 ## QA
 
