@@ -29,7 +29,7 @@
     <meta name="twitter:description" content="AI consulting for CEOs, CFOs, and CTOs: AI-first workflows, Company Brain systems, RAG, agents, finance dashboards, and production software.">
     <meta name="twitter:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:image:alt" content="AI-first company systems and dashboards connected through a central intelligence layer.">
-    <link rel="stylesheet" href="styles.css?v=20260607-roleform">
+    <link rel="stylesheet" href="styles.css?v=20260607-contact">
     <script>
       window.FERRE_SITE_CONFIG = {
         formEndpoint: "",
@@ -711,9 +711,9 @@
         <div class="section-inner final-grid">
           <div>
             <p class="section-kicker">Contact</p>
-            <h2 id="contact-title">Bring one high-value workflow. We will make it AI-first.</h2>
+            <h2 id="contact-title">Request a demo walkthrough or bring one workflow.</h2>
             <p class="contact-promise">
-              Start with one workflow. Validate value in an MVP or PoC. Scale what works.
+              Start with a concrete discussion: demo, assessment, roadmap, MVP, or architecture.
             </p>
           </div>
           <div class="contact-panel">
@@ -724,11 +724,11 @@
             <div class="contact-brief" aria-label="Project brief form">
               <div class="brief-head">
                 <div>
-                  <h3>30-second project brief</h3>
+                  <h3>30-second project or demo request</h3>
                   <p class="brief-note">
-                    Add the basics, then prepare an email draft. If an automatic form
-                    endpoint is connected later, the same brief can be submitted directly.
-                    Advanced context is optional.
+                    Add the basics, then prepare an email draft. Choose whether the
+                    discussion should start from a demo, opportunity assessment, roadmap,
+                    MVP, or technical review. Advanced context is optional.
                   </p>
                 </div>
                 <span>30s</span>
@@ -751,6 +751,18 @@
                     </select>
                   </label>
                   <label>
+                    Discussion type
+                    <select name="engagementType" required>
+                      <option value="">Choose focus</option>
+                      <option>Guided demo walkthrough</option>
+                      <option>AI opportunity assessment</option>
+                      <option>AI integration roadmap</option>
+                      <option>MVP or PoC build</option>
+                      <option>Architecture, RAG, or agents review</option>
+                      <option>Partnership or delivery team</option>
+                    </select>
+                  </label>
+                  <label>
                     Contact person and role
                     <input name="contact" autocomplete="name" required>
                   </label>
@@ -760,11 +772,11 @@
                   </label>
                   <label class="wide">
                     Workflow or opportunity
-                    <input name="workflow" placeholder="Finance reporting, legal review, operations..." required>
+                    <input name="workflow" placeholder="Finance reporting, RAG assistant, Company Brain, operations..." required>
                   </label>
                   <label class="wide">
-                    What should the first MVP or PoC prove?
-                    <textarea name="proof" rows="3" placeholder="The result, bottleneck, or decision this should improve."></textarea>
+                    What should the discussion or first MVP prove?
+                    <textarea name="proof" rows="3" placeholder="The demo angle, result, bottleneck, or decision this should improve."></textarea>
                   </label>
                   <label class="wide">
                     Target timeline
@@ -836,7 +848,7 @@
                 </details>
 
                 <div class="brief-actions">
-                  <button class="button button-primary" type="submit">Prepare 30-second brief</button>
+                  <button class="button button-primary" type="submit">Prepare request</button>
                   <button class="button button-light" id="generate-brief" type="button">Generate brief</button>
                 </div>
                 <label class="brief-output-wrap" id="brief-output-wrap" hidden>
@@ -853,8 +865,8 @@
               </form>
             </div>
             <div class="contact-actions">
-              <a class="button button-primary" href="mailto:jferre@ferretorres.eu?subject=Ferre%20Torres%20B.V.%20AI-first%20transformation">
-                Get in contact
+              <a class="button button-primary" href="mailto:jferre@ferretorres.eu?subject=Ferre%20Torres%20B.V.%20demo%20or%20AI%20project%20request">
+                Request demo or project discussion
               </a>
               <a class="button button-light" href="https://www.linkedin.com/in/josepferre/">
                 LinkedIn
@@ -879,11 +891,12 @@
         const fields = [
           ["Company", "company"],
           ["Buyer role", "buyerRole"],
+          ["Discussion type", "engagementType"],
           ["Contact person and role", "contact"],
           ["Contact email", "email"],
           ["Workflow or business area", "workflow"],
           ["Current bottleneck", "bottleneck"],
-          ["What should the first MVP or PoC prove?", "proof"],
+          ["What should the discussion or first MVP prove?", "proof"],
           ["Target timeline", "productionTime"],
           ["Success metrics", "metrics"],
           ["User groups", "users"],
@@ -910,10 +923,16 @@
             .join("\n");
         };
 
+        const buildSubject = () => {
+          const data = new FormData(form);
+          const focus = data.get("engagementType")?.toString().trim() || "AI integration";
+          return `${focus} request`;
+        };
+
         form.addEventListener("submit", async (event) => {
           event.preventDefault();
           if (!form.reportValidity()) {
-            setStatus("Add contact details and the workflow before preparing the brief.");
+            setStatus("Choose the focus, add contact details, and describe the workflow before preparing the request.");
             return;
           }
           const brief = buildBrief();
@@ -923,9 +942,9 @@
           if (endpoint) {
             const payload = new FormData(form);
             payload.set("brief", brief);
-            payload.set("_subject", "AI integration project brief");
+            payload.set("_subject", buildSubject());
             try {
-              setStatus("Sending brief...");
+              setStatus("Sending request...");
               const response = await fetch(endpoint, {
                 method: "POST",
                 body: payload,
@@ -937,13 +956,13 @@
               window.location.href = "contact-success.html";
             } catch (error) {
               setStatus("Automatic sending failed. Email draft opened as fallback.");
-              const subject = encodeURIComponent("AI integration project brief");
+              const subject = encodeURIComponent(buildSubject());
               const body = encodeURIComponent(brief);
               window.location.href = `mailto:jferre@ferretorres.eu?subject=${subject}&body=${body}`;
             }
             return;
           }
-          const subject = encodeURIComponent("AI integration project brief");
+          const subject = encodeURIComponent(buildSubject());
           const body = encodeURIComponent(brief);
           window.location.href = `mailto:jferre@ferretorres.eu?subject=${subject}&body=${body}`;
           setStatus("Email draft prepared. Review it and send it from your email client.");
@@ -951,7 +970,7 @@
 
         generateButton.addEventListener("click", () => {
           if (!form.reportValidity()) {
-            setStatus("Add contact details and the workflow before generating the brief.");
+            setStatus("Choose the focus, add contact details, and describe the workflow before generating the brief.");
             return;
           }
           const brief = buildBrief();

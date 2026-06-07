@@ -394,13 +394,18 @@ h2 {
   z-index: 1;
   display: grid;
   gap: 10px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .operating-label {
   color: var(--teal);
   font-size: 0.76rem;
   font-weight: 850;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .operating-node {
@@ -1791,6 +1796,8 @@ h3 {
 .brief-form input,
 .brief-form select,
 .brief-form textarea {
+  box-sizing: border-box;
+  min-width: 0;
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 6px;
@@ -1799,6 +1806,12 @@ h3 {
   font: inherit;
   font-size: 0.92rem;
   padding: 10px 11px;
+}
+
+.brief-form input,
+.brief-form select {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brief-form input:focus,
