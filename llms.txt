@@ -25,6 +25,7 @@ Core service pages:
 - https://ferretorres.eu/ai-consultancy-finance.html
 - https://ferretorres.eu/ai-finance-dashboard.html
 - https://ferretorres.eu/ai-consultancy-regulated-companies.html
+- https://ferretorres.eu/ai-security-gdpr.html
 - https://ferretorres.eu/ai-consultancy-operations.html
 - https://ferretorres.eu/ai-consulting-for-ceos.html
 - https://ferretorres.eu/ai-consulting-for-cfos.html
