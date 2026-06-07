@@ -1149,7 +1149,7 @@ h3 {
 
 .preview-chart {
   display: flex;
-  min-height: 126px;
+  height: 126px;
   align-items: end;
   gap: 10px;
 }
