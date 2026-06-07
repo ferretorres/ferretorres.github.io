@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://ferretorres.eu/demo-rag-evaluation.html">
     <meta property="og:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css?v=20260601-resolve">
+    <link rel="stylesheet" href="styles.css?v=20260607-rag-demo">
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -28,52 +28,99 @@
       </nav>
     </header>
     <main class="service-main">
-      <section class="subpage-hero">
-        <div class="section-inner">
-          <p class="eyebrow">Guided demo preview</p>
-          <h1>RAG evaluation before production rollout.</h1>
-          <p class="hero-lede">
-            This online preview shows the kind of quality surface a company can use
-            before expanding a RAG assistant. Request a guided demo meeting to discuss
-            your document sources, permissions, evaluation questions, and rollout path.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="mailto:jferre@ferretorres.eu?subject=Guided%20RAG%20evaluation%20demo%20meeting">Request a guided demo meeting</a>
-            <a class="button button-secondary dark" href="index.html#contact">Start a 30-second brief</a>
-            <a class="button button-secondary dark" href="rag-implementation-netherlands.html">Implementation page</a>
+      <section class="subpage-hero visual-hero">
+        <div class="section-inner demo-hero-grid">
+          <div>
+            <p class="eyebrow">Guided demo preview</p>
+            <h1>RAG evaluation before production rollout.</h1>
+            <p class="hero-lede">
+              This online preview shows the kind of quality surface a company can use
+              before expanding a RAG assistant. Request a guided demo meeting to discuss
+              your document sources, permissions, evaluation questions, and rollout path.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="mailto:jferre@ferretorres.eu?subject=Guided%20RAG%20evaluation%20demo%20meeting">Request a guided demo meeting</a>
+              <a class="button button-secondary dark" href="index.html#contact">Start a 30-second brief</a>
+              <a class="button button-secondary dark" href="rag-implementation-netherlands.html">Implementation page</a>
+            </div>
           </div>
+          <aside class="hero-product-preview" aria-label="Synthetic RAG evaluation hero preview">
+            <div class="demo-preview-screen preview-rag">
+              <div class="preview-window-head"><span></span><strong>RAG evaluation</strong><em>Synthetic preview</em></div>
+              <div class="preview-metrics"><b>87%</b><b>3 gaps</b><b>review</b></div>
+              <div class="preview-lines"><span></span><span></span><span></span></div>
+              <div class="preview-flow"><b>Question</b><b>Retrieve</b><b>Cite</b><b>Score</b></div>
+            </div>
+          </aside>
         </div>
       </section>
       <section class="section demo-section">
-        <div class="section-inner demo-shell">
-          <div class="demo-panel">
-            <p class="demo-label">RAG test run</p>
-            <h2>Evaluate answer quality, source coverage, and retrieval behavior.</h2>
-            <div class="demo-controls" aria-label="Synthetic RAG test scenarios">
-              <button type="button" data-rag-scenario="contracts" aria-pressed="true">Contracts</button>
-              <button type="button" data-rag-scenario="policies" aria-pressed="false">Policies</button>
-              <button type="button" data-rag-scenario="support" aria-pressed="false">Support knowledge</button>
-            </div>
-            <div class="demo-metrics">
-              <div class="demo-metric"><span id="rag-metric-1">87%</span><strong id="rag-label-1">Source match</strong><small id="rag-note-1">Target: 90%+</small></div>
-              <div class="demo-metric"><span id="rag-metric-2">42 ms</span><strong id="rag-label-2">Search latency</strong><small id="rag-note-2">Vector + keyword</small></div>
-              <div class="demo-metric"><span id="rag-metric-3">3</span><strong id="rag-label-3">Missing sources</strong><small id="rag-note-3">Need metadata cleanup</small></div>
-            </div>
-            <div class="demo-result">
-              <strong>Test question</strong>
-              <p id="rag-question">Which contracts require compliance review before renewal?</p>
-              <small id="rag-expected">Expected answer must cite contract policy and renewal workflow.</small>
-            </div>
-            <div class="demo-result">
-              <strong>Evaluation note</strong>
-              <p id="rag-evaluation">Retrieval finds the renewal policy but misses one regional exception. Add region metadata before pilot launch.</p>
-            </div>
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">Synthetic evaluation console</p>
+            <h2>RAG quality should be tested before users trust it.</h2>
+            <p>Use repeatable business questions to evaluate retrieval, citations, permissions, and reviewer confidence before production rollout.</p>
           </div>
-          <aside class="demo-side">
-            <div class="demo-card"><p class="demo-label">Quality</p><h3>Test sets</h3><p>Business questions become repeatable tests for retrieval quality and answer grounding.</p></div>
-            <div class="demo-card"><p class="demo-label">Governance</p><h3>Permissions</h3><p>Access checks prevent users from retrieving documents they should not see.</p></div>
-            <div class="demo-card"><p class="demo-label">Operations</p><h3>Monitoring</h3><p>Track failed questions, weak sources, and drift as documents change.</p></div>
-          </aside>
+          <div class="demo-shell demo-shell-wide">
+            <div class="demo-product" aria-label="Synthetic RAG evaluation console">
+              <div class="demo-window-bar">
+                <span></span><span></span><span></span>
+                <strong>RAG evaluation console</strong>
+                <em>Synthetic preview</em>
+              </div>
+              <div class="demo-product-grid">
+                <aside class="demo-source-rail" aria-label="Evaluation source set">
+                  <p class="demo-label">Source set</p>
+                  <div class="demo-source-card"><strong>Contract policy</strong><span>Authoritative renewal rules</span></div>
+                  <div class="demo-source-card"><strong>Renewal workflow</strong><span>Approvals and exceptions</span></div>
+                  <div class="demo-source-card"><strong>Permission matrix</strong><span>Role-based retrieval test</span></div>
+                  <div class="demo-source-card"><strong>Known failures</strong><span>Stale copies, missing metadata</span></div>
+                </aside>
+                <section class="demo-workspace" aria-label="RAG evaluation workspace">
+                  <div class="demo-controls" aria-label="Synthetic RAG test scenarios">
+                    <button type="button" data-rag-scenario="contracts" aria-pressed="true">Contracts</button>
+                    <button type="button" data-rag-scenario="policies" aria-pressed="false">Policies</button>
+                    <button type="button" data-rag-scenario="support" aria-pressed="false">Support knowledge</button>
+                  </div>
+                  <div class="demo-kpi-strip">
+                    <div><span id="rag-metric-1">87%</span><strong id="rag-label-1">Source match</strong><small id="rag-note-1">Target: 90%+</small></div>
+                    <div><span id="rag-metric-2">42 ms</span><strong id="rag-label-2">Search latency</strong><small id="rag-note-2">Vector + keyword</small></div>
+                    <div><span id="rag-metric-3">3</span><strong id="rag-label-3">Missing sources</strong><small id="rag-note-3">Need metadata cleanup</small></div>
+                  </div>
+                  <div class="demo-answer-card">
+                    <div>
+                      <p class="demo-label">Test question</p>
+                      <h3 id="rag-question">Which contracts require compliance review before renewal?</h3>
+                    </div>
+                    <small id="rag-expected">Expected answer must cite contract policy and renewal workflow.</small>
+                  </div>
+                  <div class="demo-flow" aria-label="RAG evaluation flow">
+                    <span>Question</span>
+                    <span>Retrieve</span>
+                    <span>Cite</span>
+                    <span>Review</span>
+                  </div>
+                </section>
+                <aside class="demo-inspector" aria-label="Quality gates and reviewer feedback">
+                  <p class="demo-label">Reviewer feedback</p>
+                  <div class="demo-approval-card">
+                    <strong>Evaluation note</strong>
+                    <p id="rag-evaluation">Retrieval finds the renewal policy but misses one regional exception. Add region metadata before pilot launch.</p>
+                  </div>
+                  <ul class="demo-signal-list">
+                    <li><span>Citation check</span><strong>Partial pass</strong></li>
+                    <li><span>Permission check</span><strong>Role filter active</strong></li>
+                    <li><span>Failure mode</span><strong>Missing metadata</strong></li>
+                  </ul>
+                </aside>
+              </div>
+            </div>
+            <aside class="demo-side">
+              <div class="demo-card"><p class="demo-label">Quality</p><h3>Test sets</h3><p>Business questions become repeatable tests for retrieval quality and answer grounding.</p></div>
+              <div class="demo-card"><p class="demo-label">Governance</p><h3>Permissions</h3><p>Access checks prevent users from retrieving documents they should not see.</p></div>
+              <div class="demo-card"><p class="demo-label">Scoping</p><h3>What to define</h3><p>Authoritative sources, expected answers, reviewer roles, pass criteria, and rollout monitoring.</p></div>
+            </aside>
+          </div>
         </div>
       </section>
     </main>
