@@ -14,17 +14,28 @@ This file is for manual launch tasks that cannot be completed from the static Gi
    - TTL: default or `3600`
 5. Verify in Search Console.
 6. Submit sitemap: `https://ferretorres.eu/sitemap.xml`
-7. Use URL Inspection and request indexing for:
+7. In Catalan UI, use:
+   - `Mapes del web` to submit only `sitemap.xml`.
+   - `Inspeccio d'URL` to request indexing for individual pages.
+8. If Search Console says the sitemap is HTML, the wrong URL was submitted as a sitemap. Remove that submitted entry and submit only `https://ferretorres.eu/sitemap.xml`.
+9. Use URL Inspection and request indexing for:
    - `https://ferretorres.eu/`
    - `https://ferretorres.eu/ai-consultancy.html`
+   - `https://ferretorres.eu/ai-opportunity-assessment.html`
+   - `https://ferretorres.eu/ai-integration-roadmap.html`
    - `https://ferretorres.eu/ai-consultancy-netherlands.html`
    - `https://ferretorres.eu/ai-consultancy-rotterdam.html`
    - `https://ferretorres.eu/ai-consultancy-amsterdam.html`
    - `https://ferretorres.eu/ai-transformation-netherlands.html`
+   - `https://ferretorres.eu/ai-consulting-for-ceos.html`
+   - `https://ferretorres.eu/ai-consulting-for-cfos.html`
+   - `https://ferretorres.eu/ai-consulting-for-ctos.html`
+   - `https://ferretorres.eu/ai-consulting-for-enterprises.html`
    - `https://ferretorres.eu/company-brain-for-companies.html`
    - `https://ferretorres.eu/rag-consultant-netherlands.html`
    - `https://ferretorres.eu/ai-automation-consulting-europe.html`
    - `https://ferretorres.eu/ai-solutions.html`
+   - `https://ferretorres.eu/ai-mvp-poc.html`
    - `https://ferretorres.eu/ai-demo-gallery.html`
    - `https://ferretorres.eu/ai-architecture.html`
    - `https://ferretorres.eu/delivery-patterns.html`
@@ -204,3 +215,39 @@ But buyers still need to understand implementation patterns:
 These anonymized pages describe the problem, workflow, data, governance, MVP path, and reusable system without exposing confidential client work.
 
 https://ferretorres.eu/delivery-patterns.html
+
+### Post 8: AI opportunity assessment
+
+Most companies have too many AI ideas and not enough clarity on which one should become a funded system.
+
+The useful first step is an AI opportunity assessment:
+
+- where is the workflow pain repeated?
+- which data and tools are already available?
+- who owns the business result?
+- what would prove value in an MVP?
+- what should not be built yet?
+
+That is the gap between AI pressure and a buildable plan.
+
+https://ferretorres.eu/ai-opportunity-assessment.html
+
+### Post 9: AI integration roadmap
+
+AI integration is not about adding a chatbot to every department.
+
+The real question is how AI connects to the company operating system:
+
+- workflows
+- data sources
+- dashboards
+- permissions
+- retrieval
+- agents
+- evaluations
+- monitoring
+- governance
+
+A practical roadmap should tell the company what to build first, what to validate, and what becomes reusable infrastructure.
+
+https://ferretorres.eu/ai-integration-roadmap.html
