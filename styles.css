@@ -40,6 +40,27 @@ a {
   color: inherit;
 }
 
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  transform: translateY(-140%);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--green-strong);
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  font-weight: 850;
+  text-decoration: none;
+  box-shadow: var(--shadow);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 3px solid rgba(159, 240, 217, 0.86);
+}
+
 .site-header {
   position: fixed;
   top: 0;
