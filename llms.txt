@@ -27,6 +27,10 @@ Core service pages:
 - https://ferretorres.eu/ai-solutions.html
 - https://ferretorres.eu/ai-architecture.html
 - https://ferretorres.eu/delivery-patterns.html
+- https://ferretorres.eu/regulated-knowledge-assistant-pattern.html
+- https://ferretorres.eu/finance-reporting-automation-pattern.html
+- https://ferretorres.eu/industrial-intelligence-pattern.html
+- https://ferretorres.eu/project-intelligence-assistant-pattern.html
 - https://ferretorres.eu/proof.html
 - https://ferretorres.eu/company-brain.html
 - https://ferretorres.eu/company-brain-for-companies.html

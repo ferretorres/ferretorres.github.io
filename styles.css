@@ -541,6 +541,30 @@ h3 {
   font-size: 1rem;
 }
 
+.pattern-fact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 14px;
+}
+
+.pattern-fact-grid div {
+  border: 1px solid rgba(15, 111, 95, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 22px;
+}
+
+.pattern-fact-grid strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--green-strong);
+}
+
+.pattern-fact-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
 .method-section {
   background: #eef5f0;
 }
