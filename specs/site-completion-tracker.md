@@ -216,12 +216,14 @@ Priority URL list:
 
 These are safe for Codex to tackle independently unless they cross a manual decision above.
 
-1. Add lightweight Open Graph preview image variants for key pages.
-2. Add a small `README.md` section pointing to `LAUNCH_GUIDE.md` and this tracker.
-3. Add a repeatable static QA script so the long validation commands live in one place.
-4. Add stronger internal links from demo pages back to `ai-mvp-poc.html`, `ai-security-gdpr.html`, and `index.html#contact` where relevant.
-5. Improve `proof.html` with a clearer "what evidence we need next" section while staying anonymized.
-6. Add a short LinkedIn post for the new `ai-security-gdpr.html` page in `LAUNCH_GUIDE.md`.
+| Item | Status | Notes |
+|---|---|---|
+| Add lightweight Open Graph preview image variants for key pages. | Done | Key sales, solution, demo, proof, security, architecture, finance, and RAG pages now use dedicated 1200x630 social cards. |
+| Add a small `README.md` section pointing to `LAUNCH_GUIDE.md` and this tracker. | Done | `README.md` now links the operating docs. |
+| Add a repeatable static QA script so the long validation commands live in one place. | Done | `scripts/check_site.py` validates metadata, JSON-LD, links, sitemap coverage, and basic accessibility markers. |
+| Add stronger internal links from demo pages back to `ai-mvp-poc.html`, `ai-security-gdpr.html`, and `index.html#contact` where relevant. | Done | Demo pages now connect previews to MVP/PoC, security/GDPR, and contact paths. |
+| Improve `proof.html` with a clearer "what evidence we need next" section while staying anonymized. | Done | Proof page now separates current public-safe proof from owner-approved evidence needed later. |
+| Add a short LinkedIn post for the new `ai-security-gdpr.html` page in `LAUNCH_GUIDE.md`. | Done | Launch guide includes the security/GDPR post draft. |
 
 ## Next recommended sequence
 
@@ -229,9 +231,8 @@ These are safe for Codex to tackle independently unless they cross a manual deci
 2. Owner: choose form endpoint provider or decide to stay email-only.
 3. Owner: choose analytics provider or decide to stay analytics-free.
 4. Owner: provide 2-3 anonymized proof notes.
-5. Codex: add QA script and README links.
-6. Codex: improve internal links and proof page based on owner inputs.
-7. Codex: add real demo assets when owner has screenshots/videos or approves synthetic interactive mockups.
+5. Codex: add real demo assets when owner has screenshots/videos or approves synthetic interactive mockups.
+6. Codex: expand SEO pages only after Search Console query data shows which terms have impressions.
 
 ## Notes
 

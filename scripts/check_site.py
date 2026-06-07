@@ -90,6 +90,18 @@ def check_local_links(errors: list[str]) -> None:
                     errors.append(f"{path.name}: missing local {attr} target {url}")
 
 
+def check_social_images(errors: list[str]) -> None:
+    for path in html_files():
+        content = read(path)
+        images = re.findall(r'<meta (?:property|name)="(?:og:image|twitter:image)" content="([^"]+)">', content)
+        for image in images:
+            if not image.startswith(SITE_HOST):
+                continue
+            local_path = image.removeprefix(SITE_HOST)
+            if not (ROOT / local_path).is_file():
+                errors.append(f"{path.name}: missing social image {image}")
+
+
 def check_sitemap(errors: list[str]) -> None:
     sitemap_path = ROOT / "sitemap.xml"
     if not sitemap_path.exists():
@@ -128,6 +140,7 @@ def main() -> int:
     check_seo_metadata(errors)
     check_json_ld(errors)
     check_local_links(errors)
+    check_social_images(errors)
     check_sitemap(errors)
     check_document_accessibility(errors)
 

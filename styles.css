@@ -1547,7 +1547,7 @@ h3 {
   content: "";
   position: absolute;
   top: 50%;
-  right: -9px;
+  right: 10px;
   z-index: 2;
   width: 8px;
   height: 8px;
@@ -2055,10 +2055,7 @@ h3 {
   }
 
   .diagram-stage:not(:last-child)::after {
-    top: auto;
-    right: 50%;
-    bottom: -9px;
-    transform: translateX(50%) rotate(135deg);
+    display: none;
   }
 
   .solution-card {

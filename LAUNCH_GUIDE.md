@@ -252,3 +252,21 @@ The real question is how AI connects to the company operating system:
 A practical roadmap should tell the company what to build first, what to validate, and what becomes reusable infrastructure.
 
 https://ferretorres.eu/ai-integration-roadmap.html
+
+### Post 10: Security and GDPR posture
+
+AI-first implementation needs to move fast, but it cannot ignore governance.
+
+For European companies, the useful questions are practical:
+
+- which data is processed?
+- where does it live?
+- who can access it?
+- which AI outputs need human review?
+- what should be logged?
+- which workflows need approval gates?
+- what happens when retrieval or an agent is wrong?
+
+I published the security and GDPR posture we use when scoping AI systems for companies in Europe.
+
+https://ferretorres.eu/ai-security-gdpr.html

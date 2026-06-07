@@ -24,3 +24,9 @@ Run static site checks before publishing changes:
 ```bash
 python3 scripts/check_site.py
 ```
+
+Regenerate social preview cards after changing the visual direction:
+
+```bash
+python3 scripts/generate_og_images.py
+```
