@@ -1334,6 +1334,103 @@ h3 {
   color: var(--muted);
 }
 
+.architecture-diagram-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.architecture-diagram-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  padding: clamp(22px, 4vw, 32px);
+  box-shadow: 0 14px 42px rgba(23, 32, 28, 0.06);
+}
+
+.diagram-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.diagram-head span {
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.diagram-head h3 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+}
+
+.architecture-diagram-card > p {
+  max-width: 800px;
+  margin: 14px 0 22px;
+  color: var(--muted);
+}
+
+.diagram-flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+.diagram-stage {
+  position: relative;
+  display: grid;
+  min-height: 92px;
+  align-items: center;
+  border: 1px solid rgba(23, 32, 28, 0.1);
+  border-radius: 8px;
+  background: #f8fbf7;
+  color: var(--ink);
+  padding: 14px;
+  font-size: 0.88rem;
+  font-weight: 780;
+}
+
+.diagram-stage:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -9px;
+  z-index: 2;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid rgba(15, 111, 95, 0.55);
+  border-right: 2px solid rgba(15, 111, 95, 0.55);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.diagram-stage.core {
+  border-color: rgba(15, 111, 95, 0.34);
+  background: rgba(15, 111, 95, 0.1);
+  color: var(--green-strong);
+}
+
+.diagram-stage.gate {
+  border-color: rgba(215, 132, 42, 0.36);
+  background: rgba(215, 132, 42, 0.12);
+  color: #69410f;
+}
+
+.diagram-points {
+  display: grid;
+  gap: 8px;
+  margin: 22px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.diagram-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
@@ -1730,6 +1827,21 @@ h3 {
 
   .operating-outputs {
     order: 3;
+  }
+
+  .diagram-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .diagram-stage {
+    min-height: auto;
+  }
+
+  .diagram-stage:not(:last-child)::after {
+    top: auto;
+    right: 50%;
+    bottom: -9px;
+    transform: translateX(50%) rotate(135deg);
   }
 
   .solution-card {
