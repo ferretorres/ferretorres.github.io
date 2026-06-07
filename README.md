@@ -15,6 +15,7 @@ Public contact email: `jferre@ferretorres.eu`.
 ## Operating docs
 
 - Manual launch and indexing tasks: `LAUNCH_GUIDE.md`
+- Short owner action checklist: `OWNER_ACTIONS.md`
 - Owner completion tracker: `specs/site-completion-tracker.md`
 - Outreach and first-call sales guide: `SALES_PLAYBOOK.md`
 - Proposal templates: `PROPOSAL_TEMPLATES.md`

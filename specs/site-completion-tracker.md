@@ -16,6 +16,7 @@ Purpose: keep track of manual inputs, missing proof, and future improvements tha
 - SEO pages: homepage, AI consultancy, AI consulting process, Netherlands/city pages, enterprise/CEO/CFO/CTO pages, AI opportunity assessment, AI integration roadmap, AI MVP/PoC, AI architecture, AI delivery model, AI security/GDPR, solution/demo/proof pages.
 - Demo state: synthetic guided preview pages and a guided-demo meeting page exist; production demo apps or live walkthrough videos are not embedded yet.
 - Proof state: anonymized implementation pattern pages exist; named client case studies, testimonials, logos, and quantified outcomes are not approved yet.
+- Owner actions: `OWNER_ACTIONS.md` lists manual account, proof, analytics, form, booking, pricing, and rollout decisions.
 - Sales enablement: `SALES_PLAYBOOK.md`, `PROPOSAL_TEMPLATES.md`, and `LEAD_INTAKE_CHECKLIST.md` exist for outreach, first calls, qualification, follow-up, and proposal drafting.
 
 ## Fix now
