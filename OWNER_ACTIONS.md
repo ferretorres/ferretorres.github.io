@@ -20,6 +20,7 @@ Priority URLs:
 - `https://ferretorres.eu/`
 - `https://ferretorres.eu/ai-consultancy.html`
 - `https://ferretorres.eu/ai-consulting-process.html`
+- `https://ferretorres.eu/ai-readiness-checklist.html`
 - `https://ferretorres.eu/ai-consulting-for-enterprises.html`
 - `https://ferretorres.eu/ai-consulting-for-ceos.html`
 - `https://ferretorres.eu/ai-consulting-for-cfos.html`

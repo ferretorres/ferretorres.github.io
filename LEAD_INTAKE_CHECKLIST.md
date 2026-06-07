@@ -55,8 +55,8 @@ The three things I would need to understand are:
 2. Which data or tools does that workflow depend on?
 3. What result would make an MVP worth continuing?
 
-If helpful, this page explains the process:
-https://ferretorres.eu/ai-consulting-process.html
+If helpful, this checklist shows what we need to know before scoping:
+https://ferretorres.eu/ai-readiness-checklist.html
 
 Best,
 Josep

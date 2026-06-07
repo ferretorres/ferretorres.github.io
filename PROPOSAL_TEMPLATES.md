@@ -36,7 +36,7 @@ The proposed engagement starts with [assessment / roadmap / MVP / architecture r
 
 3. Proposed starting route
 Recommended route:
-[AI opportunity assessment / AI integration roadmap / MVP or PoC / architecture review]
+[AI readiness check / AI opportunity assessment / AI integration roadmap / MVP or PoC / architecture review]
 
 Why this route:
 - [reason 1]
@@ -100,6 +100,30 @@ Phase 4: Scale decision
 10. Next step
 If this proposal matches the intended direction, the next step is to confirm scope, owner, data access path, timeline, and commercial terms.
 ```
+
+## Route 0: AI readiness check
+
+Use when the company has AI urgency but the workflow, owner, data, or success metric is still unclear.
+
+```text
+Recommended route: AI readiness check
+
+Objective:
+Clarify whether there is enough workflow ownership, data access, user involvement, security clarity, and measurable value to scope an assessment, roadmap, MVP, or no-build decision.
+
+Deliverables:
+- Readiness checklist across business, technical, security, usage, and scale dimensions
+- First workflow candidates
+- Missing inputs and blockers
+- Recommended next route
+
+Success criteria:
+- The company knows whether it is ready for an AI assessment, roadmap, or MVP.
+- The first serious conversation has enough detail to avoid a generic AI workshop.
+- Missing owners, data access, or security decisions are visible before build work starts.
+```
+
+Reference page: `https://ferretorres.eu/ai-readiness-checklist.html`
 
 ## Route 1: AI opportunity assessment
 

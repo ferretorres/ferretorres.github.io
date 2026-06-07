@@ -52,7 +52,7 @@ Most companies have too many AI ideas and not enough clarity on which one should
 Ferre Torres B.V. helps companies select one high-value workflow, build a narrow MVP or PoC, and scale only what proves useful.
 
 Useful starting point:
-https://ferretorres.eu/ai-consulting-process.html
+https://ferretorres.eu/ai-readiness-checklist.html
 
 If there is one workflow where reporting, decisions, knowledge, or coordination is slowing the company down, I can help assess whether it is a serious AI candidate.
 
@@ -167,6 +167,7 @@ Josep
 ## Page routing
 
 - General AI consulting: `https://ferretorres.eu/ai-consultancy.html`
+- AI readiness checklist: `https://ferretorres.eu/ai-readiness-checklist.html`
 - Consulting process: `https://ferretorres.eu/ai-consulting-process.html`
 - Enterprise buying path: `https://ferretorres.eu/ai-consulting-for-enterprises.html`
 - Delivery model: `https://ferretorres.eu/delivery-model.html`
