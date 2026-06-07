@@ -34,6 +34,7 @@ This file is for manual launch tasks that cannot be completed from the static Gi
    - `https://ferretorres.eu/ai-consulting-for-cfos.html`
    - `https://ferretorres.eu/ai-consulting-for-ctos.html`
    - `https://ferretorres.eu/ai-consulting-for-enterprises.html`
+   - `https://ferretorres.eu/enterprise-ai-rfp-checklist.html`
    - `https://ferretorres.eu/company-brain-for-companies.html`
    - `https://ferretorres.eu/rag-consultant-netherlands.html`
    - `https://ferretorres.eu/ai-automation-consulting-europe.html`

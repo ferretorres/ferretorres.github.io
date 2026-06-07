@@ -22,6 +22,7 @@ Core service pages:
 - https://ferretorres.eu/ai-transformation-netherlands.html
 - https://ferretorres.eu/ai-consultancy-europe.html
 - https://ferretorres.eu/ai-consulting-for-enterprises.html
+- https://ferretorres.eu/enterprise-ai-rfp-checklist.html
 - https://ferretorres.eu/rag-implementation-europe.html
 - https://ferretorres.eu/rag-implementation-netherlands.html
 - https://ferretorres.eu/rag-consultant-netherlands.html

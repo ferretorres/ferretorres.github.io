@@ -101,6 +101,27 @@ https://ferretorres.eu/guided-ai-demo.html
 
 If there is a workflow you are considering for AI, I can use the preview to scope what a practical MVP would need to prove.
 
+### Enterprise procurement
+
+Subject: AI implementation RFP questions
+
+Hi [Name],
+
+When companies evaluate AI consulting partners, the useful questions are usually not about who can show the best chatbot demo.
+
+They are about implementation:
+
+- which workflow will be improved first
+- which data and permissions are involved
+- how RAG or agents will be evaluated
+- what security and GDPR constraints apply
+- what proves the MVP can become production software
+
+I put the evaluation questions here:
+https://ferretorres.eu/enterprise-ai-rfp-checklist.html
+
+If you are comparing AI implementation partners, I can help make the first workflow and production path concrete.
+
 ## First-call agenda
 
 1. Buyer role and business pressure
@@ -170,6 +191,7 @@ Josep
 - AI readiness checklist: `https://ferretorres.eu/ai-readiness-checklist.html`
 - Consulting process: `https://ferretorres.eu/ai-consulting-process.html`
 - Enterprise buying path: `https://ferretorres.eu/ai-consulting-for-enterprises.html`
+- Enterprise RFP checklist: `https://ferretorres.eu/enterprise-ai-rfp-checklist.html`
 - Delivery model: `https://ferretorres.eu/delivery-model.html`
 - Guided demo: `https://ferretorres.eu/guided-ai-demo.html`
 - Demo gallery: `https://ferretorres.eu/ai-demo-gallery.html`

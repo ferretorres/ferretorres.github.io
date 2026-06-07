@@ -32,6 +32,7 @@ Priority URLs:
 - `https://ferretorres.eu/ai-architecture.html`
 - `https://ferretorres.eu/ai-security-gdpr.html`
 - `https://ferretorres.eu/delivery-model.html`
+- `https://ferretorres.eu/enterprise-ai-rfp-checklist.html`
 - `https://ferretorres.eu/guided-ai-demo.html`
 - `https://ferretorres.eu/ai-demo-gallery.html`
 - `https://ferretorres.eu/company-brain-for-companies.html`
