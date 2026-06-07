@@ -35,6 +35,7 @@ Core service pages:
 - https://ferretorres.eu/ai-software-engineering.html
 
 Guided demo preview pages:
+- https://ferretorres.eu/ai-demo-gallery.html
 - https://ferretorres.eu/demo-company-brain.html
 - https://ferretorres.eu/demo-rag-evaluation.html
 - https://ferretorres.eu/demo-finance-intelligence.html

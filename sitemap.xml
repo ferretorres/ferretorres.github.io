@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ferretorres.eu/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://ferretorres.eu/ai-consultancy.html</loc>
@@ -58,7 +58,7 @@
   </url>
   <url>
     <loc>https://ferretorres.eu/ai-solutions.html</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://ferretorres.eu/delivery-patterns.html</loc>
@@ -102,7 +102,11 @@
   </url>
   <url>
     <loc>https://ferretorres.eu/demo-company-brain.html</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
+  </url>
+  <url>
+    <loc>https://ferretorres.eu/ai-demo-gallery.html</loc>
+    <lastmod>2026-06-07</lastmod>
   </url>
   <url>
     <loc>https://ferretorres.eu/demo-rag-evaluation.html</loc>
