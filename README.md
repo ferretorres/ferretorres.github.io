@@ -11,3 +11,8 @@ Static landing page for Ferre Torres B.V., the Dutch B.V. for European AI-first 
 
 Custom domain: `ferretorres.eu`.
 Public contact email: `jferre@ferretorres.eu`.
+
+## Operating docs
+
+- Manual launch and indexing tasks: `LAUNCH_GUIDE.md`
+- Owner completion tracker: `specs/site-completion-tracker.md`

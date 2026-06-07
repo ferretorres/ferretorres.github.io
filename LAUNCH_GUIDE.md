@@ -36,6 +36,7 @@ This file is for manual launch tasks that cannot be completed from the static Gi
    - `https://ferretorres.eu/ai-automation-consulting-europe.html`
    - `https://ferretorres.eu/ai-solutions.html`
    - `https://ferretorres.eu/ai-mvp-poc.html`
+   - `https://ferretorres.eu/ai-security-gdpr.html`
    - `https://ferretorres.eu/ai-demo-gallery.html`
    - `https://ferretorres.eu/ai-architecture.html`
    - `https://ferretorres.eu/delivery-patterns.html`
