@@ -13,7 +13,7 @@ Purpose: keep track of manual inputs, missing proof, and future improvements tha
 - Contact email: `jferre@ferretorres.eu`.
 - Contact path: static form creates an email draft; no automatic form endpoint is connected yet.
 - Discovery files: `sitemap.xml`, `robots.txt`, and `llms.txt` exist.
-- SEO pages: homepage, AI consultancy, Netherlands/city pages, enterprise/CEO/CFO/CTO pages, AI opportunity assessment, AI integration roadmap, AI MVP/PoC, AI architecture, AI security/GDPR, solution/demo/proof pages.
+- SEO pages: homepage, AI consultancy, Netherlands/city pages, enterprise/CEO/CFO/CTO pages, AI opportunity assessment, AI integration roadmap, AI MVP/PoC, AI architecture, AI delivery model, AI security/GDPR, solution/demo/proof pages.
 - Demo state: synthetic guided preview pages exist; production demo apps or live walkthrough videos are not embedded yet.
 - Proof state: anonymized implementation pattern pages exist; named client case studies, testimonials, logos, and quantified outcomes are not approved yet.
 
@@ -130,6 +130,8 @@ Priority URL list:
 - Verification:
   - Review for overclaiming.
   - Confirm wording stays BV-only.
+
+Autonomous progress: `delivery-model.html` now explains the founder-led senior delivery model without naming collaborators or overstating capacity. Owner input is still needed if named profiles, bios, LinkedIn links, or explicit delivery capacity should be public.
 
 ### 6. Guided demo assets
 

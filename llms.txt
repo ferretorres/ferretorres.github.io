@@ -33,6 +33,7 @@ Core service pages:
 - https://ferretorres.eu/ai-solutions.html
 - https://ferretorres.eu/ai-mvp-poc.html
 - https://ferretorres.eu/ai-architecture.html
+- https://ferretorres.eu/delivery-model.html
 - https://ferretorres.eu/delivery-patterns.html
 - https://ferretorres.eu/regulated-knowledge-assistant-pattern.html
 - https://ferretorres.eu/finance-reporting-automation-pattern.html
