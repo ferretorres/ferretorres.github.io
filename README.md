@@ -16,3 +16,11 @@ Public contact email: `jferre@ferretorres.eu`.
 
 - Manual launch and indexing tasks: `LAUNCH_GUIDE.md`
 - Owner completion tracker: `specs/site-completion-tracker.md`
+
+## QA
+
+Run static site checks before publishing changes:
+
+```bash
+python3 scripts/check_site.py
+```
