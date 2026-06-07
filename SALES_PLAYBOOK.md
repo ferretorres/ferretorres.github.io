@@ -86,6 +86,21 @@ https://ferretorres.eu/ai-architecture.html
 
 If you have one workflow where the business wants AI but the production path is unclear, I can help map the MVP and architecture decision points.
 
+### AI implementation
+
+Subject: AI implementation beyond the workshop
+
+Hi [Name],
+
+Many companies have already done the AI strategy discussion. The harder step is implementation: selecting one workflow, connecting the right data, building the first working system, and deciding what deserves production investment.
+
+Ferre Torres B.V. helps companies implement RAG systems, agentic workflows, Company Brain architecture, finance intelligence, and AI-native internal tools.
+
+Implementation overview:
+https://ferretorres.eu/ai-implementation-services.html
+
+If there is one workflow where AI should move from idea to working software, I can help scope the first MVP and production path.
+
 ### Guided demo
 
 Subject: Guided AI demo for one workflow
@@ -188,6 +203,7 @@ Josep
 ## Page routing
 
 - General AI consulting: `https://ferretorres.eu/ai-consultancy.html`
+- AI implementation services: `https://ferretorres.eu/ai-implementation-services.html`
 - AI readiness checklist: `https://ferretorres.eu/ai-readiness-checklist.html`
 - Consulting process: `https://ferretorres.eu/ai-consulting-process.html`
 - Enterprise buying path: `https://ferretorres.eu/ai-consulting-for-enterprises.html`

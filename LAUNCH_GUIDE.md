@@ -21,6 +21,7 @@ This file is for manual launch tasks that cannot be completed from the static Gi
 9. Use URL Inspection and request indexing for:
    - `https://ferretorres.eu/`
    - `https://ferretorres.eu/ai-consultancy.html`
+   - `https://ferretorres.eu/ai-implementation-services.html`
    - `https://ferretorres.eu/ai-consulting-process.html`
    - `https://ferretorres.eu/capability-statement.html`
    - `https://ferretorres.eu/ai-readiness-checklist.html`

@@ -13,7 +13,7 @@ Purpose: keep track of manual inputs, missing proof, and future improvements tha
 - Contact email: `jferre@ferretorres.eu`.
 - Contact path: static form creates an email draft; no automatic form endpoint is connected yet.
 - Discovery files: `sitemap.xml`, `robots.txt`, and `llms.txt` exist.
-- SEO pages: homepage, AI consultancy, AI consulting process, AI capability statement, AI readiness checklist, enterprise AI RFP checklist, Netherlands/city pages, enterprise/CEO/CFO/CTO pages, AI opportunity assessment, AI integration roadmap, AI MVP/PoC, AI architecture, AI delivery model, AI security/GDPR, solution/demo/proof pages.
+- SEO pages: homepage, AI consultancy, AI implementation services, AI consulting process, AI capability statement, AI readiness checklist, enterprise AI RFP checklist, Netherlands/city pages, enterprise/CEO/CFO/CTO pages, AI opportunity assessment, AI integration roadmap, AI MVP/PoC, AI architecture, AI delivery model, AI security/GDPR, solution/demo/proof pages.
 - Demo state: synthetic guided preview pages and a guided-demo meeting page exist; production demo apps or live walkthrough videos are not embedded yet.
 - Proof state: anonymized implementation pattern pages exist; named client case studies, testimonials, logos, and quantified outcomes are not approved yet.
 - Owner actions: `OWNER_ACTIONS.md` lists manual account, proof, analytics, form, booking, pricing, and rollout decisions.
@@ -47,6 +47,7 @@ Priority URL list:
 
 - `https://ferretorres.eu/`
 - `https://ferretorres.eu/ai-consultancy.html`
+- `https://ferretorres.eu/ai-implementation-services.html`
 - `https://ferretorres.eu/ai-consulting-process.html`
 - `https://ferretorres.eu/ai-readiness-checklist.html`
 - `https://ferretorres.eu/ai-opportunity-assessment.html`
