@@ -29,7 +29,7 @@
     <meta name="twitter:description" content="AI consulting for CEOs, CFOs, and CTOs: AI-first workflows, Company Brain systems, RAG, agents, finance dashboards, and production software.">
     <meta name="twitter:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:image:alt" content="AI-first company systems and dashboards connected through a central intelligence layer.">
-    <link rel="stylesheet" href="styles.css?v=20260607-leaders">
+    <link rel="stylesheet" href="styles.css?v=20260607-roleform">
     <script>
       window.FERRE_SITE_CONFIG = {
         formEndpoint: "",
@@ -732,6 +732,17 @@
                     <input name="company" autocomplete="organization" required>
                   </label>
                   <label>
+                    Buyer role
+                    <select name="buyerRole" required>
+                      <option value="">Choose role</option>
+                      <option>CEO / Founder / COO</option>
+                      <option>CFO / Finance leader</option>
+                      <option>CTO / Technology leader</option>
+                      <option>Operations / Transformation leader</option>
+                      <option>Other decision-maker</option>
+                    </select>
+                  </label>
+                  <label>
                     Contact person and role
                     <input name="contact" autocomplete="name" required>
                   </label>
@@ -859,6 +870,7 @@
         const config = window.FERRE_SITE_CONFIG || {};
         const fields = [
           ["Company", "company"],
+          ["Buyer role", "buyerRole"],
           ["Contact person and role", "contact"],
           ["Contact email", "email"],
           ["Workflow or business area", "workflow"],

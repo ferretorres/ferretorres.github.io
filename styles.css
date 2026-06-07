@@ -1789,6 +1789,7 @@ h3 {
 }
 
 .brief-form input,
+.brief-form select,
 .brief-form textarea {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1801,6 +1802,7 @@ h3 {
 }
 
 .brief-form input:focus,
+.brief-form select:focus,
 .brief-form textarea:focus {
   border-color: rgba(159, 240, 217, 0.76);
   outline: 3px solid rgba(159, 240, 217, 0.18);
