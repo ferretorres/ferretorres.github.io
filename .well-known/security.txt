@@ -1,4 +1,4 @@
 Contact: mailto:jferre@ferretorres.eu
-Expires: 2027-06-07T00:00:00Z
+Expires: 2027-06-07T23:59:59+02:00
 Preferred-Languages: en
 Canonical: https://ferretorres.eu/.well-known/security.txt
