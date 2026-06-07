@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://ferretorres.eu/demo-ai-pm-assistant.html">
     <meta property="og:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css?v=20260601-resolve">
+    <link rel="stylesheet" href="styles.css?v=20260607-pm-demo">
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -28,43 +28,92 @@
       </nav>
     </header>
     <main class="service-main">
-      <section class="subpage-hero">
-        <div class="section-inner">
-          <p class="eyebrow">Guided demo preview</p>
-          <h1>AI PM assistant for delivery visibility.</h1>
-          <p class="hero-lede">
-            This online preview shows how project context, blockers, decisions, owners,
-            and status updates can become an operating view. Request a guided demo
-            meeting to discuss your delivery workflow and reporting rhythm.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="mailto:jferre@ferretorres.eu?subject=Guided%20AI%20PM%20assistant%20demo%20meeting">Request a guided demo meeting</a>
-            <a class="button button-secondary dark" href="index.html#contact">Start a 30-second brief</a>
-            <a class="button button-secondary dark" href="ai-consultancy-operations.html">Operations AI page</a>
+      <section class="subpage-hero visual-hero">
+        <div class="section-inner demo-hero-grid">
+          <div>
+            <p class="eyebrow">Guided demo preview</p>
+            <h1>AI PM assistant for delivery visibility.</h1>
+            <p class="hero-lede">
+              This online preview shows how project context, blockers, decisions, owners,
+              and status updates can become an operating view. Request a guided demo
+              meeting to discuss your delivery workflow and reporting rhythm.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="mailto:jferre@ferretorres.eu?subject=Guided%20AI%20PM%20assistant%20demo%20meeting">Request a guided demo meeting</a>
+              <a class="button button-secondary dark" href="index.html#contact">Start a 30-second brief</a>
+              <a class="button button-secondary dark" href="ai-consultancy-operations.html">Operations AI page</a>
+            </div>
           </div>
+          <aside class="hero-product-preview" aria-label="Synthetic AI PM assistant hero preview">
+            <div class="demo-preview-screen preview-pm">
+              <div class="preview-window-head"><span></span><strong>AI PM assistant</strong><em>Synthetic preview</em></div>
+              <div class="preview-roadmap"><i></i><i></i><i></i></div>
+              <div class="preview-lines"><span></span><span></span></div>
+              <div class="preview-flow"><b>Risk</b><b>Owner</b><b>Draft</b><b>Approve</b></div>
+            </div>
+          </aside>
         </div>
       </section>
       <section class="section demo-section">
-        <div class="section-inner demo-shell">
-          <div class="demo-panel">
-            <p class="demo-label">Delivery intelligence</p>
-            <h2>Project status without manual reporting drag.</h2>
-            <div class="demo-controls" aria-label="Synthetic AI PM scenarios">
-              <button type="button" data-pm-scenario="vendor" aria-pressed="true">Vendor risk</button>
-              <button type="button" data-pm-scenario="scope" aria-pressed="false">Scope change</button>
-              <button type="button" data-pm-scenario="budget" aria-pressed="false">Budget drift</button>
-            </div>
-            <div class="demo-workflow">
-              <div class="demo-step"><strong id="pm-title-1">Risk detected</strong><p id="pm-step-1">Integration dependency is slipping against the Q3 launch path.</p><small id="pm-note-1">Source: sprint notes, vendor email, dependency tracker</small></div>
-              <div class="demo-step"><strong id="pm-title-2">Decision needed</strong><p id="pm-step-2">Confirm whether to reduce launch scope or move the vendor milestone.</p><small id="pm-note-2">Owner: CTO and delivery lead</small></div>
-              <div class="demo-step"><strong id="pm-title-3">Draft update</strong><p id="pm-step-3">Executive summary prepared with blocker, options, risk level, and next action.</p><span class="demo-status" id="pm-status">Ready for review</span></div>
-            </div>
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">Synthetic project cockpit</p>
+            <h2>Project intelligence should show risks, owners, and the next decision.</h2>
+            <p>The assistant drafts status and next steps, but stakeholder communication stays behind human approval.</p>
           </div>
-          <aside class="demo-side">
-            <div class="demo-card"><p class="demo-label">Inputs</p><h3>Meetings, tickets, docs</h3><p>Pull delivery context from the tools teams already use.</p></div>
-            <div class="demo-card"><p class="demo-label">Outputs</p><h3>Risks and decisions</h3><p>Surface blockers, owners, decisions, and unresolved assumptions.</p></div>
-            <div class="demo-card"><p class="demo-label">Outcome</p><h3>Less status theatre</h3><p>Give leadership useful signals instead of manually assembled updates.</p></div>
-          </aside>
+          <div class="demo-shell demo-shell-wide">
+            <div class="demo-product" aria-label="Synthetic AI PM assistant cockpit">
+              <div class="demo-window-bar">
+                <span></span><span></span><span></span>
+                <strong>AI PM assistant cockpit</strong>
+                <em>Synthetic preview</em>
+              </div>
+              <div class="demo-product-grid">
+                <aside class="demo-source-rail" aria-label="Project source systems">
+                  <p class="demo-label">Project context</p>
+                  <div class="demo-source-card"><strong>Meeting memory</strong><span>Decisions, actions, unresolved questions</span></div>
+                  <div class="demo-source-card"><strong>Tickets and roadmap</strong><span>Milestones, owners, blocked work</span></div>
+                  <div class="demo-source-card"><strong>Risk register</strong><span>Severity, mitigation, escalation path</span></div>
+                  <div class="demo-source-card"><strong>Stakeholder updates</strong><span>Drafts, approvals, distribution</span></div>
+                </aside>
+                <section class="demo-workspace" aria-label="AI PM assistant workflow">
+                  <div class="demo-controls" aria-label="Synthetic AI PM scenarios">
+                    <button type="button" data-pm-scenario="vendor" aria-pressed="true">Vendor risk</button>
+                    <button type="button" data-pm-scenario="scope" aria-pressed="false">Scope change</button>
+                    <button type="button" data-pm-scenario="budget" aria-pressed="false">Budget drift</button>
+                  </div>
+                  <div class="demo-source-rail">
+                    <div class="demo-source-card"><strong id="pm-title-1">Risk detected</strong><span id="pm-step-1">Integration dependency is slipping against the Q3 launch path.</span><span id="pm-note-1">Source: sprint notes, vendor email, dependency tracker</span></div>
+                    <div class="demo-source-card"><strong id="pm-title-2">Decision needed</strong><span id="pm-step-2">Confirm whether to reduce launch scope or move the vendor milestone.</span><span id="pm-note-2">Owner: CTO and delivery lead</span></div>
+                    <div class="demo-source-card"><strong id="pm-title-3">Draft update</strong><span id="pm-step-3">Executive summary prepared with blocker, options, risk level, and next action.</span></div>
+                  </div>
+                  <div class="demo-flow" aria-label="AI PM assistant control flow">
+                    <span>Collect</span>
+                    <span>Detect</span>
+                    <span>Draft</span>
+                    <span>Approve</span>
+                  </div>
+                </section>
+                <aside class="demo-inspector" aria-label="Stakeholder approval and scoping">
+                  <p class="demo-label">Human approval</p>
+                  <div class="demo-approval-card">
+                    <strong id="pm-status">Ready for review</strong>
+                    <p>Stakeholder update stays draft-only until the owner approves wording, risk level, and next action.</p>
+                  </div>
+                  <ul class="demo-signal-list">
+                    <li><span>Users</span><strong>Leadership and delivery</strong></li>
+                    <li><span>Usage</span><strong>Weekly status rhythm</strong></li>
+                    <li><span>Governance</span><strong>Approval before send</strong></li>
+                  </ul>
+                </aside>
+              </div>
+            </div>
+            <aside class="demo-side">
+              <div class="demo-card"><p class="demo-label">Inputs</p><h3>Meetings, tickets, docs</h3><p>Pull delivery context from the tools teams already use.</p></div>
+              <div class="demo-card"><p class="demo-label">Outputs</p><h3>Risks and decisions</h3><p>Surface blockers, owners, decisions, and unresolved assumptions.</p></div>
+              <div class="demo-card"><p class="demo-label">Scoping</p><h3>What to define</h3><p>Project volume, tools, user groups, reporting cadence, and governance rules.</p></div>
+            </aside>
+          </div>
         </div>
       </section>
     </main>
