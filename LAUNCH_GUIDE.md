@@ -25,6 +25,13 @@ This file is for manual launch tasks that cannot be completed from the static Gi
    - `https://ferretorres.eu/rag-consultant-netherlands.html`
    - `https://ferretorres.eu/ai-automation-consulting-europe.html`
    - `https://ferretorres.eu/ai-solutions.html`
+   - `https://ferretorres.eu/ai-demo-gallery.html`
+   - `https://ferretorres.eu/ai-architecture.html`
+   - `https://ferretorres.eu/delivery-patterns.html`
+   - `https://ferretorres.eu/regulated-knowledge-assistant-pattern.html`
+   - `https://ferretorres.eu/finance-reporting-automation-pattern.html`
+   - `https://ferretorres.eu/industrial-intelligence-pattern.html`
+   - `https://ferretorres.eu/project-intelligence-assistant-pattern.html`
 
 ## 2. Form capture
 
@@ -165,3 +172,35 @@ They operate inside a workflow:
 That is where agentic AI becomes useful for companies.
 
 https://ferretorres.eu/agentic-ai-workflows.html
+
+### Post 6: Technical architecture
+
+AI demos are useful, but technical buyers need to understand the operating architecture:
+
+- data connectors
+- permissions
+- retrieval and vector search
+- evaluation
+- orchestration
+- approval gates
+- monitoring
+- audit trails
+
+I published the high-level architecture patterns we use when scoping AI systems for companies.
+
+https://ferretorres.eu/ai-architecture.html
+
+### Post 7: Proof patterns
+
+Not every project can become a named public case study.
+
+But buyers still need to understand implementation patterns:
+
+- regulated knowledge assistants
+- finance reporting automation
+- industrial intelligence
+- project intelligence assistants
+
+These anonymized pages describe the problem, workflow, data, governance, MVP path, and reusable system without exposing confidential client work.
+
+https://ferretorres.eu/delivery-patterns.html
