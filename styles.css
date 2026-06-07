@@ -1765,6 +1765,54 @@ h3 {
   font-size: 0.9rem !important;
 }
 
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 38px var(--page-margin);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.footer-brand {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--white);
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.footer-company p {
+  max-width: 520px;
+  margin: 0 0 8px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.92rem;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  font-size: 0.88rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible,
+.footer-brand:hover,
+.footer-brand:focus-visible {
+  color: #9ff0d9;
+}
+
 .legal {
   margin-top: 28px !important;
   font-size: 0.86rem !important;
@@ -1884,7 +1932,12 @@ h3 {
     display: grid;
   }
 
+  .footer-grid,
   .brief-core {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
     grid-template-columns: 1fr;
   }
 
