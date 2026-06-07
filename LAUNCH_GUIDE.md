@@ -21,6 +21,7 @@ This file is for manual launch tasks that cannot be completed from the static Gi
 9. Use URL Inspection and request indexing for:
    - `https://ferretorres.eu/`
    - `https://ferretorres.eu/ai-consultancy.html`
+   - `https://ferretorres.eu/ai-consulting-process.html`
    - `https://ferretorres.eu/ai-opportunity-assessment.html`
    - `https://ferretorres.eu/ai-integration-roadmap.html`
    - `https://ferretorres.eu/ai-consultancy-netherlands.html`
@@ -37,6 +38,8 @@ This file is for manual launch tasks that cannot be completed from the static Gi
    - `https://ferretorres.eu/ai-solutions.html`
    - `https://ferretorres.eu/ai-mvp-poc.html`
    - `https://ferretorres.eu/ai-security-gdpr.html`
+   - `https://ferretorres.eu/delivery-model.html`
+   - `https://ferretorres.eu/guided-ai-demo.html`
    - `https://ferretorres.eu/ai-demo-gallery.html`
    - `https://ferretorres.eu/ai-architecture.html`
    - `https://ferretorres.eu/delivery-patterns.html`
@@ -270,3 +273,55 @@ For European companies, the useful questions are practical:
 I published the security and GDPR posture we use when scoping AI systems for companies in Europe.
 
 https://ferretorres.eu/ai-security-gdpr.html
+
+### Post 11: AI consulting process
+
+Most AI projects become vague because the starting point is too broad.
+
+The process that works better:
+
+- choose one workflow
+- identify the business owner
+- map the data and tools
+- define what the MVP must prove
+- build narrowly
+- measure usefulness
+- scale only what proves value
+
+I published the AI consulting process we use to move from first discussion to MVP and production decision.
+
+https://ferretorres.eu/ai-consulting-process.html
+
+### Post 12: Delivery model
+
+Enterprise AI delivery does not always need a large generic consultancy bench.
+
+It needs:
+
+- accountable senior technical ownership
+- the right implementation network
+- a clear workflow owner
+- product and data execution
+- security and governance thinking
+- a path from MVP to production
+
+I wrote down how Ferre Torres B.V. structures founder-led AI delivery for companies.
+
+https://ferretorres.eu/delivery-model.html
+
+### Post 13: Guided AI demo meeting
+
+An AI demo should not be a product tour.
+
+It should answer:
+
+- which workflow matters?
+- which data exists?
+- who owns the outcome?
+- what would the first MVP prove?
+- what security or architecture constraints matter?
+- should this become a production system?
+
+I added a guided demo page so companies can use the synthetic previews to start a real business and technical discussion.
+
+https://ferretorres.eu/guided-ai-demo.html

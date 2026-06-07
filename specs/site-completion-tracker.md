@@ -45,6 +45,7 @@ Priority URL list:
 
 - `https://ferretorres.eu/`
 - `https://ferretorres.eu/ai-consultancy.html`
+- `https://ferretorres.eu/ai-consulting-process.html`
 - `https://ferretorres.eu/ai-opportunity-assessment.html`
 - `https://ferretorres.eu/ai-integration-roadmap.html`
 - `https://ferretorres.eu/ai-mvp-poc.html`
@@ -57,7 +58,9 @@ Priority URL list:
 - `https://ferretorres.eu/company-brain-for-companies.html`
 - `https://ferretorres.eu/rag-consultant-netherlands.html`
 - `https://ferretorres.eu/ai-demo-gallery.html`
+- `https://ferretorres.eu/guided-ai-demo.html`
 - `https://ferretorres.eu/ai-architecture.html`
+- `https://ferretorres.eu/delivery-model.html`
 - `https://ferretorres.eu/delivery-patterns.html`
 
 ### 2. Contact form endpoint
