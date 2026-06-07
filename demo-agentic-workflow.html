@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://ferretorres.eu/demo-agentic-workflow.html">
     <meta property="og:image" content="https://ferretorres.eu/assets/company-brain-hero.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles.css?v=20260601-resolve">
+    <link rel="stylesheet" href="styles.css?v=20260607-agent-demo">
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -28,44 +28,86 @@
       </nav>
     </header>
     <main class="service-main">
-      <section class="subpage-hero">
-        <div class="section-inner">
-          <p class="eyebrow">Guided demo preview</p>
-          <h1>Agentic workflow with human control points.</h1>
-          <p class="hero-lede">
-            This online preview shows how an AI workflow can classify an input, retrieve
-            context, draft actions, use tools, and escalate decisions. Request a guided
-            demo meeting to map the pattern to one of your workflows.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="mailto:jferre@ferretorres.eu?subject=Guided%20agentic%20workflow%20demo%20meeting">Request a guided demo meeting</a>
-            <a class="button button-secondary dark" href="index.html#contact">Start a 30-second brief</a>
-            <a class="button button-secondary dark" href="agentic-ai-workflows.html">Implementation page</a>
+      <section class="subpage-hero visual-hero">
+        <div class="section-inner demo-hero-grid">
+          <div>
+            <p class="eyebrow">Guided demo preview</p>
+            <h1>Agentic workflow with human control points.</h1>
+            <p class="hero-lede">
+              This online preview shows how an AI workflow can classify an input, retrieve
+              context, draft actions, use tools, and escalate decisions. Request a guided
+              demo meeting to map the pattern to one of your workflows.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="mailto:jferre@ferretorres.eu?subject=Guided%20agentic%20workflow%20demo%20meeting">Request a guided demo meeting</a>
+              <a class="button button-secondary dark" href="index.html#contact">Start a 30-second brief</a>
+              <a class="button button-secondary dark" href="agentic-ai-workflows.html">Implementation page</a>
+            </div>
           </div>
+          <aside class="hero-product-preview" aria-label="Synthetic agentic workflow hero preview">
+            <div class="demo-preview-screen preview-agent">
+              <div class="preview-window-head"><span></span><strong>Agentic workflow</strong><em>Synthetic preview</em></div>
+              <div class="preview-flow"><b>Draft</b><b>Tool</b><b>Review</b><b>Audit</b></div>
+              <div class="preview-lines"><span></span><span></span><span></span></div>
+            </div>
+          </aside>
         </div>
       </section>
       <section class="section demo-section">
-        <div class="section-inner demo-shell">
-          <div class="demo-panel">
-            <p class="demo-label">Agent run</p>
-            <h2>Controlled automation over a repeated business process.</h2>
-            <div class="demo-controls" aria-label="Synthetic agentic workflow scenarios">
-              <button type="button" data-agent-scenario="renewal" aria-pressed="true">Renewal risk</button>
-              <button type="button" data-agent-scenario="invoice" aria-pressed="false">Invoice exception</button>
-              <button type="button" data-agent-scenario="support" aria-pressed="false">Support escalation</button>
-            </div>
-            <div class="demo-workflow">
-              <div class="demo-step"><strong id="agent-title-1">1. Classify request</strong><p id="agent-step-1">Customer renewal risk detected from email and CRM context.</p><small id="agent-note-1">Confidence: high</small></div>
-              <div class="demo-step"><strong id="agent-title-2">2. Retrieve context</strong><p id="agent-step-2">Agent finds contract terms, last support tickets, usage drop, and open invoice status.</p><small id="agent-note-2">Sources: CRM, support desk, finance system</small></div>
-              <div class="demo-step"><strong id="agent-title-3">3. Draft action</strong><p id="agent-step-3">Prepare account manager brief and suggested renewal path.</p><span class="demo-status" id="agent-status">Needs approval</span></div>
-              <div class="demo-step"><strong id="agent-title-4">4. Escalate exception</strong><p id="agent-step-4">Finance hold blocks automated next step. Route to owner.</p><small id="agent-note-4">Audit trail recorded</small></div>
-            </div>
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <p class="section-kicker">Synthetic workflow control panel</p>
+            <h2>Agents should operate inside explicit tool, approval, and audit boundaries.</h2>
+            <p>This preview shows agents as workflow participants: they classify, retrieve, draft, use tools, and escalate under defined controls.</p>
           </div>
-          <aside class="demo-side">
-            <div class="demo-card"><p class="demo-label">Tools</p><h3>Connected systems</h3><p>Agents become useful when connected to real systems through controlled tool use.</p></div>
-            <div class="demo-card"><p class="demo-label">Controls</p><h3>Human review</h3><p>Risky actions stay behind approval gates and escalation rules.</p></div>
-            <div class="demo-card"><p class="demo-label">Scale</p><h3>Reusable patterns</h3><p>Once one workflow works, the same control pattern can expand to adjacent processes.</p></div>
-          </aside>
+          <div class="demo-shell demo-shell-wide">
+            <div class="demo-product" aria-label="Synthetic agentic workflow control panel">
+              <div class="demo-window-bar">
+                <span></span><span></span><span></span>
+                <strong>Agentic workflow control panel</strong>
+                <em>Synthetic preview</em>
+              </div>
+              <div class="demo-product-grid">
+                <aside class="demo-source-rail" aria-label="Agent tool access">
+                  <p class="demo-label">Tool policy</p>
+                  <div class="demo-source-card"><strong>CRM lookup</strong><span>Read-only customer context</span></div>
+                  <div class="demo-source-card"><strong>Support desk</strong><span>Retrieve tickets and SLA state</span></div>
+                  <div class="demo-source-card"><strong>Finance system</strong><span>Check invoice status, no write access</span></div>
+                  <div class="demo-source-card"><strong>Email draft</strong><span>Draft-only, approval before send</span></div>
+                </aside>
+                <section class="demo-workspace" aria-label="Agentic workflow run">
+                  <div class="demo-controls" aria-label="Synthetic agentic workflow scenarios">
+                    <button type="button" data-agent-scenario="renewal" aria-pressed="true">Renewal risk</button>
+                    <button type="button" data-agent-scenario="invoice" aria-pressed="false">Invoice exception</button>
+                    <button type="button" data-agent-scenario="support" aria-pressed="false">Support escalation</button>
+                  </div>
+                  <div class="demo-source-rail">
+                    <div class="demo-source-card"><strong id="agent-title-1">1. Classify request</strong><span id="agent-step-1">Customer renewal risk detected from email and CRM context.</span><span id="agent-note-1">Confidence: high</span></div>
+                    <div class="demo-source-card"><strong id="agent-title-2">2. Retrieve context</strong><span id="agent-step-2">Agent finds contract terms, last support tickets, usage drop, and open invoice status.</span><span id="agent-note-2">Sources: CRM, support desk, finance system</span></div>
+                    <div class="demo-source-card"><strong id="agent-title-3">3. Draft action</strong><span id="agent-step-3">Prepare account manager brief and suggested renewal path.</span></div>
+                    <div class="demo-source-card"><strong id="agent-title-4">4. Escalate exception</strong><span id="agent-step-4">Finance hold blocks automated next step. Route to owner.</span><span id="agent-note-4">Audit trail recorded</span></div>
+                  </div>
+                </section>
+                <aside class="demo-inspector" aria-label="Agent approvals and audit trail">
+                  <p class="demo-label">Control state</p>
+                  <div class="demo-approval-card">
+                    <strong id="agent-status">Needs approval</strong>
+                    <p>Risky or external actions remain draft-only until the owner approves the next step.</p>
+                  </div>
+                  <ul class="demo-signal-list">
+                    <li><span>Approval gate</span><strong>Before external action</strong></li>
+                    <li><span>Exception handling</span><strong>Owner route required</strong></li>
+                    <li><span>Audit trail</span><strong>Inputs and tools logged</strong></li>
+                  </ul>
+                </aside>
+              </div>
+            </div>
+            <aside class="demo-side">
+              <div class="demo-card"><p class="demo-label">Tools</p><h3>Connected systems</h3><p>Agents become useful when connected to real systems through controlled tool use.</p></div>
+              <div class="demo-card"><p class="demo-label">Controls</p><h3>Human review</h3><p>Risky actions stay behind approval gates and escalation rules.</p></div>
+              <div class="demo-card"><p class="demo-label">Scoping</p><h3>What to define</h3><p>Tools, permissions, user roles, confidence thresholds, and escalation rules.</p></div>
+            </aside>
+          </div>
         </div>
       </section>
     </main>
