@@ -1238,12 +1238,14 @@ h3 {
 }
 
 .demo-flow span {
+  min-width: 0;
   border: 1px solid rgba(15, 111, 95, 0.16);
   border-radius: 999px;
   background: rgba(15, 111, 95, 0.08);
   color: var(--green-strong);
   font-size: 0.76rem;
   font-weight: 850;
+  overflow-wrap: anywhere;
   padding: 7px 9px;
   text-align: center;
 }
