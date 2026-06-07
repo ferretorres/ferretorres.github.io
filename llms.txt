@@ -28,6 +28,7 @@ Core service pages:
 - https://ferretorres.eu/ai-consulting-for-cfos.html
 - https://ferretorres.eu/ai-consulting-for-ctos.html
 - https://ferretorres.eu/ai-solutions.html
+- https://ferretorres.eu/ai-mvp-poc.html
 - https://ferretorres.eu/ai-architecture.html
 - https://ferretorres.eu/delivery-patterns.html
 - https://ferretorres.eu/regulated-knowledge-assistant-pattern.html
