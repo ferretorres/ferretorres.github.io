@@ -2166,27 +2166,34 @@ h3 {
 
 @media (max-width: 720px) {
   html {
-    scroll-padding-top: 116px;
+    scroll-padding-top: 142px;
   }
 
   .site-header {
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .brand span:last-child {
-    display: none;
+    display: inline;
   }
 
   nav {
-    max-width: 250px;
+    width: 100%;
+    max-width: none;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 10px 16px;
+    justify-content: flex-start;
+    gap: 8px 15px;
+    font-size: 0.84rem;
   }
 
   .hero {
     min-height: 100svh;
-    padding: 122px 0 38px;
+    padding: 150px 0 38px;
   }
 
   .hero-content {
@@ -2195,7 +2202,7 @@ h3 {
   }
 
   main > section {
-    scroll-margin-top: 116px;
+    scroll-margin-top: 142px;
   }
 
   h1 {
