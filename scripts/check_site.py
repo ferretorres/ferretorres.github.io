@@ -90,6 +90,21 @@ def check_local_links(errors: list[str]) -> None:
                     errors.append(f"{path.name}: missing local {attr} target {url}")
 
 
+def check_security_metadata(errors: list[str]) -> None:
+    for path in html_files():
+        content = read(path)
+        if '<meta name="referrer" content="strict-origin-when-cross-origin">' not in content:
+            errors.append(f"{path.name}: referrer policy missing")
+
+        insecure_assets = []
+        for attr in ("href", "src"):
+            insecure_assets.extend(
+                url for url in re.findall(attr + r'="([^"]+)"', content) if url.startswith("http://")
+            )
+        if insecure_assets:
+            errors.append(f"{path.name}: insecure asset URL(s): {', '.join(insecure_assets)}")
+
+
 def check_social_images(errors: list[str]) -> None:
     for path in html_files():
         content = read(path)
@@ -140,6 +155,7 @@ def main() -> int:
     check_seo_metadata(errors)
     check_json_ld(errors)
     check_local_links(errors)
+    check_security_metadata(errors)
     check_social_images(errors)
     check_sitemap(errors)
     check_document_accessibility(errors)

@@ -29,6 +29,11 @@ Run static site checks before publishing changes:
 python3 scripts/check_site.py
 ```
 
+The QA script also checks for insecure `http://` asset URLs and required
+referrer-policy metadata. For the public site, use `https://ferretorres.eu/`.
+The local preview URL `http://127.0.0.1:8010/` can appear as "Not secure" in
+the browser because it is a local HTTP development server.
+
 Regenerate social preview cards after changing the visual direction:
 
 ```bash
