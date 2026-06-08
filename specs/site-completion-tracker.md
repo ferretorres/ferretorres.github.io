@@ -1,6 +1,6 @@
 # Ferre Torres B.V. site completion tracker
 
-Last updated: 2026-06-07
+Last updated: 2026-06-08
 
 Purpose: keep track of manual inputs, missing proof, and future improvements that should not block the current site but matter before pushing harder to enterprise buyers.
 
@@ -16,6 +16,7 @@ Purpose: keep track of manual inputs, missing proof, and future improvements tha
 - SEO pages: homepage, AI consultancy, AI implementation services, AI consulting process, AI capability statement, AI readiness checklist, enterprise AI RFP checklist, Netherlands/city pages, enterprise/CEO/CFO/CTO pages, AI opportunity assessment, AI integration roadmap, AI MVP/PoC, AI architecture, AI delivery model, AI security/GDPR, solution/demo/proof pages.
 - Demo state: synthetic guided preview pages and a guided-demo meeting page exist; production demo apps or live walkthrough videos are not embedded yet.
 - Proof state: anonymized implementation pattern pages exist; named client case studies, testimonials, logos, and quantified outcomes are not approved yet.
+- Structured content state: priority AI consulting, implementation, MVP/PoC, roadmap, readiness, enterprise, RFP, software engineering, solution, homepage, and security/GDPR pages have visible FAQ sections aligned with FAQPage schema where used.
 - Owner actions: `OWNER_ACTIONS.md` lists manual account, proof, analytics, form, booking, pricing, and rollout decisions.
 - Sales enablement: `SALES_PLAYBOOK.md`, `PROPOSAL_TEMPLATES.md`, and `LEAD_INTAKE_CHECKLIST.md` exist for outreach, first calls, qualification, follow-up, and proposal drafting.
 
@@ -234,6 +235,8 @@ These are safe for Codex to tackle independently unless they cross a manual deci
 | Add stronger internal links from demo pages back to `ai-mvp-poc.html`, `ai-security-gdpr.html`, and `index.html#contact` where relevant. | Done | Demo pages now connect previews to MVP/PoC, security/GDPR, and contact paths. |
 | Improve `proof.html` with a clearer "what evidence we need next" section while staying anonymized. | Done | Proof page now separates current public-safe proof from owner-approved evidence needed later. |
 | Add a short LinkedIn post for the new `ai-security-gdpr.html` page in `LAUNCH_GUIDE.md`. | Done | Launch guide includes the security/GDPR post draft. |
+| Align FAQPage structured data with visible FAQ content on high-intent SEO pages. | Done | Implementation, software engineering, MVP/PoC, enterprise, readiness, opportunity assessment, roadmap, consulting process, RFP, security/GDPR, solutions, consulting, and homepage pages now expose visible FAQ blocks where FAQ schema is used. |
+| Improve 404 recovery paths for high-intent visitors. | Done | 404 now routes visitors to AI consulting, implementation services, readiness, guided demo, contact, and homepage paths. |
 
 ## Next recommended sequence
 
