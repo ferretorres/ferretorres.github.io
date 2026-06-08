@@ -120,7 +120,7 @@ nav a:focus-visible {
 .hero {
   position: relative;
   display: grid;
-  min-height: min(820px, 88svh);
+  min-height: min(760px, 86svh);
   overflow: hidden;
   isolation: isolate;
 }
@@ -147,7 +147,7 @@ nav a:focus-visible {
 
 .hero-content {
   align-self: end;
-  width: min(820px, calc(100% - var(--page-margin) - var(--page-margin)));
+  width: min(760px, calc(100% - var(--page-margin) - var(--page-margin)));
   margin: 0 var(--page-margin) clamp(42px, 8vh, 92px);
   color: var(--white);
 }
@@ -180,15 +180,15 @@ h1 {
 }
 
 .hero h1 {
-  max-width: 720px;
-  font-size: clamp(3.25rem, 8.1vw, 7.2rem);
+  max-width: 680px;
+  font-size: clamp(3.25rem, 7.5vw, 6.7rem);
 }
 
 .hero-lede {
-  max-width: 640px;
+  max-width: 610px;
   margin: 26px 0 0;
   color: rgba(255, 255, 255, 0.88);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-size: clamp(1.12rem, 1.8vw, 1.32rem);
 }
 
 .hero-actions,
@@ -201,19 +201,13 @@ h1 {
 
 .home-hero-actions {
   align-items: flex-start;
-  gap: 12px 10px;
+  gap: 0;
 }
 
 .home-hero-actions .hero-main-action {
   flex: 0 1 auto;
   max-width: 100%;
   padding-inline: 22px;
-}
-
-.hero-action-break {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 0;
 }
 
 .hero-proof {
