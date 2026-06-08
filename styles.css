@@ -1877,193 +1877,107 @@ h3 {
   font-size: 1.08rem;
 }
 
-.contact-brief {
+.contact-choice-grid {
+  display: grid;
+  gap: 12px;
   margin-top: 26px;
+}
+
+.contact-choice-card,
+.contact-direct-card {
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.07));
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.13);
+}
+
+.contact-choice-card {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  min-height: 154px;
   padding: 22px;
+  text-decoration: none;
 }
 
-.brief-head {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 18px;
+.contact-choice-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: 4px;
+  border-radius: 8px 8px 0 0;
+  background: rgba(159, 240, 217, 0.36);
 }
 
-.brief-head h3 {
-  margin: 0 0 6px;
-  color: var(--white);
-  font-size: 1.08rem;
+.contact-choice-card.primary-choice::before {
+  background: linear-gradient(90deg, #9ff0d9, var(--teal));
 }
 
-.brief-head span {
-  flex: 0 0 auto;
-  border: 1px solid rgba(159, 240, 217, 0.3);
-  border-radius: 999px;
-  background: rgba(159, 240, 217, 0.12);
+.contact-choice-card span,
+.contact-direct-card span {
   color: #9ff0d9;
   font-size: 0.78rem;
   font-weight: 850;
-  padding: 5px 9px;
+  text-transform: uppercase;
 }
 
-.brief-note {
-  margin: 0 !important;
-  color: rgba(255, 255, 255, 0.72) !important;
-  font-size: 0.92rem !important;
-}
-
-.brief-form {
-  display: grid;
-  gap: 18px;
-}
-
-.brief-fields {
-  display: grid;
-  gap: 14px;
-}
-
-.brief-core {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.brief-core .wide {
-  grid-column: 1 / -1;
-}
-
-.brief-section {
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
-  padding: 14px;
-}
-
-.brief-section h3 {
-  margin: 0 0 10px;
+.contact-choice-card strong {
   color: var(--white);
-  font-size: 1rem;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.08;
 }
 
-.brief-form label {
-  display: grid;
-  gap: 7px;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 0.84rem;
-  font-weight: 760;
+.contact-choice-card p {
+  max-width: 560px;
 }
 
-.brief-form input,
-.brief-form select,
-.brief-form textarea {
-  box-sizing: border-box;
-  min-width: 0;
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--ink);
-  font: inherit;
-  font-size: 0.92rem;
-  padding: 10px 11px;
+.contact-choice-card:hover,
+.contact-choice-card:focus-visible,
+.contact-direct-card:focus-within {
+  border-color: rgba(159, 240, 217, 0.45);
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.18);
 }
 
-.brief-form input,
-.brief-form select {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.brief-form input:focus,
-.brief-form select:focus,
-.brief-form textarea:focus {
-  border-color: rgba(159, 240, 217, 0.76);
-  outline: 3px solid rgba(159, 240, 217, 0.18);
-}
-
-.brief-form textarea {
-  resize: vertical;
-}
-
-.advanced-brief {
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.advanced-brief summary {
+.contact-direct-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
-  cursor: pointer;
-  list-style: none;
-  padding: 15px 16px;
+  gap: 18px;
+  margin-top: 14px;
+  padding: 18px 20px;
 }
 
-.advanced-brief summary::-webkit-details-marker {
-  display: none;
-}
-
-.advanced-brief summary span {
-  color: var(--white);
-  font-size: 0.95rem;
-  font-weight: 850;
-}
-
-.advanced-brief summary small {
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 0.78rem;
-  font-weight: 760;
-}
-
-.advanced-brief summary::after {
-  content: "+";
-  display: inline-grid;
-  width: 24px;
-  height: 24px;
-  flex: 0 0 auto;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(159, 240, 217, 0.14);
-  color: #9ff0d9;
-  font-weight: 850;
-}
-
-.advanced-brief[open] summary::after {
-  content: "-";
-}
-
-.advanced-grid {
+.contact-direct-card div {
   display: grid;
-  gap: 14px;
-  padding: 0 16px 16px;
+  gap: 4px;
+  min-width: 0;
 }
 
-.brief-output {
-  min-height: 120px;
-  background: rgba(255, 255, 255, 0.86) !important;
+.contact-direct-card a {
+  color: var(--white);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-weight: 850;
+  overflow-wrap: anywhere;
+  text-decoration: none;
 }
 
-.brief-output-wrap[hidden] {
-  display: none;
+.contact-direct-card a:hover,
+.contact-direct-card a:focus-visible {
+  color: #9ff0d9;
 }
 
-.brief-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+.contact-direct-card .copy-email {
+  background: var(--white);
+  color: var(--green-strong);
 }
 
-.brief-status {
-  min-height: 1.35em;
-  color: #9ff0d9 !important;
-  font-size: 0.9rem !important;
+.contact-direct-card .copy-email:hover,
+.contact-direct-card .copy-email:focus-visible {
+  background: #9ff0d9;
+  color: var(--green-strong);
 }
 
 .site-footer {
@@ -2275,12 +2189,7 @@ h3 {
     width: 100%;
   }
 
-  .brief-head {
-    display: grid;
-  }
-
-  .footer-grid,
-  .brief-core {
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2327,7 +2236,7 @@ h3 {
     padding: 6px;
   }
 
-  .advanced-brief summary {
-    align-items: flex-start;
+  .contact-direct-card {
+    display: grid;
   }
 }
