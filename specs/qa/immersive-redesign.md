@@ -119,3 +119,21 @@ at `235ccf1`, but was not yet a successful custom-domain publication.
   authorized by the standing local-gate policy; direct publication was requested
   by the owner. Deploy assets before HTML, with the homepage last. Roll back via
   reviewed revert plus the same targeted overlay, without directory deletion.
+
+## FT monogram, 27 October 2026
+
+- Replaced the phi mark with a solid custom FT monogram, sharing a top bar and
+  a diagonal terminal. Monochrome plum and inverse ivory retain the palette.
+  Canonical SVG is 243 bytes; favicon, three workflow glyphs and ten social
+  cards use the same silhouette. The social generator reads canonical points.
+- Rendered size sheet inspected at 16, 24, 36, 64 and 160 pixels, with both
+  plum-on-ivory and inverse usage. Homepage and consultancy page pass loaded
+  logo checks at 375, 768 and 1440 pixels: no overflow, no header collision.
+  Logo home link works; browser console has no warnings/errors. Workflow cards
+  and a generated social card inspected. No style, behaviour or font changes.
+- All 51 changed public HTML pages version changed logo, workflow, favicon,
+  manifest, social and Organization.logo URLs with 20261027-ft. Static checks
+  cover all 52 pages. Homepage decoded resources total 98,060 bytes (<100 KB).
+- Scope excludes unrelated existing edits, private directories, and live legal
+  and application paths. Release source base ec32199; direct publication is
+  expressly authorized. Rollback uses a reviewed revert and targeted overlay.

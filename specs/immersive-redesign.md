@@ -81,3 +81,22 @@ serif treatment while retaining the visual workflow hierarchy and motion.
   selection and menu behavior, and valid versioned SEO image URLs.
 - Continue the authorized direct-publication workflow after review. Use only
   the active-host file overlay; retain the protected application and legal files.
+
+## FT monogram refinement
+
+The owner requested a more distinctive, professional and simple logo matching
+plum colours, with direct publication. Replace the phi glyph with a custom solid
+FT monogram: shared top bar, open counters and one diagonal terminal. Keep the
+company name and existing typography. This supersedes the earlier phi direction.
+
+- Apply one consistent silhouette to the header/footer, hero, workflow graphics,
+  favicon, manifest and social cards. Keep the palette and page behaviour.
+- Check recognition at 16/24/36 pixels, inverse use on plum, and loaded desktop
+  and mobile layouts. Keep all assets vector except existing social JPEG cards;
+  retain the 100 KB homepage budget. No dependencies or new font requests.
+- Version changed asset references, retain SEO metadata, and run the static site
+  gate, scoped Python checks and independent review. Publish committed public
+  files through the existing overlay, preserving live legal/privacy/application
+  paths. Risks: stale logos, small-size legibility, and unrelated-file overwrite.
+  Mitigations: version keys, rendered size checks and an explicit file allowlist.
+  Rollback: reviewed revert and the same overlay without deleting directories.

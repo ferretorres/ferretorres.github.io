@@ -6,6 +6,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 from textwrap import wrap
+from xml.etree import ElementTree
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -13,6 +14,13 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSET_DIR = ROOT / "assets"
 WIDTH = 1200
 HEIGHT = 630
+MONOGRAM_POINTS = tuple(
+    tuple(map(int, point.split(",")))
+    for point in ElementTree.parse(ASSET_DIR / "ferre-torres-mark.svg")
+    .findall("{http://www.w3.org/2000/svg}polygon")[0]
+    .attrib["points"]
+    .split()
+)
 
 
 @dataclass(frozen=True)
@@ -127,6 +135,17 @@ def rounded(
     draw.rounded_rectangle(box, radius=radius, fill=fill)
 
 
+def draw_monogram(
+    draw: ImageDraw.ImageDraw,
+    xy: tuple[int, int],
+    size: int,
+    fill: tuple[int, int, int],
+) -> None:
+    x, y = xy
+    points = [(x + px * size / 64, y + py * size / 64) for px, py in MONOGRAM_POINTS]
+    draw.polygon(points, fill=fill)
+
+
 def draw_wrapped(
     draw: ImageDraw.ImageDraw,
     text: str,
@@ -150,8 +169,7 @@ def render(card: Card, base: Image.Image) -> None:
     ink = (51, 38, 60)
     muted = (113, 100, 116)
     pale = (231, 214, 239)
-    draw.ellipse((68, 72, 108, 102), outline=ink, width=4)
-    draw.line((88, 60, 88, 114), fill=ink, width=4)
+    draw_monogram(draw, (56, 54), 64, ink)
     draw.text((128, 72), "Ferre Torres B.V.", font=font(26), fill=ink)
     draw.text((72, 162), card.eyebrow.upper(), font=font(16), fill=muted)
     title_y = 207
@@ -179,8 +197,7 @@ def render(card: Card, base: Image.Image) -> None:
     draw.ellipse((842, 164, 1164, 486), outline=(222, 210, 225), width=1)
     draw.ellipse((872, 195, 1134, 457), outline=(222, 210, 225), width=1)
     rounded(draw, (912, 246, 1094, 416), 42, pale)
-    draw.ellipse((952, 289, 1054, 370), outline=ink, width=7)
-    draw.line((1003, 265, 1003, 392), fill=ink, width=7)
+    draw_monogram(draw, (933, 261), 140, ink)
     draw.text((945, 549), "ferretorres.eu", font=font(19), fill=muted)
     output = ASSET_DIR / card.filename
     image.convert("RGB").save(

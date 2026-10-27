@@ -1,7 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <title>Ferre Torres phi mark</title>
-  <g stroke="#3c2945" stroke-width="4.5">
-    <ellipse cx="32" cy="32" rx="19" ry="15.5"/>
-    <path d="M32 6v52"/>
-  </g>
+  <title>Ferre Torres FT monogram</title>
+  <polygon points="10,10 54,10 44,20 43,20 43,54 33,54 33,20 20,20 20,30 29,30 29,40 20,40 20,54 10,54" fill="#3c2945"/>
 </svg>
