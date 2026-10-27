@@ -8,6 +8,7 @@ import re
 import sys
 from html import unescape
 from pathlib import Path
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_HOST = "https://ferretorres.eu/"
@@ -138,7 +139,7 @@ def check_social_images(errors: list[str]) -> None:
         for image in images:
             if not image.startswith(SITE_HOST):
                 continue
-            local_path = image.removeprefix(SITE_HOST)
+            local_path = urlsplit(image).path.lstrip("/")
             if not (ROOT / local_path).is_file():
                 errors.append(f"{path.name}: missing social image {image}")
 
@@ -199,7 +200,9 @@ def check_homepage_loading(errors: list[str]) -> None:
     content = read(ROOT / "index.html")
     resources = set(re.findall(r'<(?:img|script)\b[^>]*\bsrc="([^"]+)"', content))
     resources.update(
-        re.findall(r'<link rel="(?:stylesheet|icon|manifest)" href="([^"]+)"', content)
+        re.findall(
+            r'<link rel="(?:stylesheet|icon|manifest|preload)" href="([^"]+)"', content
+        )
     )
     total_bytes = len(content.encode("utf-8"))
     for resource in resources:

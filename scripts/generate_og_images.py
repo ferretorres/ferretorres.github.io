@@ -100,6 +100,7 @@ CARDS = (
 
 def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     candidates = (
+        str(ASSET_DIR / "fonts" / "ibm-plex-sans-medium-latin1.woff2"),
         "Avenir.ttc",
         "Helvetica.ttc",
         "Arial Bold.ttf" if bold else "Arial.ttf",
@@ -114,7 +115,7 @@ def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.Im
 
 
 def cover_image() -> Image.Image:
-    return Image.new("RGB", (WIDTH, HEIGHT), (249, 249, 243))
+    return Image.new("RGB", (WIDTH, HEIGHT), (250, 247, 242))
 
 
 def rounded(
@@ -146,9 +147,9 @@ def draw_wrapped(
 def render(card: Card, base: Image.Image) -> None:
     image = base.copy().convert("RGBA")
     draw = ImageDraw.Draw(image)
-    ink = (23, 47, 41)
-    muted = (78, 101, 74)
-    pale = (229, 237, 214)
+    ink = (51, 38, 60)
+    muted = (113, 100, 116)
+    pale = (231, 214, 239)
     draw.ellipse((68, 72, 108, 102), outline=ink, width=4)
     draw.line((88, 60, 88, 114), fill=ink, width=4)
     draw.text((128, 72), "Ferre Torres B.V.", font=font(26), fill=ink)
@@ -175,8 +176,8 @@ def render(card: Card, base: Image.Image) -> None:
         rounded(draw, (chip_x, 529, chip_x + width, 570), 11, pale)
         draw.text((chip_x + 16, 540), chip, font=chip_font, fill=ink)
         chip_x += width + 10
-    draw.ellipse((842, 164, 1164, 486), outline=(212, 223, 198), width=1)
-    draw.ellipse((872, 195, 1134, 457), outline=(212, 223, 198), width=1)
+    draw.ellipse((842, 164, 1164, 486), outline=(222, 210, 225), width=1)
+    draw.ellipse((872, 195, 1134, 457), outline=(222, 210, 225), width=1)
     rounded(draw, (912, 246, 1094, 416), 42, pale)
     draw.ellipse((952, 289, 1054, 370), outline=ink, width=7)
     draw.line((1003, 265, 1003, 392), fill=ink, width=7)
