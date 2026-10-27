@@ -58,3 +58,8 @@ Release risks to check: stale mixed CSS/HTML assets (version the changed assets)
 hidden or moving content (progressive enhancement and reduced-motion fallback),
 accidentally included workspace files (inspect staged-file allowlist). Rollback is
 the preceding public commit via a reviewed revert; no history rewrite.
+
+Live verification identified Hostinger as the active custom-domain host. Keep
+the GitHub Pages release as a mirror and publish a targeted website-file overlay
+to Hostinger. Preserve the separate application and existing legal pages; restore
+direct service URLs, retain old section entry points and version the favicon.

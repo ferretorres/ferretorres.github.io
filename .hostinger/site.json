@@ -1,0 +1,7 @@
+{
+  "domain": "ferretorres.eu",
+  "username": "u816161496",
+  "type": "static",
+  "deployment": "file-overlay",
+  "preservePaths": ["iih/", "_astro/", "og/", "legal.html", "privacy.html"]
+}
