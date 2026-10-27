@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" fill="none">
+  <defs>
+    <linearGradient id="paper" x2="640" y2="320" gradientUnits="userSpaceOnUse"><stop stop-color="#f8faf2"/><stop offset="1" stop-color="#dce7cb"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="638" height="318" rx="22" fill="url(#paper)" stroke="#bacbac"/>
+  <g stroke="#a4b895" stroke-width="2"><path d="M180 108h72q18 0 18 18v34h45M180 218h72q18 0 18-18v-40M419 160h36"/><path d="m447 154 8 6-8 6"/></g>
+  <g fill="#fcfdf8" stroke="#bccdb0"><rect x="34" y="65" width="150" height="84" rx="12"/><rect x="34" y="176" width="150" height="84" rx="12"/></g>
+  <g stroke="#6c8560" stroke-width="3" stroke-linecap="round"><path d="M55 87h19m-19 9h30m-30 9h24"/><path d="M55 200h20m-20 9h30"/></g>
+  <rect x="300" y="105" width="124" height="110" rx="28" fill="#173e32"/>
+  <g stroke="#e4edce" stroke-width="4"><ellipse cx="362" cy="157" rx="25" ry="20"/><path d="M362 125v64"/></g>
+  <rect x="456" y="98" width="150" height="124" rx="14" fill="#fcfdf8" stroke="#a9bf95"/>
+  <circle cx="531" cy="136" r="17" fill="#dce9bd"/><path d="m522 136 6 6 12-13" stroke="#416739" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Helvetica,Arial,sans-serif" text-anchor="middle" fill="#294c37">
+    <text x="109" y="129" font-size="15">Your workflow</text><text x="109" y="244" font-size="15">Your constraints</text>
+    <text x="362" y="242" font-size="14">Map the opportunity</text><text x="531" y="181" font-size="17">One useful start</text><text x="531" y="203" font-size="12" fill="#52694d">Agree what to prove</text>
+  </g>
+</svg>

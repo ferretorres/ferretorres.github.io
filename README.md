@@ -23,6 +23,19 @@ Public contact email: `jferre@ferretorres.eu`.
 
 ## QA
 
+The October 2026 visual refresh uses `assets/brand.css` across all pages,
+`assets/home.css` for the visual homepage, and dependency-free `assets/site.js`
+for navigation, workflow tabs, one-time section entrances, and email copying.
+Three small `assets/workflow-*.svg` illustrations load lazily. The homepage uses
+only the two dedicated stylesheets; secondary pages also retain `styles.css`. The custom vector identity
+lives in `assets/ferre-torres-mark.svg` and `favicon.svg`.
+
+Design scope: [immersive redesign spec](specs/immersive-redesign.md).
+Verification: [redesign QA](specs/qa/immersive-redesign.md).
+
+For a local preview, run `python3 -m http.server 8010 --bind 127.0.0.1` and
+open `http://127.0.0.1:8010/`. No build or dependency installation is needed.
+
 Run static site checks before publishing changes:
 
 ```bash

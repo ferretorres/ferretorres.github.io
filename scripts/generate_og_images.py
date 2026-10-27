@@ -7,12 +7,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from textwrap import wrap
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
-
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSET_DIR = ROOT / "assets"
-SOURCE = ASSET_DIR / "company-brain-hero.jpg"
 WIDTH = 1200
 HEIGHT = 630
 
@@ -100,7 +98,7 @@ CARDS = (
 )
 
 
-def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
+def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
     candidates = (
         "Avenir.ttc",
         "Helvetica.ttc",
@@ -116,24 +114,15 @@ def font(size: int, bold: bool = False) -> ImageFont.FreeTypeFont:
 
 
 def cover_image() -> Image.Image:
-    source = Image.open(SOURCE).convert("RGB")
-    src_ratio = source.width / source.height
-    target_ratio = WIDTH / HEIGHT
-    if src_ratio > target_ratio:
-        new_width = int(source.height * target_ratio)
-        left = (source.width - new_width) // 2
-        source = source.crop((left, 0, left + new_width, source.height))
-    else:
-        new_height = int(source.width / target_ratio)
-        top = (source.height - new_height) // 2
-        source = source.crop((0, top, source.width, top + new_height))
-    source = source.resize((WIDTH, HEIGHT), Image.Resampling.LANCZOS)
-    source = ImageEnhance.Contrast(source).enhance(1.08)
-    source = ImageEnhance.Color(source).enhance(0.78)
-    return source.filter(ImageFilter.GaussianBlur(radius=1.2))
+    return Image.new("RGB", (WIDTH, HEIGHT), (249, 249, 243))
 
 
-def rounded(draw: ImageDraw.ImageDraw, box: tuple[int, int, int, int], radius: int, fill: tuple[int, int, int, int]) -> None:
+def rounded(
+    draw: ImageDraw.ImageDraw,
+    box: tuple[int, int, int, int],
+    radius: int,
+    fill: tuple[int, int, int] | tuple[int, int, int, int],
+) -> None:
     draw.rounded_rectangle(box, radius=radius, fill=fill)
 
 
@@ -143,7 +132,7 @@ def draw_wrapped(
     xy: tuple[int, int],
     max_chars: int,
     line_gap: int,
-    font_obj: ImageFont.FreeTypeFont,
+    font_obj: ImageFont.FreeTypeFont | ImageFont.ImageFont,
     fill: tuple[int, int, int],
 ) -> int:
     x, y = xy
@@ -151,35 +140,51 @@ def draw_wrapped(
         draw.text((x, y), line, font=font_obj, fill=fill)
         bbox = draw.textbbox((x, y), line, font=font_obj)
         y += (bbox[3] - bbox[1]) + line_gap
-    return y
+    return int(y)
 
 
 def render(card: Card, base: Image.Image) -> None:
     image = base.copy().convert("RGBA")
-    overlay = Image.new("RGBA", (WIDTH, HEIGHT), (7, 14, 13, 148))
-    image.alpha_composite(overlay)
     draw = ImageDraw.Draw(image)
-
-    rounded(draw, (72, 70, 1128, 560), 28, (13, 24, 22, 214))
-    draw.line((72, 560, 1128, 560), fill=(73, 214, 124, 255), width=6)
-
-    draw.text((108, 104), card.eyebrow.upper(), font=font(24, bold=True), fill=(110, 235, 154))
-    draw.text((108, 144), card.title, font=font(62, bold=True), fill=(247, 250, 248))
-    y = draw_wrapped(draw, card.subtitle, (108, 300), 63, 12, font(31), (214, 224, 219))
-
-    chip_x = 108
-    chip_y = max(y + 28, 430)
-    chip_font = font(24, bold=True)
+    ink = (23, 47, 41)
+    muted = (78, 101, 74)
+    pale = (229, 237, 214)
+    draw.ellipse((68, 72, 108, 102), outline=ink, width=4)
+    draw.line((88, 60, 88, 114), fill=ink, width=4)
+    draw.text((128, 72), "Ferre Torres B.V.", font=font(26), fill=ink)
+    draw.text((72, 162), card.eyebrow.upper(), font=font(16), fill=muted)
+    title_y = 207
+    title_font = font(58)
+    line = ""
+    for word in card.title.split():
+        candidate = f"{line} {word}".strip()
+        if draw.textlength(candidate, font=title_font) > 740 and line:
+            draw.text((68, title_y), line, font=title_font, fill=ink)
+            title_y += 69
+            line = word
+        else:
+            line = candidate
+    draw.text((68, title_y), line, font=title_font, fill=ink)
+    draw_wrapped(
+        draw, card.subtitle, (72, max(title_y + 88, 386)), 64, 14, font(24), muted
+    )
+    chip_x = 72
+    chip_font = font(18)
     for chip in card.chips:
-        bbox = draw.textbbox((0, 0), chip, font=chip_font)
-        width = bbox[2] - bbox[0] + 42
-        rounded(draw, (chip_x, chip_y, chip_x + width, chip_y + 48), 24, (31, 75, 51, 235))
-        draw.text((chip_x + 21, chip_y + 10), chip, font=chip_font, fill=(220, 250, 230))
-        chip_x += width + 14
-
-    draw.text((920, 512), "ferretorres.eu", font=font(25, bold=True), fill=(176, 198, 190))
+        width = int(draw.textlength(chip, font=chip_font)) + 32
+        rounded(draw, (chip_x, 529, chip_x + width, 570), 11, pale)
+        draw.text((chip_x + 16, 540), chip, font=chip_font, fill=ink)
+        chip_x += width + 10
+    draw.ellipse((842, 164, 1164, 486), outline=(212, 223, 198), width=1)
+    draw.ellipse((872, 195, 1134, 457), outline=(212, 223, 198), width=1)
+    rounded(draw, (912, 246, 1094, 416), 42, pale)
+    draw.ellipse((952, 289, 1054, 370), outline=ink, width=7)
+    draw.line((1003, 265, 1003, 392), fill=ink, width=7)
+    draw.text((945, 549), "ferretorres.eu", font=font(19), fill=muted)
     output = ASSET_DIR / card.filename
-    image.convert("RGB").save(output, "JPEG", quality=82, optimize=True, progressive=True)
+    image.convert("RGB").save(
+        output, "JPEG", quality=85, optimize=True, progressive=True
+    )
     print(output.relative_to(ROOT))
 
 
