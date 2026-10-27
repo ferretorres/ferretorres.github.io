@@ -63,3 +63,21 @@ Live verification identified Hostinger as the active custom-domain host. Keep
 the GitHub Pages release as a mirror and publish a targeted website-file overlay
 to Hostinger. Preserve the separate application and existing legal pages; restore
 direct service URLs, retain old section entry points and version the favicon.
+
+## Plum identity refinement
+
+The owner asked to replace the familiar green/blue AI palette and common
+typography with a pleasing purplish direction. Use warm ivory, muted plum,
+dusty lilac and a structured humanist display face. Replace the large italic
+serif treatment while retaining the visual workflow hierarchy and motion.
+
+- Apply the palette consistently to shared styles, homepage, vector identity,
+  workflow illustrations and social previews. Preserve content, URLs and behavior.
+- Use one original, unmodified IBM Plex Sans Medium Latin1 WOFF2 file (21,960
+  bytes, SIL OFL 1.1) for headings and brand text. Body text uses local humanist
+  system fonts. This supersedes the earlier no-font-download constraint; retain
+  the 100 KB homepage resource budget, now counting the preloaded font.
+- Verify readable contrast, loaded font, no desktop/mobile overflow, workflow
+  selection and menu behavior, and valid versioned SEO image URLs.
+- Continue the authorized direct-publication workflow after review. Use only
+  the active-host file overlay; retain the protected application and legal files.

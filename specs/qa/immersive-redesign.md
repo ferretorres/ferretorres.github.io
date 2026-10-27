@@ -88,3 +88,34 @@ at `235ccf1`, but was not yet a successful custom-domain publication.
   pages and the original server rules are saved locally under `tmp/`.
 - Publication gate: merged source plus live HTTPS content/asset hash checks,
   direct service routes, preserved legal routes, and unchanged subdomain health.
+
+## Plum identity, 27 October 2026
+
+- Warm ivory, deep plum and dusty lilac replace the green/blue identity across
+  shared and homepage styles, vectors, favicon and ten social previews. IBM Plex
+  Sans Medium replaces the italic serif headline; body text uses system fonts.
+- One original IBM Latin1 WOFF2 file (21,960 bytes), with SIL OFL notice. The font
+  is self-hosted and uses swap. Its preload matches the CSS URL.
+- The 100,000-byte homepage budget includes this font. The static checker now
+  counts preloads and resolves social image URLs with version queries. Before
+  the URI fix, versioned social URLs failed; the updated checker passes all 52
+  pages. Missing-file checks and the original budget remain enforced.
+- Browser: home, consultancy, solutions and Company Brain demo at 375, 768 and
+  1440 pixels. Loaded Plex font, no horizontal overflow, no header overlap and
+  no broken eager images in all 12 combinations. Workflow panels and SVG images
+  render; ArrowRight/Home switch panels. Enter opens the mobile menu, Escape
+  closes it and returns focus. Browser console has no warnings/errors.
+- Muted text was darkened to #716474 after contrast review: 4.75:1 on #f1ebf4
+  and 4.53:1 on #eee5f1. Dark panels receive a light focus-ring token; light
+  surfaces retain the dark ring. Forced-colors uses the system Highlight value.
+  Loaded reduced-motion and forced-color rules checked; full OS emulation is
+  unavailable in this browser, so no complete OS-mode claim is made.
+- Changed public assets use the plum version key, including legacy stylesheets
+  and social preview URLs. Protected live legal/privacy pages remain excluded.
+- Publication risks: cached mixed palettes, font-driven wrapping, and accidental
+  application overwrite. Mitigations: versioned URLs, loaded-font responsive
+  checks, and a committed-file overlay preserving application/legal paths.
+- Release source is a reviewed feature branch based on fbe5f6b. Rebase merge is
+  authorized by the standing local-gate policy; direct publication was requested
+  by the owner. Deploy assets before HTML, with the homepage last. Roll back via
+  reviewed revert plus the same targeted overlay, without directory deletion.
