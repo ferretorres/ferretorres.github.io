@@ -46,25 +46,15 @@ Acceptance criteria:
 - Priority URLs are discovered or queued for indexing.
 - No sitemap URL was submitted as an HTML page.
 
-## Priority 2: Form endpoint decision
+## Priority 2: Contact form delivery
 
-Goal: decide whether the static project brief should submit automatically or stay as email draft only.
+The existing Formspark connection has been recovered from the original site and
+verified with an inbox delivery test. The contact page offers direct submission,
+an email-app draft and Gmail composition. No new endpoint account is needed.
 
-Options:
-
-- Stay email-only for now.
-- Use Formspree, Basin, Tally, HubSpot, or another provider.
-
-Recommended first move:
-
-- Stay email-only until outreach starts or until a real missed lead risk appears.
-- If you want automatic capture, create a Formspree endpoint for `jferre@ferretorres.eu` and send Codex the endpoint URL.
-
-Acceptance criteria if automated:
-
-- Endpoint receives a test submission.
-- `privacy.html` names the provider and purpose.
-- The homepage form still has email fallback.
+Monitor Formspark quota, delivery notifications and spam as enquiry volume grows.
+Keep the established provider/mailbox retention policy applied. Revisit the
+connection after a delivery failure, quota warning or increased spam.
 
 ## Priority 3: Analytics decision
 
@@ -197,7 +187,7 @@ Acceptance criteria:
 
 Send any of:
 
-- Form endpoint URL.
+- Contact delivery or provider quota issues, if any.
 - Analytics script or provider choice.
 - 2-3 anonymized proof notes.
 - Collaborator/team wording decision.

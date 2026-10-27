@@ -40,6 +40,14 @@ lives in `assets/ferre-torres-mark.svg` and `favicon.svg`.
 Design scope: [immersive redesign spec](specs/immersive-redesign.md).
 Verification: [redesign QA](specs/qa/immersive-redesign.md).
 
+The contact page offers direct submission through the existing Formspark form,
+an email-app draft, and Gmail composition. The two draft options send only when
+the visitor presses Send in their own account, preserving their Sent history.
+See [contact scope](specs/contact-enquiry.md). Run `node --test scripts/contact.test.mjs`
+for message encoding, provider outcomes and error-state contracts. The live
+Hostinger privacy document already discloses Formspark; keep it preserved when
+deploying. The repository privacy page reflects the same contact data flow.
+
 For a local preview, run `python3 -m http.server 8010 --bind 127.0.0.1` and
 open `http://127.0.0.1:8010/`. No build or dependency installation is needed.
 

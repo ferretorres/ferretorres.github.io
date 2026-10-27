@@ -52,15 +52,20 @@ This file is for manual launch tasks that cannot be completed from the static Gi
    - `https://ferretorres.eu/industrial-intelligence-pattern.html`
    - `https://ferretorres.eu/project-intelligence-assistant-pattern.html`
 
-## 2. Form capture
+## 2. Contact enquiries
 
-Recommended first provider: Formspree.
+The contact page reuses the established Formspark connection from the original
+website, already named in the live privacy notice. It offers website submission,
+an email-app draft and Gmail composition. Drafts are sent by the visitor in
+their own account; direct website submissions do not enter their Sent folder.
 
-1. Go to https://formspree.io
-2. Create a form for `jferre@ferretorres.eu`.
-3. Copy the endpoint. It will look like `https://formspree.io/f/xxxxxxx`.
-4. Send the endpoint to Codex.
-5. Codex will add it to `window.FERRE_SITE_CONFIG.formEndpoint` and the form will submit automatically with email fallback.
+Verify actual delivery to `jferre@ferretorres.eu` after changing the connection.
+Run `node --test scripts/contact.test.mjs`, static site checks, and contact browser
+checks before publication. Keep distinct native success/error redirects and
+`_append=false` to exclude contact details from redirect URLs.
+
+Monitor provider quota and spam. Apply the existing privacy retention policy in
+Formspark and the business mailbox. See `specs/contact-enquiry.md`.
 
 ## 3. Analytics
 

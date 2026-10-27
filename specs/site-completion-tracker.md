@@ -19,7 +19,7 @@ Purpose: keep track of manual inputs, missing proof, and future improvements tha
 - Core positioning: AI consultancy for companies, AI-first transformation, Company Brain, RAG, agents, finance intelligence, AI-native internal software.
 - Entity scope: Ferre Torres B.V. only.
 - Contact email: `jferre@ferretorres.eu`.
-- Contact path: static form creates an email draft; no automatic form endpoint is connected yet.
+- Contact path: contact.html restores the existing Formspark endpoint, with email-app and Gmail choices; see contact-enquiry.md and its release evidence.
 - Discovery files: `sitemap.xml`, `robots.txt`, and `llms.txt` exist.
 - SEO pages: homepage, AI consultancy, AI implementation services, AI consulting process, AI capability statement, AI readiness checklist, enterprise AI RFP checklist, Netherlands/city pages, enterprise/CEO/CFO/CTO pages, AI opportunity assessment, AI integration roadmap, AI MVP/PoC, AI architecture, AI delivery model, AI security/GDPR, solution/demo/proof pages.
 - Demo state: synthetic guided preview pages and a guided-demo meeting page exist; production demo apps or live walkthrough videos are not embedded yet.
@@ -80,21 +80,15 @@ Priority URL list:
 ### 2. Contact form endpoint
 
 - Category: conversion / lead capture
-- Status: owner decision needed
-- Why not done: requires choosing a provider and creating an endpoint.
-- Risk if left: mailto fallback works, but some visitors may not complete the email draft.
-- Revisit trigger: before sending the site to a high-value campaign or after the first missed/uncertain lead.
-- Affected area/files: `index.html`, `privacy.html`, `LAUNCH_GUIDE.md`.
-- Dependencies/blockers: Formspree, Basin, Tally, HubSpot, or another approved form provider.
-- Acceptance criteria:
-  - Provider selected.
-  - Endpoint configured in `window.FERRE_SITE_CONFIG.formEndpoint`.
-  - Test submission reaches `jferre@ferretorres.eu`.
-  - Privacy page updated with provider and purpose.
-- Verification:
-  - Submit a test brief from the live site.
-  - Confirm success page or fallback behavior.
-  - Confirm no console errors.
+- Status: implemented in the contact-enquiry refinement; release verification recorded separately.
+- Existing provider: Formspark, recovered from the original public homepage and
+  already named in the preserved live privacy policy. Synthetic preflight
+  submission reached jferre@ferretorres.eu on 27 October 2026.
+- Choices: direct website submission, email-app draft, or Gmail composition.
+- No new account, SMTP credential, script dependency, tracking or storage.
+- Revisit trigger: a delivery failure, provider quota warning, or spam increase.
+- Verification: Node contract tests, invalid/pending/failure/success browser
+  states, script-free form path, and actual live inbox delivery.
 
 ### 3. Privacy-friendly analytics
 
@@ -249,7 +243,7 @@ These are safe for Codex to tackle independently unless they cross a manual deci
 ## Next recommended sequence
 
 1. Owner: submit sitemap and request indexing for priority URLs.
-2. Owner: choose form endpoint provider or decide to stay email-only.
+2. Owner: monitor existing Formspark quota and delivery when enquiry volume grows.
 3. Owner: choose analytics provider or decide to stay analytics-free.
 4. Owner: provide 2-3 anonymized proof notes.
 5. Codex: add real demo assets when owner has screenshots/videos or approves synthetic interactive mockups.
