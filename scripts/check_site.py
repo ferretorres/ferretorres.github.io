@@ -6,8 +6,8 @@ from __future__ import annotations
 import json
 import re
 import sys
+from html import unescape
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE_HOST = "https://ferretorres.eu/"
@@ -39,15 +39,23 @@ def check_seo_metadata(errors: list[str]) -> None:
         content = read(path)
         title = re.search(r"<title>([^<]+)</title>", content)
         if not title or not 10 <= len(title.group(1)) <= 60:
-            errors.append(f"{path.name}: title length {len(title.group(1)) if title else 0}")
+            errors.append(
+                f"{path.name}: title length {len(title.group(1)) if title else 0}"
+            )
 
         description = re.search(r'<meta name="description" content="([^"]*)">', content)
         if not is_noindex(content) and (
-            not description or len(description.group(1)) < 50 or len(description.group(1)) > 160
+            not description
+            or len(description.group(1)) < 50
+            or len(description.group(1)) > 160
         ):
-            errors.append(f"{path.name}: description length {len(description.group(1)) if description else 0}")
+            errors.append(
+                f"{path.name}: description length {len(description.group(1)) if description else 0}"
+            )
 
-        if not re.search(r'<link rel="canonical" href="https://ferretorres.eu/[^"]*">', content):
+        if not re.search(
+            r'<link rel="canonical" href="https://ferretorres.eu/[^"]*">', content
+        ):
             errors.append(f"{path.name}: canonical missing")
 
 
@@ -55,7 +63,11 @@ def check_json_ld(errors: list[str]) -> None:
     for path in html_files():
         content = read(path)
         for index, match in enumerate(
-            re.finditer(r'<script type="application/ld\+json">(.*?)</script>', content, re.S),
+            re.finditer(
+                r'<script type="application/ld\+json">(.*?)</script>',
+                content,
+                re.DOTALL,
+            ),
             start=1,
         ):
             try:
@@ -69,7 +81,11 @@ def local_asset_names() -> set[str]:
     files.update(STATIC_FILES)
     asset_dir = ROOT / "assets"
     if asset_dir.exists():
-        files.update(str(path.relative_to(ROOT)) for path in asset_dir.glob("*") if path.is_file())
+        files.update(
+            str(path.relative_to(ROOT))
+            for path in asset_dir.glob("*")
+            if path.is_file()
+        )
     return files
 
 
@@ -93,22 +109,32 @@ def check_local_links(errors: list[str]) -> None:
 def check_security_metadata(errors: list[str]) -> None:
     for path in html_files():
         content = read(path)
-        if '<meta name="referrer" content="strict-origin-when-cross-origin">' not in content:
+        if (
+            '<meta name="referrer" content="strict-origin-when-cross-origin">'
+            not in content
+        ):
             errors.append(f"{path.name}: referrer policy missing")
 
         insecure_assets = []
         for attr in ("href", "src"):
             insecure_assets.extend(
-                url for url in re.findall(attr + r'="([^"]+)"', content) if url.startswith("http://")
+                url
+                for url in re.findall(attr + r'="([^"]+)"', content)
+                if url.startswith("http://")
             )
         if insecure_assets:
-            errors.append(f"{path.name}: insecure asset URL(s): {', '.join(insecure_assets)}")
+            errors.append(
+                f"{path.name}: insecure asset URL(s): {', '.join(insecure_assets)}"
+            )
 
 
 def check_social_images(errors: list[str]) -> None:
     for path in html_files():
         content = read(path)
-        images = re.findall(r'<meta (?:property|name)="(?:og:image|twitter:image)" content="([^"]+)">', content)
+        images = re.findall(
+            r'<meta (?:property|name)="(?:og:image|twitter:image)" content="([^"]+)">',
+            content,
+        )
         for image in images:
             if not image.startswith(SITE_HOST):
                 continue
@@ -123,9 +149,7 @@ def check_sitemap(errors: list[str]) -> None:
         errors.append("sitemap.xml missing")
         return
 
-    indexable = {
-        path.name for path in html_files() if "noindex" not in read(path)
-    }
+    indexable = {path.name for path in html_files() if "noindex" not in read(path)}
     sitemap = read(sitemap_path)
     urls = set(re.findall(r"https://ferretorres\.eu/([^<]*)", sitemap))
     urls = {"index.html" if url == "" else url for url in urls}
@@ -150,6 +174,47 @@ def check_document_accessibility(errors: list[str]) -> None:
             errors.append(f"{path.name}: h1 count")
 
 
+def check_homepage_faq(errors: list[str]) -> None:
+    content = read(ROOT / "index.html")
+    visible = re.findall(
+        r"<details><summary>(.*?)</summary><p>(.*?)</p></details>", content, re.DOTALL
+    )
+    schemas = [
+        json.loads(match.group(1))
+        for match in re.finditer(
+            r'<script type="application/ld\+json">(.*?)</script>', content, re.DOTALL
+        )
+    ]
+    faq = next((schema for schema in schemas if schema.get("@type") == "FAQPage"), {})
+    structured = [
+        (item["name"], item["acceptedAnswer"]["text"])
+        for item in faq.get("mainEntity", [])
+    ]
+    visible = [(unescape(question), unescape(answer)) for question, answer in visible]
+    if not visible or visible != structured:
+        errors.append("index.html: visible FAQ and FAQPage schema differ")
+
+
+def check_homepage_loading(errors: list[str]) -> None:
+    content = read(ROOT / "index.html")
+    resources = set(re.findall(r'<(?:img|script)\b[^>]*\bsrc="([^"]+)"', content))
+    resources.update(
+        re.findall(r'<link rel="(?:stylesheet|icon|manifest)" href="([^"]+)"', content)
+    )
+    total_bytes = len(content.encode("utf-8"))
+    for resource in resources:
+        if resource.startswith(("https://", "http://", "//")):
+            errors.append(f"index.html: external render resource {resource}")
+            continue
+        path = ROOT / resource.split("?", 1)[0]
+        if path.is_file():
+            total_bytes += path.stat().st_size
+    if total_bytes > 100_000:
+        errors.append(
+            f"index.html: resource budget exceeded ({total_bytes:,} > 100,000 bytes)"
+        )
+
+
 def main() -> int:
     errors: list[str] = []
     check_seo_metadata(errors)
@@ -159,6 +224,9 @@ def main() -> int:
     check_social_images(errors)
     check_sitemap(errors)
     check_document_accessibility(errors)
+    check_homepage_loading(errors)
+    if not errors:
+        check_homepage_faq(errors)
 
     if errors:
         print("Static site checks failed:")

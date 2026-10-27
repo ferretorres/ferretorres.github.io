@@ -2,6 +2,14 @@
 
 Last updated: 2026-06-08
 
+Update, 27 October 2026: the immersive redesign is prepared locally, with a
+phi-inspired identity, visual workflow homepage, and shared navigation refresh.
+See [scope](immersive-redesign.md) and [verification](qa/immersive-redesign.md).
+The owner authorized direct publication in the refinement follow-up. The release
+adds lightweight workflow images and finite transitions; live verification is
+recorded in the QA report. The historical status below describes the prior public
+version until the release completes.
+
 Purpose: keep track of manual inputs, missing proof, and future improvements that should not block the current site but matter before pushing harder to enterprise buyers.
 
 ## Current status

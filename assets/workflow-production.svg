@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" fill="none">
+  <defs><linearGradient id="paper" x2="640" y2="320" gradientUnits="userSpaceOnUse"><stop stop-color="#f8faf2"/><stop offset="1" stop-color="#dce7cb"/></linearGradient></defs>
+  <rect x="1" y="1" width="638" height="318" rx="22" fill="url(#paper)" stroke="#bacbac"/>
+  <g stroke="#a4b895" stroke-width="2"><path d="M188 126h65m-8-6 8 6-8 6m143 0h62m-8-6 8 6-8 6"/><path d="M530 178v54q0 16-16 16H126q-16 0-16-16v-38"/><path d="m104 202 6-8 6 8"/></g>
+  <rect x="32" y="68" width="156" height="122" rx="14" fill="#fcfdf8" stroke="#bccdb0"/>
+  <circle cx="110" cy="101" r="13" stroke="#67865a" stroke-width="2"/><path d="M86 132c0-19 48-19 48 0" stroke="#67865a" stroke-width="2"/>
+  <rect x="256" y="68" width="132" height="122" rx="28" fill="#173e32"/>
+  <g stroke="#e4edce" stroke-width="4"><ellipse cx="322" cy="122" rx="25" ry="20"/><path d="M322 90v64"/></g>
+  <rect x="452" y="68" width="156" height="122" rx="14" fill="#fcfdf8" stroke="#a9bf95"/>
+  <g fill="#88a56c"><rect x="484" y="104" width="15" height="30" rx="3"/><rect x="511" y="94" width="15" height="40" rx="3"/><rect x="538" y="84" width="15" height="50" rx="3"/></g>
+  <rect x="219" y="232" width="202" height="32" rx="16" fill="#e5edda"/>
+  <g font-family="Helvetica,Arial,sans-serif" text-anchor="middle" fill="#294c37">
+    <text x="110" y="162" font-size="15">Human approval</text><text x="322" y="215" font-size="14">Production workflow</text><text x="530" y="162" font-size="15">Useful output</text><text x="320" y="253" font-size="13">Monitor · learn · refine</text>
+  </g>
+</svg>
