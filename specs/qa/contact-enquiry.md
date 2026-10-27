@@ -45,3 +45,26 @@ or root routing/security/cache configuration. `check_contact_http.mjs` reproduce
 the MIME failure and becomes a required post-publication gate. Verify headers,
 release bytes, live browser enhancement and an actual enhanced inbox delivery
 before reporting completion.
+
+## Homepage embedding, 27 October 2026
+
+- Same form markup and unchanged provider module on both pages. Shared form
+  styles extracted into enquiry.css; old contact CTA/copy-email styles and the
+  obsolete clipboard handler removed. Full-message copying remains supported.
+- Homepage header CTA reaches #contact. Ivory form card retains readable plum
+  text, dark focus rings, scoped paragraph spacing and an underlined privacy link.
+- Complete homepage resources:99,653 decoded bytes including the module, shared
+  stylesheet, font and all workflow images. Original100,000-byte gate retained.
+  No deferred-resource exclusion. JSON-LD values unchanged; CSSOM comparison of
+  whitespace compaction has171 identical parsed rules before/after.
+- Twelve Node tests pass; two homepage contract tests were observed RED first.
+  Static54-page checks, module/site script syntax and scoped whitespace pass.
+- Browser homepage/contact at375/768/1440: no horizontal overflow, enhancement
+  ready, privacy link visible and focus tokens correct. Empty required field,
+  encoded Unicode/newline drafts and copy success verified on home. Local
+  boundary fixtures verified pending/accepted/failed/uncertain outcomes and input
+  retention. Original menu Enter/Escape and workflow ArrowRight remain healthy.
+- Before completion: live exact HTML/module MIME/byte checks on both pages,
+  shared CSS/script bytes, actual homepage inbox delivery and unchanged protected
+  responses. Existing native submission contract remains identical to the
+  previously verified contact page; no provider/privacy/data change.
