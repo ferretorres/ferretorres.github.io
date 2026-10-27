@@ -16,7 +16,7 @@ Green = required local checks passed; Red = a required check failed; Blocked = r
 - Additional local fragment/duplicate-ID check: pass across 52 pages.
 - All 52 pages include the shared brand stylesheet, common navigation and deferred enhancement script. Original secondary-page content preserved relative to the initial dirty working tree.
 - Ten social preview images regenerated and inspected as 1200 × 630 JPEGs.
-- Complete homepage resource budget: **75,140 bytes**, including HTML, referenced CSS/JavaScript, all SVG images, favicon and manifest. Baseline: 106,200 bytes. The checker enforces a 100,000-byte ceiling. Three new lazy SVG illustrations total 4,966 bytes; JavaScript is 4,814 bytes. No new project dependencies, fonts, tracking or third-party UI requests.
+- Complete homepage resource budget: **75,228 bytes**, including HTML, referenced CSS/JavaScript, all SVG images, favicon and manifest. Baseline: 106,200 bytes. The checker enforces a 100,000-byte ceiling. Three new lazy SVG illustrations total 4,966 bytes; JavaScript is 4,814 bytes. No new project dependencies, fonts, tracking or third-party UI requests.
 
 ## Rendered browser checks
 
@@ -64,3 +64,27 @@ Not verified: live HTTPS publication, search ranking/indexing outcomes, Safari/F
 - Private accounting directories, temporary QA artifacts and unrelated existing `PROPOSAL_TEMPLATES.md` / `llms.txt` changes are excluded from the explicit staged-file allowlist.
 - Release source: existing GitHub Pages legacy build from `main`, repository root. Base verified as `b045565`, matching `origin/main` before branching. Release branch: `feature/immersive-site-refinement`.
 - Rollback: reviewed revert of the release commit, without a force push. Risks and mitigations are recorded in the source spec.
+
+
+## Active hosting correction
+
+Live verification after PR #13 showed the custom domain is served by Hostinger,
+not the repository's GitHub Pages mirror. The mirror release built successfully
+at `235ccf1`, but was not yet a successful custom-domain publication.
+
+- Active host: Hostinger shared/cloud static website. Root also contains the
+  separate `iih` application. Whole-root replacement is outside this release.
+- Preserve the existing `iih/`, `_astro/`, `og/`, `legal.html` and `privacy.html`.
+  The current legal/privacy pages and their assets remain available.
+- Replace obsolete `.htaccess` redirects so restored service/demo pages resolve
+  directly. Retain extensionless route handling. Public-site fixed-name assets
+  revalidate after one hour; the inherited immutable policy for other hosts is
+  retained. HTML continues to revalidate. Favicon references get a version key.
+- Keep the former `#work`, `#services`, `#about` and `#how-we-work` entry points as
+  aliases into the new sections, including links from preserved legal pages.
+- Update through File Manager with an explicit website-only overlay, rather than
+  the whole-site deploy operation. No directory deletion, DNS change, auth change,
+  or database operation. Backups of the public entry, favicon, discovery and legal
+  pages and the original server rules are saved locally under `tmp/`.
+- Publication gate: merged source plus live HTTPS content/asset hash checks,
+  direct service routes, preserved legal routes, and unchanged subdomain health.

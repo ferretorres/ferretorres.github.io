@@ -4,6 +4,13 @@ Static landing page for Ferre Torres B.V., the Dutch B.V. for European AI-first 
 
 ## Publish on GitHub Pages
 
+Production `ferretorres.eu` is currently hosted on Hostinger; GitHub Pages is a
+mirror. Reuse `.hostinger/site.json`. Publish an explicit static-file overlay,
+preserving the separate `iih/` application and existing `_astro/`, `og/`,
+`legal.html` and `privacy.html`. Never upload this entire working directory:
+it also contains private, untracked accounting files. Include `.htaccess` so
+service URLs resolve directly and extensionless legal URLs remain available.
+
 1. Push this repository to GitHub.
 2. In the repository settings, open **Pages**.
 3. Set the source to **Deploy from a branch**.
