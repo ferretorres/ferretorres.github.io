@@ -93,25 +93,6 @@
     window.addEventListener('hashchange', followHash);
   }
 
-  const copyButton = document.querySelector('.home .copy-email');
-  const copyStatus = document.querySelector('.copy-status');
-  if (copyButton && copyStatus) {
-    copyButton.hidden = false;
-    copyButton.addEventListener('click', async () => {
-      copyButton.disabled = true;
-      try {
-        await navigator.clipboard.writeText(copyButton.dataset.email);
-        copyButton.textContent = 'Copied';
-        copyStatus.textContent = 'Email address copied.';
-      } catch {
-        copyButton.textContent = 'Copy email';
-        copyStatus.textContent = 'Copy unavailable. Select the email address or use the email link.';
-      } finally {
-        copyButton.disabled = false;
-      }
-    });
-  }
-
   if (document.body.classList.contains('home') && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       for (const entry of entries) {

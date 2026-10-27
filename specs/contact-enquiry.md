@@ -87,3 +87,32 @@ Independent challenge found no provider blocker after verified inbox delivery.
 Scoped input retention/duplicate guarantees to the enhanced flow; native failure
 recovery is explicit. Update mirror privacy and old success copy, while preserving
 the active Hostinger privacy document already describing Formspark enquiries.
+
+## Homepage form, 27 October 2026
+
+The owner now requests the same form directly on the homepage with all three
+sending choices and direct publication. This supersedes the contact-page-only
+loading decision above. The existing provider, payload, protection and privacy
+boundaries remain unchanged.
+
+- AC8: Exactly one homepage form has the same name/email/message constraints,
+  endpoint, native redirect controls and three sending choices as contact.html.
+  Reuse the existing module, extracting shared form styles without a library.
+- AC9: Keep the complete homepage local-resource budget below100,000 decoded
+  bytes, including the module, shared stylesheet and font. Compact structured
+  data without changing values, trim source indentation, and remove superseded
+  contact CTA styles/clipboard code. No deferred-resource accounting loophole.
+  No request to Formspark or Gmail occurs until a visitor chooses an action.
+- AC10: Homepage desktop/tablet/mobile form, draft values/copy, validation, native
+  and enhanced submission work; menu/workflows and contact-page layout remain
+  healthy. Verify module MIME and exact source bytes for both live pages and
+  actual homepage submission reaching the business inbox.
+
+Validation: new homepage/contact parity regression observed RED first; existing
+10 Node tests, static54-page/100KB gate, syntax, browser375/768/1440 and live HTTP
+checks. Publish explicit committed files via reviewed rebase merge and existing
+Hostinger overlay, assets before HTML/index last. Preserve private working files,
+active legal/privacy and separate application. Rollback is reviewed revert plus
+targeted overlay. Risks: style collisions on plum, stale CSS/module, hidden size
+regression. Controls: ivory form card/dark focus token, version keys, full budget
+counting and loaded browser checks.

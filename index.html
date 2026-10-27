@@ -1,366 +1,214 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.svg?v=20261027-ft" type="image/svg+xml">
-    <link rel="preload" href="assets/fonts/ibm-plex-sans-medium-latin1.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="manifest" href="site.webmanifest?v=20261027-ft">
-    <meta name="theme-color" content="#3c2945">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>AI Consultancy & Implementation | Ferre Torres B.V.</title>
-    <meta name="description" content="AI consultancy and AI implementation services for companies in Europe: AI systems, RAG, agents, Company Brain, finance dashboards, MVPs, and production rollout.">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <link rel="canonical" href="https://ferretorres.eu/">
-    <meta property="og:title" content="AI Consultancy & Implementation | Ferre Torres B.V.">
-    <meta
-      property="og:description"
-      content="AI consulting and implementation for companies: AI systems, Company Brain, RAG, agents, finance dashboards, MVPs, and production software."
-    >
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Ferre Torres B.V.">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:url" content="https://ferretorres.eu/">
-    <meta property="og:image" content="https://ferretorres.eu/assets/og-ai-consultancy.jpg?v=20261027-ft">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="AI consultancy for companies by Ferre Torres B.V.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Consultancy & Implementation | Ferre Torres B.V.">
-    <meta name="twitter:description" content="AI consulting and implementation for companies: AI systems, Company Brain, RAG, agents, finance dashboards, MVPs, and production software.">
-    <meta name="twitter:image" content="https://ferretorres.eu/assets/og-ai-consultancy.jpg?v=20261027-ft">
-    <meta name="twitter:image:alt" content="AI consultancy for companies by Ferre Torres B.V.">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Ferre Torres B.V.",
-        "logo": "https://ferretorres.eu/assets/ferre-torres-mark.svg?v=20261027-ft",
-        "url": "https://ferretorres.eu/",
-        "email": "jferre@ferretorres.eu",
-        "vatID": "NL869556800B01",
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "EORI",
-          "value": "NL869556800"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Westplein 12",
-          "postalCode": "3016 BM",
-          "addressLocality": "Rotterdam",
-          "addressCountry": "NL"
-        },
-        "areaServed": "Europe",
-        "description": "AI consultancy and AI implementation services for companies in Europe: strategy, MVPs, company brain systems, RAG pipelines, agentic workflows, and private AI-native software.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "jferre@ferretorres.eu",
-          "contactType": "sales",
-          "areaServed": "Europe",
-          "availableLanguage": "English"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/josepferre/"
-        ],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "AI consulting and AI-first development services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI consultancy for companies",
-                "url": "https://ferretorres.eu/ai-consultancy.html",
-                "description": "Advisory and implementation support to identify high-value AI workflows, validate MVPs, and scale AI-first systems."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI implementation services",
-                "url": "https://ferretorres.eu/ai-implementation-services.html",
-                "description": "Implementation services for RAG systems, agents, Company Brain, finance intelligence, AI MVPs, internal tools, and production rollout."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI MVP and PoC development",
-                "url": "https://ferretorres.eu/ai-mvp-poc.html",
-                "description": "Focused AI MVP and proof-of-concept delivery to validate usefulness, data readiness, workflow fit, and production potential."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI consulting for CEOs",
-                "url": "https://ferretorres.eu/ai-consulting-for-ceos.html",
-                "description": "Executive AI consulting to choose high-value workflows, validate MVPs, and scale AI-first operating infrastructure."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI consulting for CFOs",
-                "url": "https://ferretorres.eu/ai-consulting-for-cfos.html",
-                "description": "Finance intelligence consulting for dashboards, reporting automation, anomaly explanations, pricing signals, and forecast workflows."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI consulting for CTOs",
-                "url": "https://ferretorres.eu/ai-consulting-for-ctos.html",
-                "description": "Production AI architecture consulting for RAG, agents, evaluations, permissions, monitoring, and internal AI software."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI consultancy in the Netherlands",
-                "url": "https://ferretorres.eu/ai-consultancy-netherlands.html",
-                "description": "AI consulting and implementation for Dutch companies that need MVPs, RAG, agents, dashboards, and AI-first internal software."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Company Brain systems",
-                "url": "https://ferretorres.eu/company-brain-for-companies.html",
-                "description": "Private company memory and knowledge systems for RAG, dashboards, assistants, and decision support."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "RAG implementation and agentic AI systems",
-                "url": "https://ferretorres.eu/rag-implementation-netherlands.html",
-                "description": "Retrieval, evaluations, tool use, agent workflows, and governed deployment for company data."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI finance dashboards",
-                "url": "https://ferretorres.eu/ai-finance-dashboard.html",
-                "description": "Finance intelligence dashboards, reporting automation, anomaly explanations, and pricing signals."
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "AI-native software engineering",
-                "url": "https://ferretorres.eu/ai-software-engineering.html",
-                "description": "Internal SaaS, dashboards, workflow automation, and AI-ready software platforms."
-              }
-            }
-          ]
-        }
-      }
-    </script>
-    <link rel="stylesheet" href="assets/brand.css?v=20261027-plum">
-    <link rel="stylesheet" href="assets/home.css?v=20261027-plum">
-    <script src="assets/site.js?v=20261027-plum" defer></script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How should a company start with AI consulting?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Start with one high-value workflow, clear users and accessible data. We map the opportunity and agree a measurable result before deciding what to build."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can we start with an MVP or proof of concept?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. A focused MVP or proof of concept lets your team test usefulness, accuracy and workflow fit before committing to a wider implementation."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What AI systems can you build?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Company Brain knowledge systems, RAG assistants, agentic workflows, finance dashboards, project intelligence and AI-native internal software. Explore our AI solutions and guided demo previews for examples."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do we need to replace our existing tools?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Usually, no. We design AI around your existing business tools, documents and databases. Integration scope, permissions and security requirements are defined during discovery."
-      }
-    }
-  ]
-}
-    </script>
-  </head>
-  <body class="home">
-    <a class="skip-link" href="#top">Skip to content</a>
-    <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="index.html" aria-label="Ferre Torres B.V. home">
-        <span class="brand-mark"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="36" height="36" alt=""></span>
-        <span>Ferre Torres<span class="brand-legal"> B.V.</span></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu</button>
-      <nav id="primary-nav" aria-label="Main navigation">
-        <a href="#capabilities">What we build</a>
-        <a href="#method">How we work</a>
-        <a href="proof.html">Our approach</a>
-        <a class="nav-cta" href="contact.html">Let’s talk <span aria-hidden="true">&nbsp; ↗</span></a>
-      </nav>
-    </header>
-    <main id="top">
-      <section class="home-hero" aria-labelledby="hero-title">
-        <div class="wrap">
-          <div class="hero-meta"><span>Independent AI consultancy · Rotterdam, Europe</span><span><i class="status-dot" aria-hidden="true"></i> From first idea to production</span></div>
-          <div class="hero-grid">
-            <div class="hero-copy">
-              <h1 id="hero-title">Your business.<br>Working with<br><em>intelligence.</em></h1>
-              <p>We turn scattered knowledge and manual work into useful AI systems. Designed around your people. Connected to your business.</p>
-              <div class="hero-buttons">
-                <a class="btn btn-green" href="#contact">Find your first step <span class="arrow" aria-hidden="true">↗</span></a>
-                <a class="btn btn-outline" href="#capabilities">See it in action <span class="arrow" aria-hidden="true">↓</span></a>
-              </div>
-              <div class="hero-footnote"><span>Senior-led delivery</span><span>AI consulting &amp; implementation</span></div>
-            </div>
-            <div class="intelligence-art" role="img" aria-label="Your documents and tools connect through an AI intelligence layer, with human review before useful work reaches your team.">
-              <div class="art-glow" aria-hidden="true"></div><div class="art-grid" aria-hidden="true"></div><div class="art-orbit" aria-hidden="true"></div>
-              <div class="art-line" aria-hidden="true"></div><div class="art-line second" aria-hidden="true"></div>
-              <div class="glass-core" aria-hidden="true"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" alt="" width="100" height="100"></div>
-              <div class="glass-chip chip-docs" aria-hidden="true"><span class="chip-icon">≡</span><span class="chip-copy"><strong>Your knowledge</strong><small>Documents · decisions · data</small></span></div>
-              <div class="glass-chip chip-tools" aria-hidden="true"><span class="chip-icon">⌘</span><span class="chip-copy"><strong>Your existing tools</strong><small>Connected, not replaced</small></span></div>
-              <div class="glass-chip chip-review" aria-hidden="true"><span class="chip-icon">✓</span><span class="chip-copy"><strong>People in control</strong><small>Review · approve · refine</small></span></div>
-              <div class="glass-chip chip-output" aria-hidden="true"><span class="chip-icon">↗</span><span class="chip-copy"><strong>Useful work, delivered</strong><small>Answers · actions · insight</small></span></div>
-              <div class="core-label" aria-hidden="true">One intelligent layer</div>
-              <div class="art-caption" aria-hidden="true">Company knowledge → intelligence → action</div>
-            </div>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.svg?v=20261027-ft" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/ibm-plex-sans-medium-latin1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="manifest" href="site.webmanifest?v=20261027-ft">
+<meta name="theme-color" content="#3c2945">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>AI Consultancy & Implementation | Ferre Torres B.V.</title>
+<meta name="description" content="AI consultancy and AI implementation services for companies in Europe: AI systems, RAG, agents, Company Brain, finance dashboards, MVPs, and production rollout.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://ferretorres.eu/">
+<meta property="og:title" content="AI Consultancy & Implementation | Ferre Torres B.V.">
+<meta
+property="og:description"
+content="AI consulting and implementation for companies: AI systems, Company Brain, RAG, agents, finance dashboards, MVPs, and production software."
+>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ferre Torres B.V.">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://ferretorres.eu/">
+<meta property="og:image" content="https://ferretorres.eu/assets/og-ai-consultancy.jpg?v=20261027-ft">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI consultancy for companies by Ferre Torres B.V.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Consultancy & Implementation | Ferre Torres B.V.">
+<meta name="twitter:description" content="AI consulting and implementation for companies: AI systems, Company Brain, RAG, agents, finance dashboards, MVPs, and production software.">
+<meta name="twitter:image" content="https://ferretorres.eu/assets/og-ai-consultancy.jpg?v=20261027-ft">
+<meta name="twitter:image:alt" content="AI consultancy for companies by Ferre Torres B.V.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Ferre Torres B.V.","logo":"https://ferretorres.eu/assets/ferre-torres-mark.svg?v=20261027-ft","url":"https://ferretorres.eu/","email":"jferre@ferretorres.eu","vatID":"NL869556800B01","identifier":{"@type":"PropertyValue","propertyID":"EORI","value":"NL869556800"},"address":{"@type":"PostalAddress","streetAddress":"Westplein 12","postalCode":"3016 BM","addressLocality":"Rotterdam","addressCountry":"NL"},"areaServed":"Europe","description":"AI consultancy and AI implementation services for companies in Europe: strategy, MVPs, company brain systems, RAG pipelines, agentic workflows, and private AI-native software.","contactPoint":{"@type":"ContactPoint","email":"jferre@ferretorres.eu","contactType":"sales","areaServed":"Europe","availableLanguage":"English"},"sameAs":["https://www.linkedin.com/in/josepferre/"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI consulting and AI-first development services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI consultancy for companies","url":"https://ferretorres.eu/ai-consultancy.html","description":"Advisory and implementation support to identify high-value AI workflows, validate MVPs, and scale AI-first systems."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI implementation services","url":"https://ferretorres.eu/ai-implementation-services.html","description":"Implementation services for RAG systems, agents, Company Brain, finance intelligence, AI MVPs, internal tools, and production rollout."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI MVP and PoC development","url":"https://ferretorres.eu/ai-mvp-poc.html","description":"Focused AI MVP and proof-of-concept delivery to validate usefulness, data readiness, workflow fit, and production potential."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI consulting for CEOs","url":"https://ferretorres.eu/ai-consulting-for-ceos.html","description":"Executive AI consulting to choose high-value workflows, validate MVPs, and scale AI-first operating infrastructure."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI consulting for CFOs","url":"https://ferretorres.eu/ai-consulting-for-cfos.html","description":"Finance intelligence consulting for dashboards, reporting automation, anomaly explanations, pricing signals, and forecast workflows."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI consulting for CTOs","url":"https://ferretorres.eu/ai-consulting-for-ctos.html","description":"Production AI architecture consulting for RAG, agents, evaluations, permissions, monitoring, and internal AI software."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI consultancy in the Netherlands","url":"https://ferretorres.eu/ai-consultancy-netherlands.html","description":"AI consulting and implementation for Dutch companies that need MVPs, RAG, agents, dashboards, and AI-first internal software."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Company Brain systems","url":"https://ferretorres.eu/company-brain-for-companies.html","description":"Private company memory and knowledge systems for RAG, dashboards, assistants, and decision support."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"RAG implementation and agentic AI systems","url":"https://ferretorres.eu/rag-implementation-netherlands.html","description":"Retrieval, evaluations, tool use, agent workflows, and governed deployment for company data."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI finance dashboards","url":"https://ferretorres.eu/ai-finance-dashboard.html","description":"Finance intelligence dashboards, reporting automation, anomaly explanations, and pricing signals."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI-native software engineering","url":"https://ferretorres.eu/ai-software-engineering.html","description":"Internal SaaS, dashboards, workflow automation, and AI-ready software platforms."}}]}}</script>
+<link rel="stylesheet" href="assets/brand.css?v=20261027-plum">
+<link rel="stylesheet" href="assets/home.css?v=20261027-homeform">
+<link rel="stylesheet" href="assets/enquiry.css?v=20261027-homeform">
+<script type="module" src="assets/contact.mjs?v=20261027-contact2"></script>
+<script src="assets/site.js?v=20261027-homeform" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How should a company start with AI consulting?","acceptedAnswer":{"@type":"Answer","text":"Start with one high-value workflow, clear users and accessible data. We map the opportunity and agree a measurable result before deciding what to build."}},{"@type":"Question","name":"Can we start with an MVP or proof of concept?","acceptedAnswer":{"@type":"Answer","text":"Yes. A focused MVP or proof of concept lets your team test usefulness, accuracy and workflow fit before committing to a wider implementation."}},{"@type":"Question","name":"What AI systems can you build?","acceptedAnswer":{"@type":"Answer","text":"Company Brain knowledge systems, RAG assistants, agentic workflows, finance dashboards, project intelligence and AI-native internal software. Explore our AI solutions and guided demo previews for examples."}},{"@type":"Question","name":"Do we need to replace our existing tools?","acceptedAnswer":{"@type":"Answer","text":"Usually, no. We design AI around your existing business tools, documents and databases. Integration scope, permissions and security requirements are defined during discovery."}}]}</script>
+</head>
+<body class="home">
+<a class="skip-link" href="#top">Skip to content</a>
+<header class="site-header" aria-label="Primary navigation">
+<a class="brand" href="index.html" aria-label="Ferre Torres B.V. home">
+<span class="brand-mark"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="36" height="36" alt=""></span>
+<span>Ferre Torres<span class="brand-legal"> B.V.</span></span>
+</a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" hidden>Menu</button>
+<nav id="primary-nav" aria-label="Main navigation">
+<a href="#capabilities">What we build</a>
+<a href="#method">How we work</a>
+<a href="proof.html">Our approach</a>
+<a class="nav-cta" href="#contact">Let’s talk <span aria-hidden="true">&nbsp; ↗</span></a>
+</nav>
+</header>
+<main id="top">
+<section class="home-hero" aria-labelledby="hero-title">
+<div class="wrap">
+<div class="hero-meta"><span>Independent AI consultancy · Rotterdam, Europe</span><span><i class="status-dot" aria-hidden="true"></i> From first idea to production</span></div>
+<div class="hero-grid">
+<div class="hero-copy">
+<h1 id="hero-title">Your business.<br>Working with<br><em>intelligence.</em></h1>
+<p>We turn scattered knowledge and manual work into useful AI systems. Designed around your people. Connected to your business.</p>
+<div class="hero-buttons">
+<a class="btn btn-green" href="#contact">Find your first step <span class="arrow" aria-hidden="true">↗</span></a>
+<a class="btn btn-outline" href="#capabilities">See it in action <span class="arrow" aria-hidden="true">↓</span></a>
+</div>
+<div class="hero-footnote"><span>Senior-led delivery</span><span>AI consulting &amp; implementation</span></div>
+</div>
+<div class="intelligence-art" role="img" aria-label="Your documents and tools connect through an AI intelligence layer, with human review before useful work reaches your team.">
+<div class="art-glow" aria-hidden="true"></div><div class="art-grid" aria-hidden="true"></div><div class="art-orbit" aria-hidden="true"></div>
+<div class="art-line" aria-hidden="true"></div><div class="art-line second" aria-hidden="true"></div>
+<div class="glass-core" aria-hidden="true"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" alt="" width="100" height="100"></div>
+<div class="glass-chip chip-docs" aria-hidden="true"><span class="chip-icon">≡</span><span class="chip-copy"><strong>Your knowledge</strong><small>Documents · decisions · data</small></span></div>
+<div class="glass-chip chip-tools" aria-hidden="true"><span class="chip-icon">⌘</span><span class="chip-copy"><strong>Your existing tools</strong><small>Connected, not replaced</small></span></div>
+<div class="glass-chip chip-review" aria-hidden="true"><span class="chip-icon">✓</span><span class="chip-copy"><strong>People in control</strong><small>Review · approve · refine</small></span></div>
+<div class="glass-chip chip-output" aria-hidden="true"><span class="chip-icon">↗</span><span class="chip-copy"><strong>Useful work, delivered</strong><small>Answers · actions · insight</small></span></div>
+<div class="core-label" aria-hidden="true">One intelligent layer</div>
+<div class="art-caption" aria-hidden="true">Company knowledge → intelligence → action</div>
+</div>
+</div>
+<div class="hero-bottom">
+<p>AI implementation for the way<br>your company actually works.</p>
+<div class="capability-list" aria-label="AI implementation capabilities"><a href="company-brain-for-companies.html">Company Brain</a><a href="rag-agentic-systems.html">RAG &amp; agents</a><a href="agentic-ai-workflows.html">Workflow automation</a><a href="ai-finance-dashboard.html">Finance intelligence</a></div>
+</div>
+</div>
+</section>
+
+<section id="capabilities" class="workflow-section" aria-labelledby="capabilities-title">
+<div class="wrap" id="work">
+<div class="section-top" id="services"><div><p class="kicker">01 / What becomes possible</p><h2 id="capabilities-title">Less busywork.<br>More forward motion.</h2></div><p>Start with a problem you recognise.<br>See how the pieces come together.</p></div>
+<div class="workflow-tabs" aria-label="Explore business workflows">
+<a href="#workflow-knowledge" id="tab-knowledge" data-workflow="knowledge">Company knowledge</a>
+<a href="#workflow-operations" id="tab-operations" data-workflow="operations">Operations</a>
+<a href="#workflow-finance" id="tab-finance" data-workflow="finance">Finance</a>
+</div>
+<article class="workflow-panel" id="workflow-knowledge" aria-labelledby="knowledge-title">
+<div class="workflow-copy"><span class="panel-number">01.1 / COMPANY BRAIN</span><h3 id="knowledge-title">Your company knows.<br>Now your team can, too.</h3><p>Turn documents, decisions and internal knowledge into answers your people can trace back to the source.</p><a class="text-cta" href="demo-company-brain.html">Explore Company Brain <span aria-hidden="true">↗</span></a></div>
+<div class="workflow-demo"><div class="demo-topline"><span>A question becomes an answer</span><span>Illustrative example</span></div>
+<div class="flow-path" aria-label="Documents to retrieval to source checking to a grounded answer">
+<div class="flow-node"><span class="node-symbol" aria-hidden="true">≡</span><strong>Documents</strong><small>Your sources</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-node ai"><span class="node-symbol"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="32" height="32" alt=""></span><strong>Find context</strong><small>Permission-aware</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-node"><span class="node-symbol" aria-hidden="true">✓</span><strong>Check sources</strong><small>Human judgement</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-node"><span class="node-symbol" aria-hidden="true">↗</span><strong>Clear answer</strong><small>Ready to use</small></div>
+</div>
+<div class="demo-surface"><div class="demo-question"><span class="avatar" aria-hidden="true">J</span> What did we agree for the supplier rollout?</div><p class="demo-answer">The pilot starts with the operations team. Procurement reviews the supplier terms before the rollout expands.</p><div class="source-chips"><span>↗ Rollout plan · p. 4</span><span>↗ Procurement notes</span></div><div class="demo-foot"><span aria-hidden="true">✓</span> Sources attached. Your team makes the decision.</div></div>
+</div>
+</article>
+<article class="workflow-panel" id="workflow-operations" aria-labelledby="operations-title">
+<div class="workflow-copy"><span class="panel-number">01.2 / AGENTIC WORKFLOWS</span><h3 id="operations-title">Move the work.<br>Keep the judgement.</h3><p>Let AI prepare, route and coordinate repetitive tasks. Keep the important decisions with the people who own them.</p><a class="text-cta" href="demo-agentic-workflow.html">Explore workflow automation <span aria-hidden="true">↗</span></a></div>
+<div class="workflow-demo"><div class="demo-topline"><span>A request becomes a reviewed action</span><span>Illustrative example</span></div>
+<div class="flow-path" aria-label="Request to AI preparation to human approval to a recorded action">
+<div class="flow-node"><span class="node-symbol" aria-hidden="true">↙</span><strong>New request</strong><small>Email or system</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-node ai"><span class="node-symbol"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="32" height="32" alt=""></span><strong>Prepare</strong><small>Gather &amp; draft</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-node"><span class="node-symbol" aria-hidden="true">✓</span><strong>Approve</strong><small>Named owner</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-node"><span class="node-symbol" aria-hidden="true">↗</span><strong>Take action</strong><small>Audit trail</small></div>
+</div>
+<div class="demo-surface"><div class="demo-question"><span class="avatar" aria-hidden="true">↙</span> Supplier onboarding request</div><div class="demo-task"><strong>Read request &amp; collect documents</strong><span class="pill">Prepared</span></div><div class="demo-task"><strong>Check requirements &amp; draft response</strong><span class="pill">Ready</span></div><div class="demo-task"><strong>Procurement owner approval</strong><span class="pill">Awaiting review</span></div><div class="demo-foot"><span aria-hidden="true">⊙</span> External actions wait for the designated approver.</div></div>
+</div>
+</article>
+<article class="workflow-panel" id="workflow-finance" aria-labelledby="finance-title">
+<div class="workflow-copy"><span class="panel-number">01.3 / FINANCE INTELLIGENCE</span><h3 id="finance-title">See the movement.<br>Understand the why.</h3><p>Connect financial data, surface changes and prepare explanations your finance team can verify before reporting.</p><a class="text-cta" href="demo-finance-intelligence.html">Explore finance intelligence <span aria-hidden="true">↗</span></a></div>
+<div class="workflow-demo"><div class="demo-topline"><span>Raw figures become decision context</span><span>Illustrative example</span></div>
+<div class="flow-path" aria-label="Finance data to variance analysis to finance review to a reporting brief">
+<div class="flow-node"><span class="node-symbol" aria-hidden="true">▥</span><strong>Finance data</strong><small>ERP &amp; reports</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-node ai"><span class="node-symbol"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="32" height="32" alt=""></span><strong>Find changes</strong><small>Trace to records</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-node"><span class="node-symbol" aria-hidden="true">✓</span><strong>Review</strong><small>Finance owner</small></div><span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-node"><span class="node-symbol" aria-hidden="true">↗</span><strong>Clear brief</strong><small>Decision-ready</small></div>
+</div>
+<div class="demo-surface"><div class="demo-question"><span class="avatar" aria-hidden="true">▥</span> What changed in operating costs?</div><div class="finance-bars" role="img" aria-label="Illustrative rising monthly cost trend, with the latest month highlighted"><span style="--bar: 42%"></span><span style="--bar: 48%"></span><span style="--bar: 44%"></span><span style="--bar: 63%"></span><span style="--bar: 58%"></span><span style="--bar: 83%"></span></div><p class="demo-answer">Supplier costs moved above the prior period. Review the linked invoices and timing differences before concluding why.</p><div class="source-chips"><span>↗ Cost ledger</span><span>Finance review required</span></div></div>
+</div>
+</article>
+<div class="workflow-note"><span>Synthetic examples of systems we can build. Scope and integrations are defined with you.</span><a href="ai-demo-gallery.html">See all demo previews ↗</a></div>
+</div>
+</section>
+
+<section class="architecture-section" aria-labelledby="intro-title">
+<div class="wrap connected-grid">
+<div class="architecture-copy"><p class="kicker">02 / Built around your business</p><h2 id="intro-title">Your tools.<br>Your knowledge.<br>One connected layer.</h2><p>Build on the systems your team already uses. We design the connections, access rules and evaluations that make AI useful in everyday work.</p><a class="text-cta" href="ai-architecture.html">See the architecture <span aria-hidden="true">↗</span></a></div>
+<div class="system-map" role="img" aria-label="Documents, business tools and databases feed a private AI layer. Access rules, evaluations and human approval govern the answers, workflows and insight it provides.">
+<div class="map-heading" aria-hidden="true"><span>Reference architecture</span><span>Designed to fit you</span></div>
+<div class="map-inputs" aria-hidden="true"><span>Documents</span><span>Business tools</span><span>Databases</span></div><div class="map-lines" aria-hidden="true"></div>
+<div class="map-core" aria-hidden="true"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="44" height="44" alt=""><div><strong>Your private AI layer</strong><small>Retrieve context · reason · coordinate</small></div></div>
+<div class="map-governance" aria-hidden="true"><span>⌁ Access rules</span><span>✓ Evaluations</span><span>⊙ Human approval</span></div>
+<p class="map-output" aria-hidden="true">Answers <span>·</span> Workflows <span>·</span> Insight</p>
+</div>
+</div>
+</section>
+
+<section id="method" class="process-section" aria-labelledby="method-title">
+<div class="wrap" id="how-we-work"><div class="section-top"><div><p class="kicker">03 / From possibility to production</p><h2 id="method-title">Start small.<br>Build something that matters.</h2></div><p>A clear path from the first conversation to a system your team can actually use.</p></div>
+<ol class="process-grid" aria-label="AI consulting engagement steps">
+<li><div class="step-head"><span>01 / FIND THE OPPORTUNITY</span><span aria-hidden="true">↗</span></div><img class="process-visual" src="assets/workflow-discovery.svg?v=20261027-ft" width="640" height="320" loading="lazy" decoding="async" alt="Your workflow and constraints are mapped into one agreed AI opportunity."><h3>Make the right start.</h3><p>Choose one valuable workflow. Map the people, data and constraints. Agree what success should look like.</p><a class="text-cta" href="ai-opportunity-assessment.html">Opportunity assessment <span aria-hidden="true">→</span></a></li>
+<li><div class="step-head"><span>02 / PROVE IT IN PRACTICE</span><span aria-hidden="true">↗</span></div><img class="process-visual" src="assets/workflow-validation.svg?v=20261027-ft" width="640" height="320" loading="lazy" decoding="async" alt="A working AI MVP is tested with real context and reviewed for usefulness, sources and workflow fit."><h3>Put it to work.</h3><p>Build a focused AI MVP. Test it with real users and representative data. Measure usefulness before expanding.</p><a class="text-cta" href="ai-mvp-poc.html">MVP &amp; proof of concept <span aria-hidden="true">→</span></a></li>
+<li><div class="step-head"><span>03 / BUILD TO LAST</span><span aria-hidden="true">↗</span></div><img class="process-visual" src="assets/workflow-production.svg?v=20261027-ft" width="640" height="320" loading="lazy" decoding="async" alt="Human approval governs a production workflow, with monitoring feeding improvements back into the system."><h3>Grow with confidence.</h3><p>Integrate the proven workflow. Add monitoring, ownership and the controls your production environment needs.</p><a class="text-cta" href="ai-implementation-services.html">Production implementation <span aria-hidden="true">→</span></a></li>
+</ol>
+</div>
+</section>
+
+<section id="trust" class="trust-section" aria-labelledby="trust-title">
+<div class="wrap trust-grid" id="about"><div><p class="kicker">04 / A senior partner, from day one</p><h2 id="trust-title">Close to the detail.<br>Accountable for<br>the whole.</h2></div><div><p class="trust-intro">Founder-led AI consulting, backed by senior engineering and PhD-level modelling. Technical ownership from the first question to the production system.</p><ul class="trust-points"><li><span aria-hidden="true">↗</span> Experience across enterprise and regulated environments</li><li><span aria-hidden="true">↗</span> Access controls, evaluation and human oversight by design</li><li><span aria-hidden="true">↗</span> A Dutch contracting entity serving companies across Europe</li></ul><a class="text-cta" href="delivery-model.html">Meet the delivery approach <span aria-hidden="true">↗</span></a></div></div>
+</section>
+
+<section class="faq-section-new" aria-labelledby="homepage-faq-title">
+<div class="wrap faq-layout"><div><p class="kicker">A little more clarity</p><h2 id="homepage-faq-title">Good questions.<br>Clear answers.</h2></div><div class="faq-list">
+<details><summary>How should a company start with AI consulting?</summary><p>Start with one high-value workflow, clear users and accessible data. We map the opportunity and agree a measurable result before deciding what to build.</p></details>
+<details><summary>Can we start with an MVP or proof of concept?</summary><p>Yes. A focused MVP or proof of concept lets your team test usefulness, accuracy and workflow fit before committing to a wider implementation.</p></details>
+<details><summary>What AI systems can you build?</summary><p>Company Brain knowledge systems, RAG assistants, agentic workflows, finance dashboards, project intelligence and AI-native internal software. Explore our AI solutions and guided demo previews for examples.</p></details>
+<details><summary>Do we need to replace our existing tools?</summary><p>Usually, no. We design AI around your existing business tools, documents and databases. Integration scope, permissions and security requirements are defined during discovery.</p></details>
+</div></div>
+</section>
+
+<section id="contact" class="contact-section-new" aria-labelledby="contact-title">
+<div class="contact-box"><div class="contact-grid">
+<div class="contact-copy"><p class="kicker">Your next move</p><h2 id="contact-title">One useful conversation.<br><em>A clearer way forward.</em></h2><p>Tell us where work gets stuck. We’ll explore what AI could change and what a sensible first step looks like.</p><p><a href="mailto:jferre@ferretorres.eu">jferre@ferretorres.eu</a></p><a class="text-cta" href="contact.html">Contact details <span aria-hidden="true">↗</span></a></div>
+<div class="enquiry-card" aria-labelledby="form-title"><h3 class="form-title" id="form-title">What’s on your mind?</h3><p class="form-intro">A few sentences are enough. All fields are required. Please leave out confidential or sensitive information.</p>
+<form id="enquiry-form" action="https://submit-form.com/Gkeicb6LW" method="POST" aria-describedby="privacy-note">
+          <input type="hidden" name="_redirect" value="https://ferretorres.eu/contact-success.html">
+          <input type="hidden" name="_error" value="https://ferretorres.eu/contact-error.html">
+          <input type="hidden" name="_append" value="false">
+          <input type="text" name="_honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
+          <div class="field-pair">
+            <div class="contact-field"><label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" maxlength="120" required></div>
+            <div class="contact-field"><label for="contact-email">Your email</label><input id="contact-email" type="email" name="email" autocomplete="email" maxlength="254" required></div>
           </div>
-          <div class="hero-bottom">
-            <p>AI implementation for the way<br>your company actually works.</p>
-            <div class="capability-list" aria-label="AI implementation capabilities"><a href="company-brain-for-companies.html">Company Brain</a><a href="rag-agentic-systems.html">RAG &amp; agents</a><a href="agentic-ai-workflows.html">Workflow automation</a><a href="ai-finance-dashboard.html">Finance intelligence</a></div>
+          <div class="contact-field"><label for="contact-message">Your message</label><textarea id="contact-message" name="message" rows="5" maxlength="2000" required aria-describedby="message-hint"></textarea><p id="message-hint" class="field-hint">What would you like to improve? Up to 2,000 characters.</p></div>
+          <p id="privacy-note" class="privacy-note">Website enquiries are delivered by Formspark. We use your details to respond to your enquiry. <a href="privacy.html">Read our privacy notice</a>.</p>
+          <button class="contact-action primary" type="submit">Send enquiry <span aria-hidden="true">↗</span></button>
+          <p class="send-note">Sends through this website. It won’t appear in your Sent folder.</p>
+          <p class="contact-status" data-contact-status role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></p>
+          <div class="send-choices">
+            <h3>Prefer a record in your Sent folder?</h3>
+            <p>Use the same message in your own account. Review the draft and press Send there.</p>
+            <div class="draft-actions"><a class="contact-action" data-email-app href="mailto:jferre@ferretorres.eu?subject=AI%20project%20enquiry">Email app <span aria-hidden="true">↗</span></a><a class="contact-action" data-gmail href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=jferre%40ferretorres.eu&amp;su=AI%20project%20enquiry" target="_blank" rel="noopener noreferrer" aria-label="Gmail (opens a new tab)">Gmail <span aria-hidden="true">↗</span></a></div>
+            <button class="copy-message" data-copy-message type="button" hidden>Copy full message</button>
+            <p class="send-note">If a draft doesn’t open or your message is long, copy it and paste it into your email app.</p>
           </div>
-        </div>
-      </section>
+          <noscript><p class="send-note">The website form works without JavaScript. Email links open a blank draft; add your message in your email app.</p></noscript>
+        </form>
 
-      <section id="capabilities" class="workflow-section" aria-labelledby="capabilities-title">
-        <div class="wrap" id="work">
-          <div class="section-top" id="services"><div><p class="kicker">01 / What becomes possible</p><h2 id="capabilities-title">Less busywork.<br>More forward motion.</h2></div><p>Start with a problem you recognise.<br>See how the pieces come together.</p></div>
-          <div class="workflow-tabs" aria-label="Explore business workflows">
-            <a href="#workflow-knowledge" id="tab-knowledge" data-workflow="knowledge">Company knowledge</a>
-            <a href="#workflow-operations" id="tab-operations" data-workflow="operations">Operations</a>
-            <a href="#workflow-finance" id="tab-finance" data-workflow="finance">Finance</a>
-          </div>
-          <article class="workflow-panel" id="workflow-knowledge" aria-labelledby="knowledge-title">
-            <div class="workflow-copy"><span class="panel-number">01.1 / COMPANY BRAIN</span><h3 id="knowledge-title">Your company knows.<br>Now your team can, too.</h3><p>Turn documents, decisions and internal knowledge into answers your people can trace back to the source.</p><a class="text-cta" href="demo-company-brain.html">Explore Company Brain <span aria-hidden="true">↗</span></a></div>
-            <div class="workflow-demo"><div class="demo-topline"><span>A question becomes an answer</span><span>Illustrative example</span></div>
-              <div class="flow-path" aria-label="Documents to retrieval to source checking to a grounded answer">
-                <div class="flow-node"><span class="node-symbol" aria-hidden="true">≡</span><strong>Documents</strong><small>Your sources</small></div><span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-node ai"><span class="node-symbol"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="32" height="32" alt=""></span><strong>Find context</strong><small>Permission-aware</small></div><span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-node"><span class="node-symbol" aria-hidden="true">✓</span><strong>Check sources</strong><small>Human judgement</small></div><span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-node"><span class="node-symbol" aria-hidden="true">↗</span><strong>Clear answer</strong><small>Ready to use</small></div>
-              </div>
-              <div class="demo-surface"><div class="demo-question"><span class="avatar" aria-hidden="true">J</span> What did we agree for the supplier rollout?</div><p class="demo-answer">The pilot starts with the operations team. Procurement reviews the supplier terms before the rollout expands.</p><div class="source-chips"><span>↗ Rollout plan · p. 4</span><span>↗ Procurement notes</span></div><div class="demo-foot"><span aria-hidden="true">✓</span> Sources attached. Your team makes the decision.</div></div>
-            </div>
-          </article>
-          <article class="workflow-panel" id="workflow-operations" aria-labelledby="operations-title">
-            <div class="workflow-copy"><span class="panel-number">01.2 / AGENTIC WORKFLOWS</span><h3 id="operations-title">Move the work.<br>Keep the judgement.</h3><p>Let AI prepare, route and coordinate repetitive tasks. Keep the important decisions with the people who own them.</p><a class="text-cta" href="demo-agentic-workflow.html">Explore workflow automation <span aria-hidden="true">↗</span></a></div>
-            <div class="workflow-demo"><div class="demo-topline"><span>A request becomes a reviewed action</span><span>Illustrative example</span></div>
-              <div class="flow-path" aria-label="Request to AI preparation to human approval to a recorded action">
-                <div class="flow-node"><span class="node-symbol" aria-hidden="true">↙</span><strong>New request</strong><small>Email or system</small></div><span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-node ai"><span class="node-symbol"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="32" height="32" alt=""></span><strong>Prepare</strong><small>Gather &amp; draft</small></div><span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-node"><span class="node-symbol" aria-hidden="true">✓</span><strong>Approve</strong><small>Named owner</small></div><span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-node"><span class="node-symbol" aria-hidden="true">↗</span><strong>Take action</strong><small>Audit trail</small></div>
-              </div>
-              <div class="demo-surface"><div class="demo-question"><span class="avatar" aria-hidden="true">↙</span> Supplier onboarding request</div><div class="demo-task"><strong>Read request &amp; collect documents</strong><span class="pill">Prepared</span></div><div class="demo-task"><strong>Check requirements &amp; draft response</strong><span class="pill">Ready</span></div><div class="demo-task"><strong>Procurement owner approval</strong><span class="pill">Awaiting review</span></div><div class="demo-foot"><span aria-hidden="true">⊙</span> External actions wait for the designated approver.</div></div>
-            </div>
-          </article>
-          <article class="workflow-panel" id="workflow-finance" aria-labelledby="finance-title">
-            <div class="workflow-copy"><span class="panel-number">01.3 / FINANCE INTELLIGENCE</span><h3 id="finance-title">See the movement.<br>Understand the why.</h3><p>Connect financial data, surface changes and prepare explanations your finance team can verify before reporting.</p><a class="text-cta" href="demo-finance-intelligence.html">Explore finance intelligence <span aria-hidden="true">↗</span></a></div>
-            <div class="workflow-demo"><div class="demo-topline"><span>Raw figures become decision context</span><span>Illustrative example</span></div>
-              <div class="flow-path" aria-label="Finance data to variance analysis to finance review to a reporting brief">
-                <div class="flow-node"><span class="node-symbol" aria-hidden="true">▥</span><strong>Finance data</strong><small>ERP &amp; reports</small></div><span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-node ai"><span class="node-symbol"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="32" height="32" alt=""></span><strong>Find changes</strong><small>Trace to records</small></div><span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-node"><span class="node-symbol" aria-hidden="true">✓</span><strong>Review</strong><small>Finance owner</small></div><span class="flow-arrow" aria-hidden="true">→</span>
-                <div class="flow-node"><span class="node-symbol" aria-hidden="true">↗</span><strong>Clear brief</strong><small>Decision-ready</small></div>
-              </div>
-              <div class="demo-surface"><div class="demo-question"><span class="avatar" aria-hidden="true">▥</span> What changed in operating costs?</div><div class="finance-bars" role="img" aria-label="Illustrative rising monthly cost trend, with the latest month highlighted"><span style="--bar: 42%"></span><span style="--bar: 48%"></span><span style="--bar: 44%"></span><span style="--bar: 63%"></span><span style="--bar: 58%"></span><span style="--bar: 83%"></span></div><p class="demo-answer">Supplier costs moved above the prior period. Review the linked invoices and timing differences before concluding why.</p><div class="source-chips"><span>↗ Cost ledger</span><span>Finance review required</span></div></div>
-            </div>
-          </article>
-          <div class="workflow-note"><span>Synthetic examples of systems we can build. Scope and integrations are defined with you.</span><a href="ai-demo-gallery.html">See all demo previews ↗</a></div>
-        </div>
-      </section>
-
-      <section class="architecture-section" aria-labelledby="intro-title">
-        <div class="wrap connected-grid">
-          <div class="architecture-copy"><p class="kicker">02 / Built around your business</p><h2 id="intro-title">Your tools.<br>Your knowledge.<br>One connected layer.</h2><p>Build on the systems your team already uses. We design the connections, access rules and evaluations that make AI useful in everyday work.</p><a class="text-cta" href="ai-architecture.html">See the architecture <span aria-hidden="true">↗</span></a></div>
-          <div class="system-map" role="img" aria-label="Documents, business tools and databases feed a private AI layer. Access rules, evaluations and human approval govern the answers, workflows and insight it provides.">
-            <div class="map-heading" aria-hidden="true"><span>Reference architecture</span><span>Designed to fit you</span></div>
-            <div class="map-inputs" aria-hidden="true"><span>Documents</span><span>Business tools</span><span>Databases</span></div><div class="map-lines" aria-hidden="true"></div>
-            <div class="map-core" aria-hidden="true"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="44" height="44" alt=""><div><strong>Your private AI layer</strong><small>Retrieve context · reason · coordinate</small></div></div>
-            <div class="map-governance" aria-hidden="true"><span>⌁ Access rules</span><span>✓ Evaluations</span><span>⊙ Human approval</span></div>
-            <p class="map-output" aria-hidden="true">Answers <span>·</span> Workflows <span>·</span> Insight</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="method" class="process-section" aria-labelledby="method-title">
-        <div class="wrap" id="how-we-work"><div class="section-top"><div><p class="kicker">03 / From possibility to production</p><h2 id="method-title">Start small.<br>Build something that matters.</h2></div><p>A clear path from the first conversation to a system your team can actually use.</p></div>
-          <ol class="process-grid" aria-label="AI consulting engagement steps">
-            <li><div class="step-head"><span>01 / FIND THE OPPORTUNITY</span><span aria-hidden="true">↗</span></div><img class="process-visual" src="assets/workflow-discovery.svg?v=20261027-ft" width="640" height="320" loading="lazy" decoding="async" alt="Your workflow and constraints are mapped into one agreed AI opportunity."><h3>Make the right start.</h3><p>Choose one valuable workflow. Map the people, data and constraints. Agree what success should look like.</p><a class="text-cta" href="ai-opportunity-assessment.html">Opportunity assessment <span aria-hidden="true">→</span></a></li>
-            <li><div class="step-head"><span>02 / PROVE IT IN PRACTICE</span><span aria-hidden="true">↗</span></div><img class="process-visual" src="assets/workflow-validation.svg?v=20261027-ft" width="640" height="320" loading="lazy" decoding="async" alt="A working AI MVP is tested with real context and reviewed for usefulness, sources and workflow fit."><h3>Put it to work.</h3><p>Build a focused AI MVP. Test it with real users and representative data. Measure usefulness before expanding.</p><a class="text-cta" href="ai-mvp-poc.html">MVP &amp; proof of concept <span aria-hidden="true">→</span></a></li>
-            <li><div class="step-head"><span>03 / BUILD TO LAST</span><span aria-hidden="true">↗</span></div><img class="process-visual" src="assets/workflow-production.svg?v=20261027-ft" width="640" height="320" loading="lazy" decoding="async" alt="Human approval governs a production workflow, with monitoring feeding improvements back into the system."><h3>Grow with confidence.</h3><p>Integrate the proven workflow. Add monitoring, ownership and the controls your production environment needs.</p><a class="text-cta" href="ai-implementation-services.html">Production implementation <span aria-hidden="true">→</span></a></li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="trust" class="trust-section" aria-labelledby="trust-title">
-        <div class="wrap trust-grid" id="about"><div><p class="kicker">04 / A senior partner, from day one</p><h2 id="trust-title">Close to the detail.<br>Accountable for<br>the whole.</h2></div><div><p class="trust-intro">Founder-led AI consulting, backed by senior engineering and PhD-level modelling. Technical ownership from the first question to the production system.</p><ul class="trust-points"><li><span aria-hidden="true">↗</span> Experience across enterprise and regulated environments</li><li><span aria-hidden="true">↗</span> Access controls, evaluation and human oversight by design</li><li><span aria-hidden="true">↗</span> A Dutch contracting entity serving companies across Europe</li></ul><a class="text-cta" href="delivery-model.html">Meet the delivery approach <span aria-hidden="true">↗</span></a></div></div>
-      </section>
-
-      <section class="faq-section-new" aria-labelledby="homepage-faq-title">
-        <div class="wrap faq-layout"><div><p class="kicker">A little more clarity</p><h2 id="homepage-faq-title">Good questions.<br>Clear answers.</h2></div><div class="faq-list">
-          <details><summary>How should a company start with AI consulting?</summary><p>Start with one high-value workflow, clear users and accessible data. We map the opportunity and agree a measurable result before deciding what to build.</p></details>
-          <details><summary>Can we start with an MVP or proof of concept?</summary><p>Yes. A focused MVP or proof of concept lets your team test usefulness, accuracy and workflow fit before committing to a wider implementation.</p></details>
-          <details><summary>What AI systems can you build?</summary><p>Company Brain knowledge systems, RAG assistants, agentic workflows, finance dashboards, project intelligence and AI-native internal software. Explore our AI solutions and guided demo previews for examples.</p></details>
-          <details><summary>Do we need to replace our existing tools?</summary><p>Usually, no. We design AI around your existing business tools, documents and databases. Integration scope, permissions and security requirements are defined during discovery.</p></details>
-        </div></div>
-      </section>
-
-      <section id="contact" class="contact-section-new" aria-labelledby="contact-title">
-        <div class="contact-box"><div class="contact-grid"><div><p class="kicker">Your next move</p><h2 id="contact-title">One useful conversation.<br><em>A clearer way forward.</em></h2><p>Tell us where work gets stuck. We’ll explore what AI could change and what a sensible first step looks like.</p></div><div>
-          <a class="btn" href="contact.html">Let’s explore your project <span class="arrow" aria-hidden="true">↗</span></a>
-          <div class="contact-secondary"><a href="mailto:jferre@ferretorres.eu">jferre@ferretorres.eu</a><button class="copy-email" type="button" data-email="jferre@ferretorres.eu" hidden>Copy email</button></div><div class="copy-status" role="status" aria-live="polite"></div>
-          <a class="contact-demo" href="mailto:jferre@ferretorres.eu?subject=Guided%20AI%20demo%20request&amp;body=Hello%20Josep%2C%0A%0AI%20would%20like%20a%20guided%20demo.%0A%0ACompany%3A%0AMain%20interest%3A%0A%0ABest%2C">Prefer to see an example first? Request a guided demo ↗</a>
-        </div></div></div>
-      </section>
-    </main>
-    <footer class="site-footer" aria-label="Site footer">
-      <div class="wrap"><div class="footer-top">
-        <div class="footer-about"><a class="brand" href="index.html"><span class="brand-mark"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="36" height="36" alt=""></span><span>Ferre Torres B.V.</span></a><p>Thoughtful AI consulting.<br>Useful systems. European delivery.</p></div>
-        <div class="footer-col"><strong>WHAT WE BUILD</strong><a href="company-brain-for-companies.html">Company Brain</a><a href="rag-agentic-systems.html">RAG &amp; AI agents</a><a href="agentic-ai-workflows.html">Workflow automation</a><a href="ai-finance-dashboard.html">Finance intelligence</a><a href="ai-software-engineering.html">AI software engineering</a><a href="ai-solutions.html">All AI solutions ↗</a></div>
-        <div class="footer-col"><strong>HOW WE HELP</strong><a href="ai-consultancy.html">AI consulting</a><a href="ai-opportunity-assessment.html">Opportunity assessment</a><a href="ai-mvp-poc.html">MVP &amp; proof of concept</a><a href="ai-implementation-services.html">Implementation</a><a href="ai-security-gdpr.html">Security &amp; governance</a><a href="ai-demo-gallery.html">Demo gallery ↗</a></div>
-        <div class="footer-col"><strong>GET TO KNOW US</strong><a href="delivery-model.html">Delivery approach</a><a href="proof.html">Proof &amp; measurement</a><a href="capability-statement.html">Capabilities</a><a href="ai-consultancy-netherlands.html">AI consultancy Netherlands</a><a href="https://www.linkedin.com/in/josepferre/">LinkedIn ↗</a><a href="#contact">Get in touch ↗</a></div>
-      </div><div class="footer-bottom"><span>© 2026 Ferre Torres B.V. · Rotterdam, the Netherlands</span><span>Westplein 12, 3016 BM · KvK 42067229 · VAT NL869556800B01 · EORI NL869556800</span><a href="privacy.html">Privacy</a></div></div>
-    </footer>
-  </body>
+</div>
+</div></div>
+</section>
+</main>
+<footer class="site-footer" aria-label="Site footer">
+<div class="wrap"><div class="footer-top">
+<div class="footer-about"><a class="brand" href="index.html"><span class="brand-mark"><img src="assets/ferre-torres-mark.svg?v=20261027-ft" width="36" height="36" alt=""></span><span>Ferre Torres B.V.</span></a><p>Thoughtful AI consulting.<br>Useful systems. European delivery.</p></div>
+<div class="footer-col"><strong>WHAT WE BUILD</strong><a href="company-brain-for-companies.html">Company Brain</a><a href="rag-agentic-systems.html">RAG &amp; AI agents</a><a href="agentic-ai-workflows.html">Workflow automation</a><a href="ai-finance-dashboard.html">Finance intelligence</a><a href="ai-software-engineering.html">AI software engineering</a><a href="ai-solutions.html">All AI solutions ↗</a></div>
+<div class="footer-col"><strong>HOW WE HELP</strong><a href="ai-consultancy.html">AI consulting</a><a href="ai-opportunity-assessment.html">Opportunity assessment</a><a href="ai-mvp-poc.html">MVP &amp; proof of concept</a><a href="ai-implementation-services.html">Implementation</a><a href="ai-security-gdpr.html">Security &amp; governance</a><a href="ai-demo-gallery.html">Demo gallery ↗</a></div>
+<div class="footer-col"><strong>GET TO KNOW US</strong><a href="delivery-model.html">Delivery approach</a><a href="proof.html">Proof &amp; measurement</a><a href="capability-statement.html">Capabilities</a><a href="ai-consultancy-netherlands.html">AI consultancy Netherlands</a><a href="https://www.linkedin.com/in/josepferre/">LinkedIn ↗</a><a href="#contact">Get in touch ↗</a></div>
+</div><div class="footer-bottom"><span>© 2026 Ferre Torres B.V. · Rotterdam, the Netherlands</span><span>Westplein 12, 3016 BM · KvK 42067229 · VAT NL869556800B01 · EORI NL869556800</span><a href="privacy.html">Privacy</a></div></div>
+</footer>
+</body>
 </html>
