@@ -47,6 +47,9 @@ See [contact scope](specs/contact-enquiry.md). Run `node --test scripts/contact.
 for message encoding, provider outcomes and error-state contracts. The live
 Hostinger privacy document already discloses Formspark; keep it preserved when
 deploying. The repository privacy page reflects the same contact data flow.
+`assets/.htaccess` declares the JavaScript MIME type for `.mjs` on Hostinger.
+After publication, run `node scripts/check_contact_http.mjs` to verify module
+headers and release bytes; a successful static check cannot prove server MIME.
 
 For a local preview, run `python3 -m http.server 8010 --bind 127.0.0.1` and
 open `http://127.0.0.1:8010/`. No build or dependency installation is needed.

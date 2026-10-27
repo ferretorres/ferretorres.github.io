@@ -34,3 +34,14 @@ Source: [contact scope](../contact-enquiry.md), 27 October 2026.
 Commands: node --test scripts/contact.test.mjs; node --check assets/contact.mjs;
 python3 scripts/check_site.py; scoped git diff --check. Ten tests were observed
 RED before implementation and then GREEN; evidence stays locally under tmp/.
+
+## Active-host module MIME correction
+
+The live HTTP gate found that Hostinger served `.mjs` as `text/plain`. Native
+submission continued working, but browsers refused the enhancement module.
+Declare `text/javascript` within the marketing assets directory and version the
+module URL again. The rule does not change the separate application's directory
+or root routing/security/cache configuration. `check_contact_http.mjs` reproduces
+the MIME failure and becomes a required post-publication gate. Verify headers,
+release bytes, live browser enhancement and an actual enhanced inbox delivery
+before reporting completion.
